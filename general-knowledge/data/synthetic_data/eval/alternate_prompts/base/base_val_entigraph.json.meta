@@ -1,0 +1,11 @@
+{
+  "model": "Qwen/Qwen2.5-7B",
+  "dataset_in": "general-knowledge/data/squad_val.json",
+  "dataset_out": "general-knowledge/data/synthetic_data/eval/base/base_val_entigraph.json",
+  "temperature": 1.0,
+  "top_p": 0.95,
+  "max_tokens": 8192,
+  "n": 200,
+  "k": 5,
+  "timestamp": "2025-07-28T22:01:09.083014+00:00Z"
+}

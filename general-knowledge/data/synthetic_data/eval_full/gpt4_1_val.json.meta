@@ -1,0 +1,8 @@
+{
+  "model": "gpt-4.1",
+  "dataset_in": "general-knowledge/data/squad_val_full.json",
+  "dataset_out": "general-knowledge/data/synthetic_data/eval_full/gpt4_1_val.json",
+  "n": 2067,
+  "k": 5,
+  "timestamp": "2025-07-29T03:49:57.239841+00:00Z"
+}

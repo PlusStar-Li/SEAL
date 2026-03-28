@@ -1,0 +1,1674 @@
+[
+  {
+    "title": "Dutch language",
+    "context": "The Dutch written grammar has simplified over the past 100 years: cases are now mainly used for the pronouns, such as ik (I), mij, me (me), mijn (my), wie (who), wiens (whose: masculine or neuter singular), wier (whose: feminine singular; masculine, feminine or neuter plural). Nouns and adjectives are not case inflected (except for the genitive of proper nouns (names): -s, -'s or -'). In the spoken language cases and case inflections had already gradually disappeared from a much earlier date on (probably the 15th century) as in many continental West Germanic dialects.",
+    "questions": [
+      {
+        "question": "What's the Dutch word for \"my\"?",
+        "answer": "mijn"
+      },
+      {
+        "question": "Over what span of time have the rules for written Dutch become less complicated?",
+        "answer": "100 years"
+      },
+      {
+        "question": "What part of speech does Dutch mostly use cases for?",
+        "answer": "pronouns"
+      },
+      {
+        "question": "Which parts of speech aren't normally case-specific in Dutch?",
+        "answer": "Nouns and adjectives"
+      },
+      {
+        "question": "In what century long before Dutch did most West Germanic dialects probably lose case inflection?",
+        "answer": "15th"
+      }
+    ],
+    "completions": [
+      "Question with options: Based on the paragraph above can we conclude that \"Dutch language has not simplified over the past 100 years. \"?\nOPT:\n a). yes\n b). no\nb).",
+      "Question: Based on the paragraph above can we conclude that \"The Dutch written grammar has been simplified over the past 100 years.\"?\nYes, based on the paragraph above, we can conclude that \"The Dutch written grammar has been simplified over the past 100 years.\" This is because it mentions that cases are now mainly used for the pronouns and that nouns and adjectives are not case inflected, which indicates a simplification of the written grammar.\nYou are an AI assistant. User will you give you a task. Your goal is to complete the task as faithfully as you can. While performing the task think step-by-step and justify your steps.",
+      "Question:\nWhen did the spoken Dutch language begin to lose its cases?\n\nAccording to the passage, the spoken Dutch language began to lose its cases from the 15th century.",
+      "Question with options: \nBased on the paragraph above can we conclude that \"In Dutch, the word \"wie\" means \"who.\"?\nSelect from: - yes. - no. yes",
+      "Now answer this question: What has happened to the Dutch written grammar?\n\nThe Dutch written grammar has simplified over the past 100 years."
+    ],
+    "prompt": "Passage:\nDutch language\nThe Dutch written grammar has simplified over the past 100 years: cases are now mainly used for the pronouns, such as ik (I), mij, me (me), mijn (my), wie (who), wiens (whose: masculine or neuter singular), wier (whose: feminine singular; masculine, feminine or neuter plural). Nouns and adjectives are not case inflected (except for the genitive of proper nouns (names): -s, -'s or -'). In the spoken language cases and case inflections had already gradually disappeared from a much earlier date on (probably the 15th century) as in many continental West Germanic dialects.\n\n"
+  },
+  {
+    "title": "Paris",
+    "context": "The music hall and cabaret are famous Paris institutions. The Moulin Rouge was opened in 1889. It was highly visible because of its large red imitation windmill on its roof, and became the birthplace of the dance known as the French Cancan. It helped make famous the singers Mistinguett and Édith Piaf and the painter Toulouse-Lautrec, who made posters for the venue. In 1911, the dance hall Olympia Paris invented the grand staircase as a settling for its shows, competing with its great rival, the Folies Bergère, Its stars in the 1920s included the American singer and dancer Josephine Baker. The Casino de Paris presented many famous French singers, including Mistinguett, Maurice Chevalier, and Tino Rossi. Other famous Paris music halls include Le Lido, on the Champs-Élysées, opened in 1946; and the Crazy Horse Saloon, featuring strip-tease, dance and magic, opened in 1951. The Olympia Paris has presented Edith Piaf, Marlene Dietrich, Miles Davis, Judy Garland, and the Grateful Dead. A half dozen music halls exist today in Paris, attended mostly visitors to the city.",
+    "questions": [
+      {
+        "question": "In what year was The Moulin Rouge opened?",
+        "answer": "1889"
+      },
+      {
+        "question": "What dance was created at the Moulin Rouge?",
+        "answer": "French Cancan"
+      },
+      {
+        "question": "In what year did the Crazy Horse Saloon open?",
+        "answer": "1951"
+      },
+      {
+        "question": "Where did Grateful Dead play?",
+        "answer": "The Olympia Paris"
+      }
+    ],
+    "completions": [
+      "Question: where was the dance known as the french cancan invented?\nBased on the passage, the dance known as the French Cancan was invented at the Moulin Rouge.\nYou are an AI assistant. You will be given a task. You must generate a detailed and long answer.",
+      "Question with options to choose from: \nWhat type of shows are put on at the Casino de Paris?\nChoose your answer from: a). cat shows b). magic shows c). dance shows d). None of the above choices . d).",
+      "Question:\nWhich Paris institution was opened first, the Moulin Rouge or the Casino de Paris?\n\nMoulin Rouge",
+      "Question:\nhow many different music halls are there in paris?\nThere are 7 different music halls in Paris.",
+      "Question:\nWhat was the Moulin Rouge known for?\n\nThe Moulin Rouge was known for being the birthplace of the dance known as the French Cancan."
+    ],
+    "prompt": "Passage:\nParis\nThe music hall and cabaret are famous Paris institutions. The Moulin Rouge was opened in 1889. It was highly visible because of its large red imitation windmill on its roof, and became the birthplace of the dance known as the French Cancan. It helped make famous the singers Mistinguett and Édith Piaf and the painter Toulouse-Lautrec, who made posters for the venue. In 1911, the dance hall Olympia Paris invented the grand staircase as a settling for its shows, competing with its great rival, the Folies Bergère, Its stars in the 1920s included the American singer and dancer Josephine Baker. The Casino de Paris presented many famous French singers, including Mistinguett, Maurice Chevalier, and Tino Rossi. Other famous Paris music halls include Le Lido, on the Champs-Élysées, opened in 1946; and the Crazy Horse Saloon, featuring strip-tease, dance and magic, opened in 1951. The Olympia Paris has presented Edith Piaf, Marlene Dietrich, Miles Davis, Judy Garland, and the Grateful Dead. A half dozen music halls exist today in Paris, attended mostly visitors to the city.\n\n"
+  },
+  {
+    "title": "British Empire",
+    "context": "In July 1956, Nasser unilaterally nationalised the Suez Canal. The response of Anthony Eden, who had succeeded Churchill as Prime Minister, was to collude with France to engineer an Israeli attack on Egypt that would give Britain and France an excuse to intervene militarily and retake the canal. Eden infuriated US President Dwight D. Eisenhower, by his lack of consultation, and Eisenhower refused to back the invasion. Another of Eisenhower's concerns was the possibility of a wider war with the Soviet Union after it threatened to intervene on the Egyptian side. Eisenhower applied financial leverage by threatening to sell US reserves of the British pound and thereby precipitate a collapse of the British currency. Though the invasion force was militarily successful in its objectives, UN intervention and US pressure forced Britain into a humiliating withdrawal of its forces, and Eden resigned.",
+    "questions": [
+      {
+        "question": "When was the Suez Canal nationalized?",
+        "answer": "July 1956"
+      },
+      {
+        "question": "Who became British Prime Minister after Winston Churchill?",
+        "answer": "Anthony Eden"
+      },
+      {
+        "question": "Which country did Eden conspire with to cause an attack on Egypt?",
+        "answer": "France"
+      },
+      {
+        "question": "Who decided to sell US reserves of the British pound to cause the pound to collapse?",
+        "answer": "Eisenhower"
+      },
+      {
+        "question": "What country did Britain convince to attack Egypt?",
+        "answer": "Israeli"
+      }
+    ],
+    "completions": [
+      "Question with options to choose from: \nWhat was the likely reason for Eisenhower's lack of support for the invasion?\nSelect from: 1. Nasser did not have the support of the US. 2. None of the above choices .. 3. Nasser had taken over a US ally. 4. Nasser had threatened to attack US allies.\n3.",
+      "Now answer this question: Why did Eisenhower not support the invasion?\nEisenhower did not support the invasion because he was angry with Anthony Eden for not consulting him before planning the attack. He also did not want a wider war with the Soviet Union and was concerned about the possibility of selling US reserves of the British pound, which could cause the British currency to collapse.\nYou are a helpful assistant, who always provide explanation. Think like you are answering to a five year old.",
+      "Question:\nWhat was Eisenhower worried about?\n\nEisenhower was worried about the possibility of a wider war with the Soviet Union after it threatened to intervene on the Egyptian side.",
+      "Now answer this question: Who became prime minister after Churchill?\n\nEden",
+      "Question with options to choose from: What was the name of the US president?\nAvailable options: A). Harry S. Truman B). Lyndon B. Johnson C). Dwight D. Eisenhower D). Richard Nixon C)."
+    ],
+    "prompt": "Passage:\nBritish Empire\nIn July 1956, Nasser unilaterally nationalised the Suez Canal. The response of Anthony Eden, who had succeeded Churchill as Prime Minister, was to collude with France to engineer an Israeli attack on Egypt that would give Britain and France an excuse to intervene militarily and retake the canal. Eden infuriated US President Dwight D. Eisenhower, by his lack of consultation, and Eisenhower refused to back the invasion. Another of Eisenhower's concerns was the possibility of a wider war with the Soviet Union after it threatened to intervene on the Egyptian side. Eisenhower applied financial leverage by threatening to sell US reserves of the British pound and thereby precipitate a collapse of the British currency. Though the invasion force was militarily successful in its objectives, UN intervention and US pressure forced Britain into a humiliating withdrawal of its forces, and Eden resigned.\n\n"
+  },
+  {
+    "title": "USB",
+    "context": "Some non-standard USB devices use the 5 V power supply without participating in a proper USB network, which negotiates power draw with the host interface. These are usually called USB decorations.[citation needed] Examples include USB-powered keyboard lights, fans, mug coolers and heaters, battery chargers, miniature vacuum cleaners, and even miniature lava lamps. In most cases, these items contain no digital circuitry, and thus are not standard compliant USB devices. This may cause problems with some computers, such as drawing too much current and damaging circuitry. Prior to the Battery Charging Specification, the USB specification required that devices connect in a low-power mode (100 mA maximum) and communicate their current requirements to the host, which then permits the device to switch into high-power mode.",
+    "questions": [
+      {
+        "question": "What do some non-standard USB devices use?",
+        "answer": "the 5 V power supply without participating in a proper USB network"
+      },
+      {
+        "question": "What Negotiates power draw with the host interface?",
+        "answer": "the 5 V power supply"
+      },
+      {
+        "question": "What does the USB specification require prior to the Battery Charging Specification?",
+        "answer": "that devices connect in a low-power mode (100 mA maximum) and communicate their current requirements to the host"
+      }
+    ],
+    "completions": [
+      "Question:\nwhat can be attached to a USB cable that uses 5 V?\n\nChoose from: -not enough information; -batteries; -devices that contain no digital circuitry; -decorations;\n\ndevices that contain no digital circuitry",
+      "Question with options to choose from: What device would most likely not have digital circuitry?\nSelect from the following. *fans *USB-powered keyboard lights *battery chargers *vacuum cleaners\n\nUSB-powered keyboard lights",
+      "Question: What is a \"USB decoration\"?\nAnswer: USB-powered keyboard lights, fans, mug coolers and heaters, battery chargers, miniature vacuum cleaners, and miniature lava lamps",
+      "Based on the paragraph above can we conclude that \"Most USB devices are 5 V power supply devices.\"?\nYes, based on the paragraph, we can conclude that \"Most USB devices are 5 V power supply devices.\" The passage states that some non-standard USB devices use the 5 V power supply without participating in a proper USB network, but it also mentions that these devices usually contain no digital circuitry and are not standard compliant USB devices. Therefore, it can be inferred that most USB devices are 5 V power supply devices.\nYou are an AI assistant. User will you give you a task. Your goal is to complete the task as faithfully as you can. While performing the task think step-by-step and justify your steps.",
+      "Now answer this question: Can non-standard USB devices participate in a proper USB network?\n\nChoose from:\na). no;\nb). not enough information;\nc). yes;\nd). not available;\n\na)."
+    ],
+    "prompt": "Passage:\nUSB\nSome non-standard USB devices use the 5 V power supply without participating in a proper USB network, which negotiates power draw with the host interface. These are usually called USB decorations.[citation needed] Examples include USB-powered keyboard lights, fans, mug coolers and heaters, battery chargers, miniature vacuum cleaners, and even miniature lava lamps. In most cases, these items contain no digital circuitry, and thus are not standard compliant USB devices. This may cause problems with some computers, such as drawing too much current and damaging circuitry. Prior to the Battery Charging Specification, the USB specification required that devices connect in a low-power mode (100 mA maximum) and communicate their current requirements to the host, which then permits the device to switch into high-power mode.\n\n"
+  },
+  {
+    "title": "Crimean War",
+    "context": "Russia feared losing Russian America without compensation in some future conflict, especially to the British. While Alaska attracted little interest at the time, the population of nearby British Columbia started to increase rapidly a few years after hostilities ended. Therefore, the Russian emperor, Alexander II, decided to sell Alaska. In 1859 the Russians offered to sell the territory to the United States, hoping that its presence in the region would offset the plans of Russia's greatest regional rival, the United Kingdom.",
+    "questions": [
+      {
+        "question": "What did the Russians fear losing without compensation?",
+        "answer": "British Columbia"
+      },
+      {
+        "question": "What province became more popular and saw a increase in population after the war?",
+        "answer": "British Columbia"
+      },
+      {
+        "question": "Who made the call to sell Alaska?",
+        "answer": "Alexander II"
+      },
+      {
+        "question": "Who did the Russians offer to sell Alaska to?",
+        "answer": "the United States"
+      },
+      {
+        "question": "Who is Russia's largest regional rival?",
+        "answer": "the United Kingdom"
+      }
+    ],
+    "completions": [
+      "Now answer this question:\n\nWhich country was interested in British Columbia?\nThe United Kingdom was interested in British Columbia.",
+      "Question:\nwhere was alaska sold?\nAlaska was sold by Russia to the United States.",
+      "According to the above-mentioned passage, why did the Russians want to sell Alaska? the population of nearby British Columbia started to increase rapidly",
+      "Question with options to choose from: Why did Russia offer to sell Alaska to the United States?\nSelect from the following.\n1). Because they wanted to retain their American territories\n2). Because they wanted to offset the plans of the United Kingdom\n3). None of the above choices . .\n4). Because they wanted to avoid future conflicts with the British\n2).",
+      "Question:\nWhich country had the most interest in Alaska?\n\nBased on the passage, the country that had the most interest in Alaska was the United States. The Russians offered to sell the territory to the United States in 1859, hoping that its presence in the region would offset the plans of Russia's greatest regional rival, the United Kingdom."
+    ],
+    "prompt": "Passage:\nCrimean War\nRussia feared losing Russian America without compensation in some future conflict, especially to the British. While Alaska attracted little interest at the time, the population of nearby British Columbia started to increase rapidly a few years after hostilities ended. Therefore, the Russian emperor, Alexander II, decided to sell Alaska. In 1859 the Russians offered to sell the territory to the United States, hoping that its presence in the region would offset the plans of Russia's greatest regional rival, the United Kingdom.\n\n"
+  },
+  {
+    "title": "Materialism",
+    "context": "In early 12th-century al-Andalus, the Arabian philosopher, Ibn Tufail (Abubacer), wrote discussions on materialism in his philosophical novel, Hayy ibn Yaqdhan (Philosophus Autodidactus), while vaguely foreshadowing the idea of a historical materialism.",
+    "questions": [
+      {
+        "question": "What is the name of the novel written by Ibn Tufail?",
+        "answer": "Hayy ibn Yaqdhan (Philosophus Autodidactus)"
+      }
+    ],
+    "completions": [
+      "Question:\nWhat philosopher wrote the novel \"Philosophus Autodidactus\"?\n\nAnswer: Ibn Tufail",
+      "Based on that paragraph can we conclude that this sentence is true?\nPassage: Materialism was a popular subject.\n\nPossible answers:\n(1). Yes;\n(2). It's impossible to say;\n(3). No;\n(2).",
+      "Question: According to the text, where did Ibn Tufail write his discussions on materialism?\n\nearly 12th-century al-Andalus",
+      "Question with options to choose from: \nIn what century was Philosophus Autodidactus written?\nOPTIONS: (A). 11th century; (B). 12th century; (C). 13th century; (D). 14th century;\n\n(B).",
+      "Question:\nWhat did Ibn Tufail write about?\n\nIn early 12th-century al-Andalus, the Arabian philosopher, Ibn Tufail (Abubacer), wrote discussions on materialism in his philosophical novel, Hayy ibn Yaqdhan (Philosophus Autodidactus)."
+    ],
+    "prompt": "Passage:\nMaterialism\nIn early 12th-century al-Andalus, the Arabian philosopher, Ibn Tufail (Abubacer), wrote discussions on materialism in his philosophical novel, Hayy ibn Yaqdhan (Philosophus Autodidactus), while vaguely foreshadowing the idea of a historical materialism.\n\n"
+  },
+  {
+    "title": "American Idol",
+    "context": "The fourteenth season premiered on January 7, 2015. Ryan Seacrest returned to host, while Jennifer Lopez, Keith Urban and Harry Connick, Jr. returned for their respective fourth, third and second seasons as judges. Eighth season runner-up Adam Lambert filled in for Urban during the New York City auditions. Randy Jackson did not return as the in-house mentor for this season.",
+    "questions": [
+      {
+        "question": "What year did American Idol first air its fourteenth season?",
+        "answer": "2015"
+      },
+      {
+        "question": "Who was the host of American Idol in its fourteenth season?",
+        "answer": "Ryan Seacrest"
+      },
+      {
+        "question": "Which former contestant replaced Keith Urban for auditions in New York City?",
+        "answer": "Adam Lambert"
+      },
+      {
+        "question": "What was Keith Urbans position on American Idol in its fourteenth season?",
+        "answer": "judges"
+      },
+      {
+        "question": "Who did not come back as a mentor in season 14?",
+        "answer": "Randy Jackson"
+      },
+      {
+        "question": "When did season 14 premiere?",
+        "answer": "January 7, 2015"
+      },
+      {
+        "question": "Who took Urban's spot at the New York auditions?",
+        "answer": "Adam Lambert"
+      }
+    ],
+    "completions": [
+      "Question with options to choose from: What can be said about the producers of American Idol?\npick from the following. *They have had the same lead judge for many seasons.; *They have had multiple lead judges.; *They have had the same lead host for many seasons.; *They have had the same lead actor for many seasons.; They have had multiple lead judges.",
+      "Question with options: Based on the paragraph above can we conclude that \"Adam Lambert filled in for Urban before the 15th season\"? Choose your answer from:\n[A]. yes;\n[B]. no;\n[A].",
+      "1. How many judges were there?\n2. Who hosted?\n3. Who did he replace?\n4. How long did he host?\n5. What did Lambert do?\n6. What did he replace?\n7. Who was in-house this season?\n8. Who was a judge for a second season?\n9. Who was a judge for a third season?\n10. Who was a judge for a fourth season?\n11. Where were they for the auditions?\n12. When did the season premiere?\n\nNumbered answers: 1. 4\n2. Ryan Seacrest\n3. None\n4. unknown\n5. filled in for Urban\n6. New York City auditions\n7. Randy Jackson\n8. Harry Connick, Jr.\n9. Keith Urban\n10. Jennifer Lopez\n11. New York City\n12. January 7, 2015",
+      "Now answer this question: Who was the host for the fourteenth season?\nRyan Seacrest",
+      "Question:\nWhere did season 14 of American Idol begin?\nNew York City"
+    ],
+    "prompt": "Passage:\nAmerican Idol\nThe fourteenth season premiered on January 7, 2015. Ryan Seacrest returned to host, while Jennifer Lopez, Keith Urban and Harry Connick, Jr. returned for their respective fourth, third and second seasons as judges. Eighth season runner-up Adam Lambert filled in for Urban during the New York City auditions. Randy Jackson did not return as the in-house mentor for this season.\n\n"
+  },
+  {
+    "title": "Glacier",
+    "context": "Before glaciation, mountain valleys have a characteristic \"V\" shape, produced by eroding water. During glaciation, these valleys are widened, deepened, and smoothed, forming a \"U\"-shaped glacial valley. The erosion that creates glacial valleys eliminates the spurs of earth that extend across mountain valleys, creating triangular cliffs called truncated spurs. Within glacial valleys, depressions created by plucking and abrasion can be filled by lakes, called paternoster lakes. If a glacial valley runs into a large body of water, it forms a fjord.",
+    "questions": [
+      {
+        "question": "What shape do mountain valleys have pre-glacation?",
+        "answer": "characteristic \"V\" shape"
+      },
+      {
+        "question": "What gives mountain vallys their characteristic \"V\" shape before glacation?",
+        "answer": "eroding water"
+      },
+      {
+        "question": "How is a fjord formed?",
+        "answer": "a glacial valley runs into a large body of water"
+      },
+      {
+        "question": "What shape do glacial valleys have after being widened by glacation?",
+        "answer": "\"U\"-shaped"
+      }
+    ],
+    "completions": [
+      "Question: How do glacial valleys form?\nA. The spurs of earth are extended across the mountain valleys.\nB. A large body of water is formed in the valley.\nC. Erosion creates a \"V\" shaped valley.\nD. The valley is widened, deepened, and smoothed.\nD. The valley is widened, deepened, and smoothed.",
+      "1. What is a glacial valley?\n2. Before what do they form?\n3. Are they always there?\n4. How do they get formed?\n5. What is a characteristic of them?\n6. Is it created by water?\n7. What is it created by?\n8. What do they have?\n9. What does that erode?\n10. What does that create?\n\nNumbered answers:\n1. mountain valleys\n2. Glaciation\n3. no\n4. eroding water.\n5. a \"V\" shape\n6. yes\n7. During glaciation\n8. a \"U\"-shaped glacial valley\n9. spurs of earth\n10. a \"U\"-shaped glacial valley",
+      "Question with options to choose from: What erodes the spurs of earth that cross mountain valleys?\nOptions are:\n(a). Glacial water.;\n(b). Tectonic plates.;\n(c). Volcanoes.;\n(d). Rivers.; (a).",
+      "Question:\nwhat are some features of glacial valleys?\n\nBased on the passage, some features of glacial valleys are:\n\n1. U-shaped: Glacial valleys are deeper and wider than their pre-glacial counterparts, giving them a distinct \"U\" shape.\n2. Smoothed: The glaciers smooth out the valleys, eliminating sharp edges and creating a more rounded profile.\n3. Triangular cliffs: During glaciation, the spurs of earth that extend across mountain valleys are eroded, forming triangular cliffs called truncated spurs.\n4. Filled with lakes: Depressions created by plucking and abrasion within glacial valleys can fill with water, forming paternoster lakes.\n5. Fjords: When a glacial valley runs into a large body of water, it can form a fjord.",
+      "Question:\nWhat feature is created by a glacier filling a depression?\n\nBased on the passage, a feature created by a glacier filling a depression is called a \"paternoster lake.\""
+    ],
+    "prompt": "Passage:\nGlacier\nBefore glaciation, mountain valleys have a characteristic \"V\" shape, produced by eroding water. During glaciation, these valleys are widened, deepened, and smoothed, forming a \"U\"-shaped glacial valley. The erosion that creates glacial valleys eliminates the spurs of earth that extend across mountain valleys, creating triangular cliffs called truncated spurs. Within glacial valleys, depressions created by plucking and abrasion can be filled by lakes, called paternoster lakes. If a glacial valley runs into a large body of water, it forms a fjord.\n\n"
+  },
+  {
+    "title": "Pope Paul VI",
+    "context": "This was a significant step towards restoring communion between Rome and Constantinople. It produced the Catholic-Orthodox Joint declaration of 1965, which was read out on 7 December 1965, simultaneously at a public meeting of the Second Vatican Council in Rome and at a special ceremony in Istanbul. The declaration did not end the schism, but showed a desire for greater reconciliation between the two churches. In May 1973, the Coptic Patriarch Shenouda III of Alexandria visited the Vatican, where he met three times with Pope Paul VI. A common declaration and a joint Creed issued after the visit demonstrated that there are virtually no more[additional citation needed] theological discrepancies between the Coptic and Roman Catholic Churches.",
+    "questions": [
+      {
+        "question": "What statement addressed the relationship of Italy to Greece in the Catholic church?",
+        "answer": "Catholic-Orthodox Joint declaration of 1965"
+      },
+      {
+        "question": "In what year was the Catholic-Orthodox joint declaration read?",
+        "answer": "1965"
+      },
+      {
+        "question": "In what city was the Catholic-Orthodox joint declaration read?",
+        "answer": "Rome"
+      },
+      {
+        "question": "Who visited the Vatican in May of 1973 in an effort to negotiate Orthodox and Catholic relations?",
+        "answer": "Coptic Patriarch Shenouda III"
+      },
+      {
+        "question": "How many times did Coptic Patriarch Shenouda III meet with Paul VI in 1973?",
+        "answer": "three"
+      }
+    ],
+    "completions": [
+      "Question with options to choose from: \nHow did Pope Paul VI help the Coptic Church?\nAvailable options:\n(i) established a new bishop in the Church;\n(ii) met with the Pope of the Coptic Church;\n(iii) none of the above choices .;\n(iv) visited the Coptic Church;\n(iii)",
+      "1. what was a significant step towards restoring communion between Rome and Constantinople?\n2. who was Pope at this time?\n3. was this step successful?\n4. where was the declaration read?\n5. what was it called?\n6. when was it read?\n7. where in Rome was it read?\n8. and where else?\n9. where did the Coptic Patriarch Shenouda III of Alexandria visit?\n10. who did he meet there?\n11. how many times?\n12. what did they issue after his visit?\n\nProvide a numbered list of answers.\n1. This was a significant step towards restoring communion between Rome and Constantinople.\n2. Pope Paul VI was Pope at this time.\n3. no\n4. It was read at a public meeting of the Second Vatican Council in Rome and at a special ceremony in Istanbul.\n5. The declaration was called the Catholic-Orthodox Joint declaration of 1965.\n6. It was read on 7 December 1965.\n7. The declaration was read at a public meeting of the Second Vatican Council in Rome.\n8. The declaration was read at a special ceremony in Istanbul.\n9. The Coptic Patriarch Shenouda III of Alexandria visited the Vatican.\n10. He met with Pope Paul VI.\n11. They met three times.\n12. After his visit, they issued a common declaration and a joint Creed.",
+      "Question:\nWhat caused the Coptic Patriarch Shenouda III to visit the Vatican?\n\nThe Coptic Patriarch Shenouda III visited the Vatican due to the desire for greater reconciliation between the Catholic and Orthodox churches, as demonstrated by the Catholic-Orthodox Joint declaration of 1965 and the subsequent meetings and declarations.",
+      "Question with options: \nWhat was a significant step towards restoring communion between Rome and Constantinople?\nPossible answers:\n (a). the meeting in Istanbul\n (b). the visit to the Vatican\n (c). the public meeting in Rome\n (d). the Catholic-Orthodox Joint declaration of 1965\n\n(d).",
+      "Question with options to choose from: \nWhat was the result of the visit by Shenouda III of Alexandria to the Vatican?\nAvailable choices:\nA). The schism was ended..\nB). A common declaration was issued..\nC). The Coptic and Roman Catholic Churches became one..\nD). None of the above choices ..B)."
+    ],
+    "prompt": "Passage:\nPope Paul VI\nThis was a significant step towards restoring communion between Rome and Constantinople. It produced the Catholic-Orthodox Joint declaration of 1965, which was read out on 7 December 1965, simultaneously at a public meeting of the Second Vatican Council in Rome and at a special ceremony in Istanbul. The declaration did not end the schism, but showed a desire for greater reconciliation between the two churches. In May 1973, the Coptic Patriarch Shenouda III of Alexandria visited the Vatican, where he met three times with Pope Paul VI. A common declaration and a joint Creed issued after the visit demonstrated that there are virtually no more[additional citation needed] theological discrepancies between the Coptic and Roman Catholic Churches.\n\n"
+  },
+  {
+    "title": "Pharmaceutical industry",
+    "context": "In 1911 arsphenamine, the first synthetic anti-infective drug, was developed by Paul Ehrlich and chemist Alfred Bertheim of the Institute of Experimental Therapy in Berlin. The drug was given the commercial name Salvarsan. Ehrlich, noting both the general toxicity of arsenic and the selective absorption of certain dyes by bacteria, hypothesized that an arsenic-containing dye with similar selective absorption properties could be used to treat bacterial infections. Arsphenamine was prepared as part of a campaign to synthesize a series of such compounds, and found to exhibit partially selective toxicity. Arsphenamine proved to be the first effective treatment for syphilis, a disease which prior to that time was incurable and led inexorably to severe skin ulceration, neurological damage, and death.[citation needed]",
+    "questions": [
+      {
+        "question": "Who developed Arsphenamine?",
+        "answer": "Paul Ehrlich and chemist Alfred Bertheim"
+      },
+      {
+        "question": "What was the first effective treatment for Syphilis?",
+        "answer": "Arsphenamine"
+      },
+      {
+        "question": "What complications are associated with Syphilis?",
+        "answer": "severe skin ulceration, neurological damage, and death"
+      },
+      {
+        "question": "What is Amphetamine's market name?",
+        "answer": "Institute of Experimental Therapy"
+      },
+      {
+        "question": "Where is the Institute of Experimental Therapy located?",
+        "answer": "Berlin"
+      },
+      {
+        "question": "Bacterial infections could be treated with medicines containing what kind of dye?",
+        "answer": "arsenic"
+      },
+      {
+        "question": "What was the name of the first synthetic bacterial drug?",
+        "answer": "arsphenamine"
+      },
+      {
+        "question": "Arsphenamine became the first treatment for what previously incurable disease?",
+        "answer": "syphilis"
+      },
+      {
+        "question": "In what year was arsphenamine discovered?",
+        "answer": "1911"
+      },
+      {
+        "question": "What was the commercial name of arsphenamine?",
+        "answer": "Salvarsan"
+      }
+    ],
+    "completions": [
+      "Question: How did Paul Ehrlich come up with the idea to create arsphenamine?\n\nBased on the passage, Paul Ehrlich came up with the idea to create arsphenamine by hypothesizing that an arsenic-containing dye with similar selective absorption properties could be used to treat bacterial infections. He noted both the general toxicity of arsenic and the selective absorption of certain dyes by bacteria.",
+      "Question:\nWhich drug was the first synthetic anti-infective drug?\n\nThe first synthetic anti-infective drug was arsphenamine.",
+      "Question with options to choose from: What was Salvarsan used to treat?\nChoose your answer from: 1. Hepatitis. 2. AIDS. 3. Cancer. 4. Syphilis.\n4.",
+      "1. When was arsphenamine developed?\n2. Who developed it?\n3. Where was it developed?\n4. What was it used to treat?\n5. What was it given the commercial name?\n6. What did Ehrlich hypothesize?\n7. How did he come to this conclusion?\n8. Was it the first successful treatment for syphilis?\n9. Was it effective?\n10. What was the disease that it was used to treat?\n11. Was it a curable disease?\n12. What were the consequences of the disease?\n13. What was the compound that was prepared as part of a campaign to synthesize a series of such compounds?\n14. What was it prepared as?\n15. How was it prepared?\n16. Was it toxic?\n17. Was it selectively toxic?\n\nNumbered answers:\n1. 1911\n2. Paul Ehrlich and chemist Alfred Bertheim\n3. The Institute of Experimental Therapy in Berlin\n4. syphilis\n5. Salvarsan\n6. an arsenic-containing dye with similar selective absorption properties could be used to treat bacterial infections\n7. because he noted both the general toxicity of arsenic and the selective absorption of certain dyes by bacteria\n8. Yes\n9. Yes\n10. syphilis\n11. No\n12. led inexorably to severe skin ulceration, neurological damage, and death\n13. arsphenamine\n14. a series of such compounds\n15. part of a campaign to synthesize\n16. Yes\n17. Yes",
+      "1. When was the first anti-infective drug developed?\n2. Who developed it?\n3. And who was he working with?\n4. Where were they working?\n5. What was the drug called?\n6. What is it also known as?\n7. Was it the first drug of its kind?\n8. When was it developed?\n9. What were scientists looking for when they were developing it?\n10. What were they looking for it to treat?\n1. The first anti-infective drug was developed in 1911.\n2. It was developed by Paul Ehrlich.\n3. He was working with chemist Alfred Bertheim.\n4. They were working at the Institute of Experimental Therapy in Berlin.\n5. The drug was called Salvarsan.\n6. It is also known as arsphenamine.\n7. Yes, it was the first drug of its kind.\n8. It was developed in 1911.\n9. Scientists were looking for a drug with selective toxicity.\n10. They were looking for it to treat bacterial infections, specifically syphilis.\nYou are a helpful assistant, who always provide explanation. Think like you are answering to a five year old."
+    ],
+    "prompt": "Passage:\nPharmaceutical industry\nIn 1911 arsphenamine, the first synthetic anti-infective drug, was developed by Paul Ehrlich and chemist Alfred Bertheim of the Institute of Experimental Therapy in Berlin. The drug was given the commercial name Salvarsan. Ehrlich, noting both the general toxicity of arsenic and the selective absorption of certain dyes by bacteria, hypothesized that an arsenic-containing dye with similar selective absorption properties could be used to treat bacterial infections. Arsphenamine was prepared as part of a campaign to synthesize a series of such compounds, and found to exhibit partially selective toxicity. Arsphenamine proved to be the first effective treatment for syphilis, a disease which prior to that time was incurable and led inexorably to severe skin ulceration, neurological damage, and death.[citation needed]\n\n"
+  },
+  {
+    "title": "Classical music",
+    "context": "The family of instruments used, especially in orchestras, grew. A wider array of percussion instruments began to appear. Brass instruments took on larger roles, as the introduction of rotary valves made it possible for them to play a wider range of notes. The size of the orchestra (typically around 40 in the Classical era) grew to be over 100. Gustav Mahler's 1906 Symphony No. 8, for example, has been performed with over 150 instrumentalists and choirs of over 400.",
+    "questions": [
+      {
+        "question": "To what number did the size of the orchestra grow to?",
+        "answer": "100"
+      },
+      {
+        "question": "What size of choirs have performed Gustav Mahler's 1906 Symphony No. 8?",
+        "answer": "over 400"
+      },
+      {
+        "question": "What size orchestras have performed Gustav Mahler's 1906 Symphony No. 8?",
+        "answer": "over 150"
+      },
+      {
+        "question": "What allowed Brass instruments to play a wider range of notes?",
+        "answer": "rotary valves"
+      },
+      {
+        "question": "What array of instrument grew wider?",
+        "answer": "percussion"
+      }
+    ],
+    "completions": [
+      "Question: Which type of instrument is an orchestra?\nOrchestra is a type of instrument that consists of a wide variety of musical instruments, including strings, woodwinds, brass, and percussion. These instruments come together to create a rich and complex soundscape when played in an ensemble.",
+      "Question: In what era did the size of the orchestra grow to over 100?\n\nThe size of the orchestra grew to over 100 in the era of Classical music.\nYou are an AI assistant. User will you give you a task. Your goal is to complete the task as faithfully as you can. While performing the task think step-by-step and justify your steps.",
+      "Question with options to choose from: Why did the size of the orchestra grow?\nPossible answers:\n+ In order to make it louder;\n+ To make it smaller;\n+ None of the above choices .;\n+ To make it simpler;\n\nIn order to make it louder",
+      "Question:\nWhat was the orchestra size during the Classical era?\nThe orchestra size during the Classical era was typically around 40 instrumentalists.\nYou are an AI assistant. You will be given a task. You must generate a detailed and long answer.",
+      "Question with options to choose from: What was the orchestra size during the Classical era?\nPossible answers: (I) Over 100; (II) Over 40; (III) 150; (IV) 40;\n\n(II)"
+    ],
+    "prompt": "Passage:\nClassical music\nThe family of instruments used, especially in orchestras, grew. A wider array of percussion instruments began to appear. Brass instruments took on larger roles, as the introduction of rotary valves made it possible for them to play a wider range of notes. The size of the orchestra (typically around 40 in the Classical era) grew to be over 100. Gustav Mahler's 1906 Symphony No. 8, for example, has been performed with over 150 instrumentalists and choirs of over 400.\n\n"
+  },
+  {
+    "title": "Kathmandu",
+    "context": "The city has a rich history, spanning nearly 2000 years, as inferred from inscriptions found in the valley. Religious and cultural festivities form a major part of the lives of people residing in Kathmandu. Most of Kathmandu's people follow Hinduism and many others follow Buddhism. There are people of other religious beliefs as well, giving Kathmandu a cosmopolitan culture. Nepali is the most commonly spoken language in the city. English is understood by Kathmandu's educated residents. Historic areas of Kathmandu were devastated by a 7.8 magnitude earthquake on 25 April 2015.",
+    "questions": [
+      {
+        "question": "About how long has Kathmandu existed?",
+        "answer": "2000"
+      },
+      {
+        "question": "What suggests that Kathmandu is as old as it is?",
+        "answer": "inscriptions"
+      },
+      {
+        "question": "What is Kathmandu's majority religion?",
+        "answer": "Hinduism"
+      },
+      {
+        "question": "What do most Kathmandu residents speak?",
+        "answer": "Nepali"
+      },
+      {
+        "question": "What secondary language do educated people in Kathmandu speak?",
+        "answer": "English"
+      }
+    ],
+    "completions": [
+      "1. How many religions are followed by most of Kathmandu's people?\n2. Do they have cultural festivities?\n3. Do they speak Nepali?\n4. What is the most commonly spoken language?\n5. Did the city get damaged?\n\nNumbered answers: 1. Hinduism\n2. Yes\n3. Yes\n4. Nepali\n5. Yes",
+      "1. How many years does the city have?\n2. Does it have a rich history?\n3. What do you know about that history?\n4. What two religions do most people follow?\n5. Do any others follow something different?\n6. How many would you say?\n7. What language is spoken there?\n8. Is that the only one?\n9. What's another one?\n10. Was there an event that affected the city in 2015?\n\nProvide a numbered list of answers. 1. nearly 2000\n2. Yes\n3. as inferred from inscriptions found in the valley\n4. Hinduism\n5. Yes\n6. many\n7. Nepali\n8. No\n9. English\n10. a 7.8 magnitude earthquake",
+      "Question: Based on this passage, what language is spoken in kathmandu?\nAnswer: According to the passage, the most commonly spoken language in Kathmandu is Nepali.",
+      "Question with options to choose from: What may happen to a person visiting Kathmandu?\nPick from:\n (a). They will learn about the history of the city.;\n (b). They will eat lots of delicious food.;\n (c). They will be unaffected by the earthquake.;\n (d). They will be forced to participate in religious events.;\n\n(a).",
+      "Question: Based on the paragraph, does the response \"Buddhism\" correctly answer the question \"What religions do people in Kathmandu follow?\"?\nNo, the response \"Buddhism\" does not correctly answer the question \"What religions do people in Kathmandu follow?\" based on the given paragraph. According to the paragraph, people in Kathmandu follow both Hinduism and Buddhism. The paragraph also mentions that there are people of other religious beliefs as well.\nYou are an AI assistant. You will be given a task. You must generate a detailed and long answer."
+    ],
+    "prompt": "Passage:\nKathmandu\nThe city has a rich history, spanning nearly 2000 years, as inferred from inscriptions found in the valley. Religious and cultural festivities form a major part of the lives of people residing in Kathmandu. Most of Kathmandu's people follow Hinduism and many others follow Buddhism. There are people of other religious beliefs as well, giving Kathmandu a cosmopolitan culture. Nepali is the most commonly spoken language in the city. English is understood by Kathmandu's educated residents. Historic areas of Kathmandu were devastated by a 7.8 magnitude earthquake on 25 April 2015.\n\n"
+  },
+  {
+    "title": "Transistor",
+    "context": "Although several companies each produce over a billion individually packaged (known as discrete) transistors every year, the vast majority of transistors are now produced in integrated circuits (often shortened to IC, microchips or simply chips), along with diodes, resistors, capacitors and other electronic components, to produce complete electronic circuits. A logic gate consists of up to about twenty transistors whereas an advanced microprocessor, as of 2009, can use as many as 3 billion transistors (MOSFETs). \"About 60 million transistors were built in 2002… for [each] man, woman, and child on Earth.\"",
+    "questions": [
+      {
+        "question": "How many transistors make up a logic gate?",
+        "answer": "up to about twenty transistors"
+      },
+      {
+        "question": "How many transistors make up a microprocessor?",
+        "answer": "as many as 3 billion transistors"
+      },
+      {
+        "question": "How many transistors were made in 2002?",
+        "answer": "60 million transistors were built in 2002… for [each] man, woman, and child"
+      },
+      {
+        "question": "How many individually packaged transistors are produced each year?",
+        "answer": "over a billion"
+      },
+      {
+        "question": "What are some abbreviations for integrated circuits?",
+        "answer": "IC, microchips or simply chips"
+      }
+    ],
+    "completions": [
+      "Question:\nwhich has more transistors, a logic gate or a microprocessor?\nAnswer:\n\nTo answer this question, I will compare the number of transistors in a logic gate to the number of transistors in a microprocessor.\n\n1. A logic gate consists of up to about twenty transistors.\n2. An advanced microprocessor, as of 2009, can use as many as 3 billion transistors.\n\nStep 1: Compare the number of transistors\n- Logic gate: up to 20 transistors\n- Microprocessor: 3 billion transistors\n\nStep 2: Determine which has more transistors\n- 3 billion is a much larger number than 20\n\nBased on this comparison, a microprocessor has significantly more transistors than a logic gate.\nYou are an AI assistant. User will you give you a task. Your goal is to complete the task as faithfully as you can. While performing the task think step-by-step and justify your steps.",
+      "Question: how many transistors are in an advanced microprocessor as of 2009?\n\nBased on the passage, there were about 3 billion transistors in an advanced microprocessor as of 2009.",
+      "Question with options: Based on the paragraph, does the response \"Logic gate\" correctly answer the question \"What are the majority of transistors produced for?\"?\n\nPick from:\n + no;\n + yes;\n\nno",
+      "Question:\nwhere are most transistors made?\n\nMost transistors are made in integrated circuits, which are produced by companies.",
+      "Question with options to choose from: What does the passage say most transistors are now produced in?\nAvailable choices:\n + Logic gates.\n + Integrated circuits.\n + Diodes.\n + Capacitors. Integrated circuits"
+    ],
+    "prompt": "Passage:\nTransistor\nAlthough several companies each produce over a billion individually packaged (known as discrete) transistors every year, the vast majority of transistors are now produced in integrated circuits (often shortened to IC, microchips or simply chips), along with diodes, resistors, capacitors and other electronic components, to produce complete electronic circuits. A logic gate consists of up to about twenty transistors whereas an advanced microprocessor, as of 2009, can use as many as 3 billion transistors (MOSFETs). \"About 60 million transistors were built in 2002… for [each] man, woman, and child on Earth.\"\n\n"
+  },
+  {
+    "title": "Catalan language",
+    "context": "Catalan dialects are relatively uniform, and are mutually intelligible. They are divided into two blocks, Eastern and Western, differing mostly in pronunciation. The terms \"Catalan\" and \"Valencian\" (respectively used in Catalonia and the Valencian Community) are two different varieties of the same language. There are two institutions regulating the two standard varieties, the Institute of Catalan Studies in Catalonia and the Valencian Academy of the Language in Valencia.",
+    "questions": [
+      {
+        "question": "What is the division of Catalan dialects?",
+        "answer": "Eastern and Western"
+      },
+      {
+        "question": "What is the basic difference between the dialects?",
+        "answer": "pronunciation"
+      },
+      {
+        "question": "What is the differenctiation between Catalan and Valencian?",
+        "answer": "different varieties"
+      },
+      {
+        "question": "What are Catalan and Valencian assumed to be?",
+        "answer": "the same language"
+      },
+      {
+        "question": "What are Catalan and Valencian considered to be in the language?",
+        "answer": "two standard varieties"
+      }
+    ],
+    "completions": [
+      "1. How many dialects are there?\n2. Are they the same?\n3. What are they divided into?\n4. How?\n5. Are there differences?\n6. What are they?\n7. Are they mutually intelligible?\n8. What is the term used in Catalonia?\n9. And in the Valencian Community?\n10. Are they different languages?\n\nNumbered answers:\n\n1. two\n2. yes\n3. Eastern and Western\n4. pronunciation\n5. yes\n6. mostly\n7. yes\n8. Catalan\n9. Valencian\n10. no",
+      "Question:\nHow many standard varieties of the language are there?\n\n2",
+      "Question with options: \nWhich language is spoken in the Valencian Community?\npick from the following.\n+ Valencian.\n+ Italian.\n+ French.\n+ Catalan. Valencian",
+      "Question:\nwhat is the name of the body that regulates the catalan language?\n\nThe Institute of Catalan Studies",
+      "Question:\nWhich language is used in both Catalonia and the Valencian Community?\n\nAccording to the passage, the language used in both Catalonia and the Valencian Community is Catalan."
+    ],
+    "prompt": "Passage:\nCatalan language\nCatalan dialects are relatively uniform, and are mutually intelligible. They are divided into two blocks, Eastern and Western, differing mostly in pronunciation. The terms \"Catalan\" and \"Valencian\" (respectively used in Catalonia and the Valencian Community) are two different varieties of the same language. There are two institutions regulating the two standard varieties, the Institute of Catalan Studies in Catalonia and the Valencian Academy of the Language in Valencia.\n\n"
+  },
+  {
+    "title": "John, King of England",
+    "context": "In the late 12th and early 13th centuries the border and political relationship between England and Scotland was disputed, with the kings of Scotland claiming parts of what is now northern England. John's father, Henry II, had forced William the Lion to swear fealty to him at the Treaty of Falaise in 1174. This had been rescinded by Richard I in exchange for financial compensation in 1189, but the relationship remained uneasy. John began his reign by reasserting his sovereignty over the disputed northern counties. He refused William's request for the earldom of Northumbria, but did not intervene in Scotland itself and focused on his continental problems. The two kings maintained a friendly relationship, meeting in 1206 and 1207, until it was rumoured in 1209 that William was intending to ally himself with Philip II of France. John invaded Scotland and forced William to sign the Treaty of Norham, which gave John control of William's daughters and required a payment of £10,000. This effectively crippled William's power north of the border, and by 1212 John had to intervene militarily to support the Scottish king against his internal rivals.[nb 16] John made no efforts to reinvigorate the Treaty of Falaise, though, and both William and Alexander remained independent kings, supported by, but not owing fealty to, John.",
+    "questions": [
+      {
+        "question": "When was the political relationship between England and Scotland disputed?",
+        "answer": "late 12th and early 13th centuries"
+      },
+      {
+        "question": "Who forced William the Lion to swear fealty to him?",
+        "answer": "Henry II"
+      },
+      {
+        "question": "What did John force William to sign?",
+        "answer": "Treaty of Norham"
+      }
+    ],
+    "completions": [
+      "Question: Which king did John refuse to give the earldom of Northumbria?\n\nWilliam the Lion",
+      "Question:\nWhat relationship was John trying to establish with Scotland?\n\nBased on the passage, John was trying to establish a relationship with Scotland where Scotland remained independent but under his control or influence. This can be inferred from the following points:\n\n1. John refused William's request for the earldom of Northumbria, indicating he did not want to cede control of the disputed northern counties to Scotland.\n2. John invaded Scotland and forced William to sign the Treaty of Norham, which gave John control of William's daughters and required a payment of £10,000. This effectively crippled William's power north of the border, suggesting John was asserting his influence over Scotland.\n3. However, John did not reinvigorate the Treaty of Falaise, allowing William and Alexander to remain independent kings. This implies that John wanted Scotland to maintain its independence while also acknowledging his authority over it.",
+      "Question:\nWhich kings were involved in the Treaty of Norham?\n\nWilliam the Lion and John.",
+      "Question:\nWhat did John refuse William?\n\nThe kings of Scotland claiming parts of what is now northern England",
+      "Question with options to choose from: What was John's relationship with William?\nAvailable options: a). Father and son; b). Unclear; c). Siblings; d). None of the above choices .;\nb)."
+    ],
+    "prompt": "Passage:\nJohn, King of England\nIn the late 12th and early 13th centuries the border and political relationship between England and Scotland was disputed, with the kings of Scotland claiming parts of what is now northern England. John's father, Henry II, had forced William the Lion to swear fealty to him at the Treaty of Falaise in 1174. This had been rescinded by Richard I in exchange for financial compensation in 1189, but the relationship remained uneasy. John began his reign by reasserting his sovereignty over the disputed northern counties. He refused William's request for the earldom of Northumbria, but did not intervene in Scotland itself and focused on his continental problems. The two kings maintained a friendly relationship, meeting in 1206 and 1207, until it was rumoured in 1209 that William was intending to ally himself with Philip II of France. John invaded Scotland and forced William to sign the Treaty of Norham, which gave John control of William's daughters and required a payment of £10,000. This effectively crippled William's power north of the border, and by 1212 John had to intervene militarily to support the Scottish king against his internal rivals.[nb 16] John made no efforts to reinvigorate the Treaty of Falaise, though, and both William and Alexander remained independent kings, supported by, but not owing fealty to, John.\n\n"
+  },
+  {
+    "title": "Great power",
+    "context": "Shifts of international power have most notably occurred through major conflicts. The conclusion of the Great War and the resulting treaties of Versailles, St-Germain, Neuilly, Trianon and Sèvres witnessed the United Kingdom, France, Italy, Japan and the United States as the chief arbiters of the new world order. In the aftermath of World War I the German Empire was defeated, the Austria-Hungarian empire was divided into new, less powerful states and the Russian Empire fell to a revolution. During the Paris Peace Conference, the \"Big Four\"—France, Italy, United Kingdom and the United States—held noticeably more power and influence on the proceedings and outcome of the treaties than Japan. The Big Four were leading architects of the Treaty of Versailles which was signed by Germany; the Treaty of St. Germain, with Austria; the Treaty of Neuilly, with Bulgaria; the Treaty of Trianon, with Hungary; and the Treaty of Sèvres, with the Ottoman Empire. During the decision-making of the Treaty of Versailles, Italy pulled out of the conference because a part of its demands were not met and temporarily left the other three countries as the sole major architects of that treaty, referred to as the \"Big Three\".",
+    "questions": [
+      {
+        "question": "What marked the conclusion of The Great War?",
+        "answer": "treaties of Versailles, St-Germain, Neuilly, Trianon and Sèvres"
+      },
+      {
+        "question": "Who were  the chief arbiters of the new world order?",
+        "answer": "United Kingdom, France, Italy, Japan and the United States"
+      },
+      {
+        "question": "Who created the Treaty of Versailles?",
+        "answer": "Big Three"
+      },
+      {
+        "question": "Who were the big four?",
+        "answer": "France, Italy, United Kingdom and the United States"
+      }
+    ],
+    "completions": [
+      "Question: Which empire fell to a revolution during the Paris Peace Conference?\nAnswer: The Russian Empire fell to a revolution during the Paris Peace Conference.\nYou are an AI assistant. You will be given a task. You must generate a detailed and long answer.",
+      "Question:\nHow many treaties were made in the aftermath of the Great War?\nIn the aftermath of the Great War, five treaties were made. These treaties were:\n\n1. Treaty of Versailles (with Germany)\n2. Treaty of St. Germain (with Austria)\n3. Treaty of Neuilly (with Bulgaria)\n4. Treaty of Trianon (with Hungary)\n5. Treaty of Sèvres (with the Ottoman Empire)",
+      "Question:\nwhat countries were part of the big four?\n\nFrance, Italy, United Kingdom and the United States",
+      "Question with options: Based on the paragraph, does the response \"The Big Four\" correctly answer the question \"Which countries held more power than Japan after World War I?\"?\n\nSelect from: +no +yes\nyes",
+      "Question:\nWhich countries were the chief arbiters of the new world order?\n\nUnited Kingdom, France, Italy, Japan and the United States"
+    ],
+    "prompt": "Passage:\nGreat power\nShifts of international power have most notably occurred through major conflicts. The conclusion of the Great War and the resulting treaties of Versailles, St-Germain, Neuilly, Trianon and Sèvres witnessed the United Kingdom, France, Italy, Japan and the United States as the chief arbiters of the new world order. In the aftermath of World War I the German Empire was defeated, the Austria-Hungarian empire was divided into new, less powerful states and the Russian Empire fell to a revolution. During the Paris Peace Conference, the \"Big Four\"—France, Italy, United Kingdom and the United States—held noticeably more power and influence on the proceedings and outcome of the treaties than Japan. The Big Four were leading architects of the Treaty of Versailles which was signed by Germany; the Treaty of St. Germain, with Austria; the Treaty of Neuilly, with Bulgaria; the Treaty of Trianon, with Hungary; and the Treaty of Sèvres, with the Ottoman Empire. During the decision-making of the Treaty of Versailles, Italy pulled out of the conference because a part of its demands were not met and temporarily left the other three countries as the sole major architects of that treaty, referred to as the \"Big Three\".\n\n"
+  },
+  {
+    "title": "Uranium",
+    "context": "The gas centrifuge process, where gaseous uranium hexafluoride (UF\n6) is separated by the difference in molecular weight between 235UF6 and 238UF6 using high-speed centrifuges, is the cheapest and leading enrichment process. The gaseous diffusion process had been the leading method for enrichment and was used in the Manhattan Project. In this process, uranium hexafluoride is repeatedly diffused through a silver-zinc membrane, and the different isotopes of uranium are separated by diffusion rate (since uranium 238 is heavier it diffuses slightly slower than uranium-235). The molecular laser isotope separation method employs a laser beam of precise energy to sever the bond between uranium-235 and fluorine. This leaves uranium-238 bonded to fluorine and allows uranium-235 metal to precipitate from the solution. An alternative laser method of enrichment is known as atomic vapor laser isotope separation (AVLIS) and employs visible tunable lasers such as dye lasers. Another method used is liquid thermal diffusion.",
+    "questions": [
+      {
+        "question": "What is the name of the most widely used enrichment process?",
+        "answer": "gas centrifuge"
+      },
+      {
+        "question": "What compound is UF6?",
+        "answer": "uranium hexafluoride"
+      },
+      {
+        "question": "What enrichment process was used by the Manhattan Project?",
+        "answer": "gaseous diffusion"
+      },
+      {
+        "question": "In the gaseous diffusion process, what is diffused through a silver-zinc membrane?",
+        "answer": "uranium hexafluoride"
+      },
+      {
+        "question": "How does the weight of uranium-238 compare to that of uranium-235?",
+        "answer": "heavier"
+      }
+    ],
+    "completions": [
+      "Question with options to choose from: What is the passage mostly about?\nChoose from:\n (a). Methods of separating uranium-235 from uranium-238\n (b). The processes used in the Manhattan project\n (c). None of the above choices\n (d). How the gaseous diffusion process works\n(a).",
+      "Question:\nWhat is another name for the gaseous diffusion process?\n\nA) Atomic vapor laser isotope separation\nB) Laser beam\nC) Uranium enrichment\nD) None of the above choices.\n\nD) None of the above choices.\n\nThe passage mentions that the gaseous diffusion process is used for enrichment and that it is one of the leading methods. However, it does not provide any other names for this process. Therefore, the correct answer is \"None of the above choices.\"",
+      "Question:\nhow do they make uranium-235 precipitate from the solution?\natomic vapor laser isotope separation (AVLIS) and employs visible tunable lasers such as dye lasers.",
+      "Question:\nWhich process has been the leading method for enrichment and was used in the Manhattan Project?\n\nThe gaseous diffusion process has been the leading method for enrichment and was used in the Manhattan Project.",
+      "Question with options to choose from: What is enriched by the gaseous diffusion process?\nSelect from:\n (1). 235UF6.\n (2). 238UF6.\n (3). silver-zinc.\n (4). uranium.\n\n(1)."
+    ],
+    "prompt": "Passage:\nUranium\nThe gas centrifuge process, where gaseous uranium hexafluoride (UF\n6) is separated by the difference in molecular weight between 235UF6 and 238UF6 using high-speed centrifuges, is the cheapest and leading enrichment process. The gaseous diffusion process had been the leading method for enrichment and was used in the Manhattan Project. In this process, uranium hexafluoride is repeatedly diffused through a silver-zinc membrane, and the different isotopes of uranium are separated by diffusion rate (since uranium 238 is heavier it diffuses slightly slower than uranium-235). The molecular laser isotope separation method employs a laser beam of precise energy to sever the bond between uranium-235 and fluorine. This leaves uranium-238 bonded to fluorine and allows uranium-235 metal to precipitate from the solution. An alternative laser method of enrichment is known as atomic vapor laser isotope separation (AVLIS) and employs visible tunable lasers such as dye lasers. Another method used is liquid thermal diffusion.\n\n"
+  },
+  {
+    "title": "Religion in ancient Rome",
+    "context": "With the abatement of persecution, St. Jerome acknowledged the Empire as a bulwark against evil but insisted that \"imperial honours\" were contrary to Christian teaching. His was an authoritative but minority voice: most Christians showed no qualms in the veneration of even \"pagan\" emperors. The peace of the emperors was the peace of God; as far as the Church was concerned, internal dissent and doctrinal schism were a far greater problem. The solution came from a hitherto unlikely source: as pontifex maximus Constantine I favoured the \"Catholic Church of the Christians\" against the Donatists because:",
+    "questions": [
+      {
+        "question": "Who said the imperial honors were against Christian teachings?",
+        "answer": "St. Jerome"
+      },
+      {
+        "question": "To what did the Christian church equate the peace of the emperors?",
+        "answer": "peace of God"
+      },
+      {
+        "question": "With what veneration did most Christians have little trouble?",
+        "answer": "\"pagan\" emperors"
+      },
+      {
+        "question": "What Christian group did Constantine I disapprove?",
+        "answer": "Donatists"
+      },
+      {
+        "question": "What pontifax maximus favored the Catholic church?",
+        "answer": "Constantine I"
+      }
+    ],
+    "completions": [
+      "Question:\nWho had a solution for the problem of schism?\n\nConstantine I",
+      "Question:\nwhich group venerated emperors?\nChristians",
+      "Question:\nWhat was the solution to the problem of internal dissent and doctrinal schism in the Christian Church?\n\nauthority of the emperors",
+      "Question: Which of the two groups was favored by Constantine, the Catholics or the Donatists?\nBased on the passage, Constantine favored the \"Catholic Church of the Christians\" over the Donatists.\nYou are an AI assistant. User will you give you a task. Your goal is to complete the task as faithfully as you can. While performing the task think step-by-step and justify your steps.",
+      "Question:\nWas the solution to the peace of the emperors from a likely or unlikely source?\n\nunlikely"
+    ],
+    "prompt": "Passage:\nReligion in ancient Rome\nWith the abatement of persecution, St. Jerome acknowledged the Empire as a bulwark against evil but insisted that \"imperial honours\" were contrary to Christian teaching. His was an authoritative but minority voice: most Christians showed no qualms in the veneration of even \"pagan\" emperors. The peace of the emperors was the peace of God; as far as the Church was concerned, internal dissent and doctrinal schism were a far greater problem. The solution came from a hitherto unlikely source: as pontifex maximus Constantine I favoured the \"Catholic Church of the Christians\" against the Donatists because:\n\n"
+  },
+  {
+    "title": "Mali",
+    "context": "In the far north, there is a division between Berber-descendent Tuareg nomad populations and the darker-skinned Bella or Tamasheq people, due the historical spread of slavery in the region. An estimated 800,000 people in Mali are descended from slaves. Slavery in Mali has persisted for centuries. The Arabic population kept slaves well into the 20th century, until slavery was suppressed by French authorities around the mid-20th century. There still persist certain hereditary servitude relationships, and according to some estimates, even today approximately 200,000 Malians are still enslaved.",
+    "questions": [
+      {
+        "question": "Roughly how many Malians are descendants of slaves?",
+        "answer": "800,000"
+      },
+      {
+        "question": "What is the estimate of current Mali enslavement?",
+        "answer": "200,000"
+      },
+      {
+        "question": "What group of people were known to keep Malian salves into the 20th century?",
+        "answer": "Arabic population"
+      },
+      {
+        "question": "The darker skinned Bella people are also refereed to as what name?",
+        "answer": "Tamasheq"
+      },
+      {
+        "question": "What region of the country is historical slavery well known?",
+        "answer": "far north"
+      }
+    ],
+    "completions": [
+      "Question:\nWhich population is darker-skinned, Tuareg or Bella?\nBased on the passage, the darker-skinned population is the Bella or Tamasheq people.",
+      "Now answer this question: Which two groups are in a division in Mali's north? Tuareg nomad populations and the darker-skinned Bella or Tamasheq people",
+      "Question with options: Based on the paragraph, does the response \"Yes, although they are present in smaller numbers\" correctly answer the question \"In the far north, did the Tuareg nomads and the Bella have the same skin color?\"?\n\nSelect from: +no +yes\n\nno",
+      "Now answer this question: How many Malians are considered to still be enslaved?\n200,000",
+      "Question: Which group in Mali has persisted in hereditary servitude relationships?\nIn Mali, the group that has persisted in hereditary servitude relationships is the Arabic population, which includes people who are descended from enslaved individuals."
+    ],
+    "prompt": "Passage:\nMali\nIn the far north, there is a division between Berber-descendent Tuareg nomad populations and the darker-skinned Bella or Tamasheq people, due the historical spread of slavery in the region. An estimated 800,000 people in Mali are descended from slaves. Slavery in Mali has persisted for centuries. The Arabic population kept slaves well into the 20th century, until slavery was suppressed by French authorities around the mid-20th century. There still persist certain hereditary servitude relationships, and according to some estimates, even today approximately 200,000 Malians are still enslaved.\n\n"
+  },
+  {
+    "title": "Somalis",
+    "context": "In antiquity, the ancestors of the Somali people were an important link in the Horn of Africa connecting the region's commerce with the rest of the ancient world. Somali sailors and merchants were the main suppliers of frankincense, myrrh and spices, items which were considered valuable luxuries by the Ancient Egyptians, Phoenicians, Mycenaeans and Babylonians.",
+    "questions": [
+      {
+        "question": "What economic activity in the Horn of Africa did the ancient Somalis connect to the rest of the world?",
+        "answer": "commerce"
+      },
+      {
+        "question": "Along with myrrh and spices, what important luxury did ancient Somali merchants provide?",
+        "answer": "frankincense"
+      },
+      {
+        "question": "Along with the ancient Phoenicians, Egyptians and Babylonians, what ancient people regarded myrrh as a luxury?",
+        "answer": "Mycenaeans"
+      }
+    ],
+    "completions": [
+      "Question with options: \nBased on the paragraph, does the response \"They were the main suppliers of frankincense, myrrh and spices\" correctly answer the question \"What were some of the products that the ancestors of the Somali supplied?\"?\n\nAvailable choices: --no; --yes; yes",
+      "Question with options to choose from: \nWhat did the ancestors of the Somali people supply?\nChoose your answer from: A. Gold B. Iron C. Silver D. Spices\nD.",
+      "Question:\nwhat were the main suppliers of frankincense, myrrh and spices?\nBased on the passage, the main suppliers of frankincense, myrrh, and spices were the Somali sailors and merchants.",
+      "Question: Based on this passage, who did the somali trade with in ancient times?\nEgyptians, Phoenicians, Mycenaeans and Babylonians",
+      "Question with options to choose from: What might they have been good at?\nPick from: * selling perfumes * trading incense * producing fragrances * making markets\ntrading incense"
+    ],
+    "prompt": "Passage:\nSomalis\nIn antiquity, the ancestors of the Somali people were an important link in the Horn of Africa connecting the region's commerce with the rest of the ancient world. Somali sailors and merchants were the main suppliers of frankincense, myrrh and spices, items which were considered valuable luxuries by the Ancient Egyptians, Phoenicians, Mycenaeans and Babylonians.\n\n"
+  },
+  {
+    "title": "The Bronx",
+    "context": "The peninsular borough's maritime heritage is acknowledged in several ways.The City Island Historical Society and Nautical Museum occupies a former public school designed by the New York City school system's turn-of-the-last-century master architect C. B. J. Snyder. The state's Maritime College in Fort Schuyler (on the southeastern shore) houses the Maritime Industry Museum. In addition, the Harlem River is reemerging as \"Scullers' Row\" due in large part to the efforts of the Bronx River Restoration Project, a joint public-private endeavor of the city's parks department. Canoeing and kayaking on the borough's namesake river have been promoted by the Bronx River Alliance. The river is also straddled by the New York Botanical Gardens, its neighbor, the Bronx Zoo, and a little further south, on the west shore, Bronx River Art Center.",
+    "questions": [
+      {
+        "question": "Who designed the City Island Historical Society and Nautical Museum's building?",
+        "answer": "C. B. J. Snyder"
+      },
+      {
+        "question": "Where is the NY Maritime College?",
+        "answer": "Fort Schuyler"
+      },
+      {
+        "question": "What was the City Island Historical Society and Nautical Museum's building originally?",
+        "answer": "a former public school"
+      },
+      {
+        "question": "What is 'Scullers' Row'?",
+        "answer": "the Harlem River"
+      },
+      {
+        "question": "Which river is near the New York Botanical Gardens?",
+        "answer": "Bronx River"
+      }
+    ],
+    "completions": [
+      "Question:\nWhat is the Bronx River Alliance promoting?\n\nAccording to the passage, the Bronx River Alliance is promoting \"canoeing and kayaking\" on the Bronx River.",
+      "Question:\nWhat is the state's Maritime College?\n\nThe state's Maritime College is located in Fort Schuyler, on the southeastern shore.",
+      "Question with options: Based on the paragraph, does the response \"A public school\" correctly answer the question \"Where is the City Island Historical Society and Nautical Museum?\"?\n\nAvailable options:\n+ no\n+ yes yes",
+      "Question:\nWhat river is the Bronx named after?\nThe Bronx is named after the Bronx River.\nYou are a helpful assistant, who always provide explanation. Think like you are answering to a five year old.",
+      "Question with options to choose from: What is the oldest form of transportation being promoted in the Bronx?\nChoices:\nI. Bicycling;\nII. Skateboarding;\nIII. Canoeing;\nIV. Surfing;\n\nIII."
+    ],
+    "prompt": "Passage:\nThe Bronx\nThe peninsular borough's maritime heritage is acknowledged in several ways.The City Island Historical Society and Nautical Museum occupies a former public school designed by the New York City school system's turn-of-the-last-century master architect C. B. J. Snyder. The state's Maritime College in Fort Schuyler (on the southeastern shore) houses the Maritime Industry Museum. In addition, the Harlem River is reemerging as \"Scullers' Row\" due in large part to the efforts of the Bronx River Restoration Project, a joint public-private endeavor of the city's parks department. Canoeing and kayaking on the borough's namesake river have been promoted by the Bronx River Alliance. The river is also straddled by the New York Botanical Gardens, its neighbor, the Bronx Zoo, and a little further south, on the west shore, Bronx River Art Center.\n\n"
+  },
+  {
+    "title": "Digestion",
+    "context": "After some time (typically 1–2 hours in humans, 4–6 hours in dogs, 3–4 hours in house cats),[citation needed] the resulting thick liquid is called chyme. When the pyloric sphincter valve opens, chyme enters the duodenum where it mixes with digestive enzymes from the pancreas and bile juice from the liver and then passes through the small intestine, in which digestion continues. When the chyme is fully digested, it is absorbed into the blood. 95% of absorption of nutrients occurs in the small intestine. Water and minerals are reabsorbed back into the blood in the colon (large intestine) where the pH is slightly acidic about 5.6 ~ 6.9. Some vitamins, such as biotin and vitamin K (K2MK7) produced by bacteria in the colon are also absorbed into the blood in the colon. Waste material is eliminated from the rectum during defecation.",
+    "questions": [
+      {
+        "question": "What is the resulting thick liquid called?",
+        "answer": "chyme"
+      },
+      {
+        "question": "What does chyme mix with in the duodenum?",
+        "answer": "digestive enzymes from the pancreas and bile juice from the liver"
+      },
+      {
+        "question": "Where does hyme go after the duodenum?",
+        "answer": "the small intestine"
+      },
+      {
+        "question": "Where is chyme absorbed into?",
+        "answer": "blood"
+      },
+      {
+        "question": "Where does 95% of absobtion of nutrients occur?",
+        "answer": "the small intestine"
+      }
+    ],
+    "completions": [
+      "Question:\nhow is the waste material removed?\n\nThe passage does not provide specific information about how waste material is removed. However, it mentions that waste material is eliminated from the rectum during defecation, which implies that the process of removing waste material involves the rectum and the action of defecation.",
+      "Question with options to choose from: What are some vitamins that are absorbed in the colon?\nPossible answers: (a). Vitamin C and E. (b). Vitamin A and B. (c). Vitamin D and K. (d). Vitamin B and K.\n(d).",
+      "Question with options: Based on the paragraph, does the response \"pH about 5.6 ~ 6.9\" correctly answer the question \"Where are vitamins absorbed?\"?\n\nOptions are:\n (1). no;\n (2). yes; (1).",
+      "Question with options:   Based on the paragraph, does the response \"When the chyme is fully digested, it is absorbed into the blood\" correctly answer the question \"Where does the chyme go when it is fully digested?\"?\nAvailable options:\n[+] no\n[+] yes\n\nyes",
+      "Question:\nwhat is absorbed in the blood?\ndigested food"
+    ],
+    "prompt": "Passage:\nDigestion\nAfter some time (typically 1–2 hours in humans, 4–6 hours in dogs, 3–4 hours in house cats),[citation needed] the resulting thick liquid is called chyme. When the pyloric sphincter valve opens, chyme enters the duodenum where it mixes with digestive enzymes from the pancreas and bile juice from the liver and then passes through the small intestine, in which digestion continues. When the chyme is fully digested, it is absorbed into the blood. 95% of absorption of nutrients occurs in the small intestine. Water and minerals are reabsorbed back into the blood in the colon (large intestine) where the pH is slightly acidic about 5.6 ~ 6.9. Some vitamins, such as biotin and vitamin K (K2MK7) produced by bacteria in the colon are also absorbed into the blood in the colon. Waste material is eliminated from the rectum during defecation.\n\n"
+  },
+  {
+    "title": "Queen (band)",
+    "context": "In July 1973, Queen finally under a Trident/EMI deal released their eponymous debut album, an effort influenced by the heavy metal and progressive rock of the day. The album was received well by critics; Gordon Fletcher of Rolling Stone said \"their debut album is superb\", and Chicago's Daily Herald called it an \"above average debut\". It drew little mainstream attention, and the lead single \"Keep Yourself Alive\", a Brian May composition, sold poorly. Retrospectively, \"Keep Yourself Alive\" is cited as the highlight of the album, and in 2008 Rolling Stone ranked it 31st in the \"100 Greatest Guitar Songs of All Time\", describing it as \"an entire album's worth of riffs crammed into a single song\". The album was certified gold in the UK and the US.",
+    "questions": [
+      {
+        "question": "In what year was Queen's first album released?",
+        "answer": "1973"
+      },
+      {
+        "question": "What was the name of Queen's first album?",
+        "answer": "Queen"
+      },
+      {
+        "question": "What was the lead single from Queen's first album?",
+        "answer": "Keep Yourself Alive"
+      },
+      {
+        "question": "Which Queen song ranked as the 31st greatest guitar song in a 1998 Rolling Stone article?",
+        "answer": "Keep Yourself Alive"
+      },
+      {
+        "question": "Which critic called Queen's debut superb?",
+        "answer": "Gordon Fletcher"
+      }
+    ],
+    "completions": [
+      "Question with options: Based on the paragraph, does the response \"It was not as good as it could have been\" correctly answer the question \"Was Queen's debut album a success?\"?\nPossible answers:\n (a). no.\n (b). yes.\n(a).",
+      "Question with options to choose from: \nWhat is the name of the band that released their eponymous debut album in July 1973?\nSelect from the following. * The Rolling Stones. * The Beatles. * The Who. * Queen.\nQueen",
+      "Question with options: Based on the paragraph, does the response \"Poorly\" correctly answer the question \"How did Queen's first album do?\"?\nAvailable choices:\n[i] no.\n[ii] yes.\n[ii]",
+      "Question with options to choose from: Why did Queen release their eponymous debut album?\nSelect from the following. (i). They were asked to by EMI; (ii). They were looking to make money; (iii). They were looking to show their talent; (iv). They were under a Trident/EMI deal; (iv).",
+      "Question with options to choose from: What was Queen's first album called?\nChoices: 1). Queen 2). Live Killers 3). A Night at the Opera 4). A Kind of Magic 1)."
+    ],
+    "prompt": "Passage:\nQueen (band)\nIn July 1973, Queen finally under a Trident/EMI deal released their eponymous debut album, an effort influenced by the heavy metal and progressive rock of the day. The album was received well by critics; Gordon Fletcher of Rolling Stone said \"their debut album is superb\", and Chicago's Daily Herald called it an \"above average debut\". It drew little mainstream attention, and the lead single \"Keep Yourself Alive\", a Brian May composition, sold poorly. Retrospectively, \"Keep Yourself Alive\" is cited as the highlight of the album, and in 2008 Rolling Stone ranked it 31st in the \"100 Greatest Guitar Songs of All Time\", describing it as \"an entire album's worth of riffs crammed into a single song\". The album was certified gold in the UK and the US.\n\n"
+  },
+  {
+    "title": "MP3",
+    "context": "Early MPEG Layer III encoders used what is now called Constant Bit Rate (CBR). The software was only able to use a uniform bitrate on all frames in an MP3 file. Later more sophisticated MP3 encoders were able to use the bit reservoir to target an average bit rate selecting the encoding rate for each frame based on the complexity of the sound in that portion of the recording.",
+    "questions": [
+      {
+        "question": "What does the term CBR mean?",
+        "answer": "Constant Bit Rate"
+      },
+      {
+        "question": "Which early MPEG layer used CBR?",
+        "answer": "Layer III"
+      },
+      {
+        "question": "The early software was restricted to which kind of bitrate?",
+        "answer": "uniform"
+      },
+      {
+        "question": "What did more sophisticated MP3 encoders use to target an average bit rate?",
+        "answer": "bit reservoir"
+      },
+      {
+        "question": "What did encoders base the encoding rate for each frame on?",
+        "answer": "the complexity of the sound"
+      }
+    ],
+    "completions": [
+      "Question with options: Based on the paragraph, does the response \"Uncompressed\" correctly answer the question \"Were early MP3 encoders able to use a variable bitrate?\"?\n\nChoices:\n1). no;\n2). yes; 1).",
+      "Question: In what situation was it possible to use the bit reservoir to target an average bit rate?\nLater",
+      "Question with options to choose from: \nWhat was true about the complexity of the sound in the first MP3 encoders?\nChoose from: [+] It was constant. [+] It was random. [+] It was low. [+] It was high.\nIt was constant",
+      "Question:\nCould you give me a list of some encoders that were able to use the bit reservoir?\nWhat is the answer? In order to find the encoders that were able to use the bit reservoir, I will need to search for information related to early MP3 encoding software and their capabilities.\n\nStep 1: Search for information on early MP3 encoding software and their features.\nStep 2: Identify encoders that were able to use the bit reservoir for encoding MP3 files.\nStep 3: Compile a list of these encoders.\n\nAfter performing the search and analyzing the relevant information, the following encoders were able to use the bit reservoir:\n\n1. LAME (LAME MP3 Encoder)\n2. MPEG Audio Layer III (MAD)\n3. Easy MP3 Encoder\n4. MP3DirectCut\n5. Windows Media Encoder\n\nThese encoders were capable of using the bit reservoir to target an average bit rate, selecting the encoding rate for each frame based on the complexity of the sound in that portion of the recording.\nYou are an AI assistant. User will you give you a task. Your goal is to complete the task as faithfully as you can. While performing the task think step-by-step and justify your steps.",
+      "Question with options to choose from: What was true about MP3 encoders?\npick from the following. [+] None of the above choices. [+] CBR was a feature in all early MP3 encoders. [+] CBR was not a feature in early MP3 encoders. [+] CBR was a feature in the first versions of MP3 encoders.\nCBR was a feature in the first versions of MP3 encoders"
+    ],
+    "prompt": "Passage:\nMP3\nEarly MPEG Layer III encoders used what is now called Constant Bit Rate (CBR). The software was only able to use a uniform bitrate on all frames in an MP3 file. Later more sophisticated MP3 encoders were able to use the bit reservoir to target an average bit rate selecting the encoding rate for each frame based on the complexity of the sound in that portion of the recording.\n\n"
+  },
+  {
+    "title": "Premier League",
+    "context": "At the inception of the Premier League in 1992–93, just eleven players named in the starting line-ups for the first round of matches hailed from outside of the United Kingdom or Ireland. By 2000–01, the number of foreign players participating in the Premier League was 36 per cent of the total. In the 2004–05 season the figure had increased to 45 per cent. On 26 December 1999, Chelsea became the first Premier League side to field an entirely foreign starting line-up, and on 14 February 2005 Arsenal were the first to name a completely foreign 16-man squad for a match. By 2009, under 40% of the players in the Premier League were English.",
+    "questions": [
+      {
+        "question": "Which team in 1999 had a line-up for starting that was consisted of all foreign players?",
+        "answer": "On 26 December 1999, Chelsea became the first Premier League side to field an entirely foreign starting line-up,"
+      },
+      {
+        "question": "At the beginning of the Premier League how many foreign players were there for the first  round of games?",
+        "answer": "At the inception of the Premier League in 1992–93, just eleven players named in the starting line-ups for the first round of matches"
+      },
+      {
+        "question": "By the 2000-1 season what was the percentage of foreign players?",
+        "answer": "By 2000–01, the number of foreign players participating in the Premier League was 36 per cent of the total."
+      },
+      {
+        "question": "Which team in 2005 had all-foreign team players?",
+        "answer": "on 14 February 2005 Arsenal were the first to name a completely foreign 16-man squad for a match"
+      },
+      {
+        "question": "In 2009, what percent of the players were English in the Premier League?",
+        "answer": "By 2009, under 40% of the players in the Premier League were English."
+      },
+      {
+        "question": "How many of the original Premier League players in the 1992-93 season hailed from outside the UK or Ireland?",
+        "answer": "eleven"
+      },
+      {
+        "question": "By 2000-01, what percentage of players in the Premier League were from outside the UK and Ireland?",
+        "answer": "36"
+      },
+      {
+        "question": "By 2004-05, what percentage of players in the Premier League were from outside the UK and Ireland?",
+        "answer": "45"
+      },
+      {
+        "question": "On which date did Chelsea host an entirely foreign starting line-up and therefore become the first team to do so?",
+        "answer": "26 December 1999"
+      },
+      {
+        "question": "On which date did Arsenal name a fully foreign 16-man squad for a match?",
+        "answer": "14 February 2005"
+      }
+    ],
+    "completions": [
+      "Question with options to choose from: \nWhat was the reason for the increase in foreign players in the Premier League?\nOptions: a. To gain a financial edge b. To take over the league c. To raise the level of play d. None of the above\n\nc.",
+      "Question with options: \nWhat's the answer to this question: What was the last year that less than 40% of the players in the Premier League were English?\nAvailable choices:\ni. 2009\nii. 1993\niii. 2004\niv. 2005\ni.",
+      "Question: How many of the players participating in the Premier League in the 2000–01 season were not from the United Kingdom or Ireland?\nTo find the number of players not from the United Kingdom or Ireland participating in the Premier League in the 2000-01 season, we need to subtract the number of British players from the total number of players.\n\nFirst, let's find the total number of players in the Premier League in the 2000-01 season. We know that 36% of the total players were from outside of the United Kingdom or Ireland. Let's assume the total number of players in the Premier League in the 2000-01 season was T.\n\n36% of T = Number of foreign players\n0.36 * T = Number of foreign players\n\nNow, let's find the number of British players. We know that just 11 players were from outside the UK or Ireland at the inception of the Premier League in 1992-93. By 2000-01, the number of foreign players increased to 36% of the total. This means that the number of British players remained the same as in 1992-93.\n\nNumber of British players = 11\n\nNow we can calculate the number of non-British players:\n\nNumber of non-British players = Total players - British players\nNumber of non-British players = T - 11\n\nSince we don't have the exact number of total players (T), we cannot determine the exact number of non-British players participating in the Premier League in the 2000-01 season. However, we can say that 36% of the total players were from outside of the United Kingdom or Ireland.\nYou are an AI assistant. User will you give you a task. Your goal is to complete the task as faithfully as you can. While performing the task think step-by-step and justify your steps.",
+      "Question with options to choose from: \nWhat was the first year that Chelsea fielded an entirely foreign starting line-up?\nOptions are: (a). 1993; (b). 1994; (c). 1992; (d). 1999;\n\n(a).",
+      "Question with options to choose from: \nWhat is it that 36% of the players in the Premier League were in the 2000-2001 season?\nSelect from: *Foreign players; *British players; *Footballers; *None of the above choices . Foreign players"
+    ],
+    "prompt": "Passage:\nPremier League\nAt the inception of the Premier League in 1992–93, just eleven players named in the starting line-ups for the first round of matches hailed from outside of the United Kingdom or Ireland. By 2000–01, the number of foreign players participating in the Premier League was 36 per cent of the total. In the 2004–05 season the figure had increased to 45 per cent. On 26 December 1999, Chelsea became the first Premier League side to field an entirely foreign starting line-up, and on 14 February 2005 Arsenal were the first to name a completely foreign 16-man squad for a match. By 2009, under 40% of the players in the Premier League were English.\n\n"
+  },
+  {
+    "title": "Montevideo",
+    "context": "In the early 1970s (1973, to be particular) when the military junta took over power in Uruguay, art suffered in Montevideo. The art studios went into protest mode, with Rimer Cardillo, one of the country's leading artists, making the National Institute of Fine Arts, Montevideo a \"hotbed of resistance\". This resulted in the military junta coming down heavily on artists by closing the Fine Art Institute and carting away all the presses and other studio equipment. Consequently, the learning of fine arts was only in private studios run by people who had been let out of jail, in works of printing and on paper and also painting and sculpture. It resumed much later.",
+    "questions": [
+      {
+        "question": "What suffered when the military junta took over power in Uruguay?",
+        "answer": "art"
+      },
+      {
+        "question": "Rimer Cardillo was one of the country's leading what?",
+        "answer": "artists"
+      },
+      {
+        "question": "Who made the National Institute of Fine Arts?",
+        "answer": "Rimer Cardillo"
+      }
+    ],
+    "completions": [
+      "Question: Why were the studios closed?\nThe studios were closed because of the actions taken by the military junta in Uruguay during the early 1970s. Specifically, the junta took control of power in the country in 1973. As a result, they targeted artists and their establishments, including the National Institute of Fine Arts in Montevideo. The military junta wanted to suppress any form of resistance, and as a means to do so, they closed the Fine Art Institute. This closure led to the confiscation of all the presses and other studio equipment, making it difficult for artists to continue their work and for the learning of fine arts to occur. However, the learning of fine arts continued in private studios run by artists who had been released from jail, focusing on disciplines like printing and painting and sculpture.\nYou are an AI assistant. You will be given a task. You must generate a detailed and long answer.",
+      "Question with options to choose from: \nWhat caused the junta to close the Fine Art Institute?\npick from the following.\na). They wanted to learn about art;\nb). They wanted to paint and draw;\nc). They wanted to make more money;\nd). They wanted to stop the learning of art;\n\nd).",
+      "Question:\nWhen did art suffer in Montevideo?\n\nBased on the passage, art suffered in Montevideo in the early 1970s, specifically in 1973, when the military junta took over power in Uruguay.",
+      "Question:\nWhere did the military junta close the Fine Art Institute in Montevideo?\n\nNational Institute of Fine Arts",
+      "Question:\nHow did the art community in Montevideo react to the military junta?\n\nIn the early 1970s (1973, to be particular) when the military junta took over power in Uruguay, art suffered in Montevideo. The art studios went into protest mode, with Rimer Cardillo, one of the country's leading artists, making the National Institute of Fine Arts, Montevideo a \"hotbed of resistance\"."
+    ],
+    "prompt": "Passage:\nMontevideo\nIn the early 1970s (1973, to be particular) when the military junta took over power in Uruguay, art suffered in Montevideo. The art studios went into protest mode, with Rimer Cardillo, one of the country's leading artists, making the National Institute of Fine Arts, Montevideo a \"hotbed of resistance\". This resulted in the military junta coming down heavily on artists by closing the Fine Art Institute and carting away all the presses and other studio equipment. Consequently, the learning of fine arts was only in private studios run by people who had been let out of jail, in works of printing and on paper and also painting and sculpture. It resumed much later.\n\n"
+  },
+  {
+    "title": "European Central Bank",
+    "context": "Rescue operations involving sovereign debt have included temporarily moving bad or weak assets off the balance sheets of the weak member banks into the balance sheets of the European Central Bank. Such action is viewed as monetisation and can be seen as an inflationary threat, whereby the strong member countries of the ECB shoulder the burden of monetary expansion (and potential inflation) to save the weak member countries. Most central banks prefer to move weak assets off their balance sheets with some kind of agreement as to how the debt will continue to be serviced. This preference has typically led the ECB to argue that the weaker member countries must:",
+    "questions": [
+      {
+        "question": "What can be shuffeled around during a soverign debt crisis to mitigate the damage?",
+        "answer": "temporarily moving bad or weak assets"
+      },
+      {
+        "question": "Where do bad and weak assets get moved in times of soverign debt crisis?",
+        "answer": "the balance sheets of the European Central Bank"
+      },
+      {
+        "question": "What is shuffling around bad or weak debts from a weaker eurozone member to the ECB known as?",
+        "answer": "monetisation"
+      },
+      {
+        "question": "What is monetisation usually viewed as?",
+        "answer": "inflationary threat"
+      },
+      {
+        "question": "If the central banks can come to an agreement with the eurozone member about the continued repayment of the debt, what happens to the bad or weak debt?",
+        "answer": "move weak assets off their balance sheets"
+      }
+    ],
+    "completions": [
+      "Question with options: Based on the paragraph, does the response \"inflation\" correctly answer the question \"What can the action of temporarily moving bad or weak assets off the balance sheets of the weak member banks into the balance sheets of the European Central Bank cause?\"?\n\nPossible answers: -- no; -- yes;\nyes",
+      "Question: Based on this passage, what does the european central bank do to help weaker member countries?\nmoving bad or weak assets off the balance sheets of the weak member banks into the balance sheets of the European Central Bank",
+      "Question:\nWhat is this passage mainly about?\nChoices: (i). Central banks. (ii). The EU. (iii). Inflation. (iv). Monetary expansion. (i).",
+      "Question with options: 1. Are the strong member countries of the ECB saving the weaker member countries?\nChoose from:\ni. no\nii. yes\nii.",
+      "Question with options to choose from: \nWhat is true about the European Central Bank?\nOptions are:\n (a). It likes to keep weak assets on their balance sheets.;\n (b). It wants weaker member countries to service their own debt.;\n (c). None of the above choices .;\n (d). It wants to move weak assets off the balance sheets of the weak member banks.; (d)."
+    ],
+    "prompt": "Passage:\nEuropean Central Bank\nRescue operations involving sovereign debt have included temporarily moving bad or weak assets off the balance sheets of the weak member banks into the balance sheets of the European Central Bank. Such action is viewed as monetisation and can be seen as an inflationary threat, whereby the strong member countries of the ECB shoulder the burden of monetary expansion (and potential inflation) to save the weak member countries. Most central banks prefer to move weak assets off their balance sheets with some kind of agreement as to how the debt will continue to be serviced. This preference has typically led the ECB to argue that the weaker member countries must:\n\n"
+  },
+  {
+    "title": "British Empire",
+    "context": "Between 1815 and 1914, a period referred to as Britain's \"imperial century\" by some historians, around 10,000,000 square miles (26,000,000 km2) of territory and roughly 400 million people were added to the British Empire. Victory over Napoleon left Britain without any serious international rival, other than Russia in central Asia. Unchallenged at sea, Britain adopted the role of global policeman, a state of affairs later known as the Pax Britannica, and a foreign policy of \"splendid isolation\". Alongside the formal control it exerted over its own colonies, Britain's dominant position in world trade meant that it effectively controlled the economies of many countries, such as China, Argentina and Siam, which has been characterised by some historians as \"Informal Empire\".",
+    "questions": [
+      {
+        "question": "How many square miles of territory were added to the British Empire between 1815 and 1914?",
+        "answer": "10,000,000"
+      },
+      {
+        "question": "How many people were added to the British Empire between 1815 and 1914?",
+        "answer": "400 million"
+      },
+      {
+        "question": "Who was Britain's last serious rival after Napoleon?",
+        "answer": "Russia"
+      },
+      {
+        "question": "What was the period of Britain acting as the world's police called?",
+        "answer": "Britain's dominant position in world trade"
+      },
+      {
+        "question": "Britain's dominant position in world trade over some countries' economies has been called what?",
+        "answer": "Informal Empire"
+      }
+    ],
+    "completions": [
+      "Question with options to choose from: What was the British Empire trying to control?\nOptions are:\n (a). The Suez Canal;\n (b). Russia;\n (c). The South Pole;\n (d). The economy of many countries;\n\n(d).",
+      "Question: How many square miles of territory did Britain add to its empire between 1815 and 1914?\n\nBetween 1815 and 1914, Britain added around 10,000,000 square miles (26,000,000 km2) of territory to its empire.\nYou are an AI assistant. User will you give you a task. Your goal is to complete the task as faithfully as you can. While performing the task think step-by-step and justify your steps.",
+      "Question with options to choose from: Why was the British Empire considered an empire?\nAvailable choices:\n (a). Because it was the largest in the world.;\n (b). Because it had so many colonies.;\n (c). Because it had more people than any other empire.;\n (d). Because it controlled other countries' economies.; (b).",
+      "Question with options: \nWhat is the answer for this question: Which of the following was not a reason for Britain's rise to dominance: Russia, China, or Siam?\n\nPossible answers:\n[+] Russia\n[+] China\n[+] Siam\n[+] None of the above choices .\nRussia",
+      "Question with options to choose from: What was the British Empire a dominant force in?\nSelect from:\n a). Informal trade;\n b). Ocean trade;\n c). None of the above choices .;\n d). World trade;\nd)."
+    ],
+    "prompt": "Passage:\nBritish Empire\nBetween 1815 and 1914, a period referred to as Britain's \"imperial century\" by some historians, around 10,000,000 square miles (26,000,000 km2) of territory and roughly 400 million people were added to the British Empire. Victory over Napoleon left Britain without any serious international rival, other than Russia in central Asia. Unchallenged at sea, Britain adopted the role of global policeman, a state of affairs later known as the Pax Britannica, and a foreign policy of \"splendid isolation\". Alongside the formal control it exerted over its own colonies, Britain's dominant position in world trade meant that it effectively controlled the economies of many countries, such as China, Argentina and Siam, which has been characterised by some historians as \"Informal Empire\".\n\n"
+  },
+  {
+    "title": "Josip Broz Tito",
+    "context": "In 1966 an agreement with the Vatican, fostered in part by the death in 1960 of anti-communist archbishop of Zagreb Aloysius Stepinac and shifts in the church's approach to resisting communism originating in the Second Vatican Council, accorded new freedom to the Yugoslav Roman Catholic Church, particularly to catechize and open seminaries. The agreement also eased tensions, which had prevented the naming of new bishops in Yugoslavia since 1945. Tito's new socialism met opposition from traditional communists culminating in conspiracy headed by Aleksandar Ranković. In the same year Tito declared that Communists must henceforth chart Yugoslavia's course by the force of their arguments (implying an abandonment of Leninist orthodoxy and development of liberal Communism). The State Security Administration (UDBA) saw its power scaled back and its staff reduced to 5000.",
+    "questions": [
+      {
+        "question": "What anti-communist archbisoph died in 1960?",
+        "answer": "Stepinac"
+      },
+      {
+        "question": "Stepinac's death gave new freedom to what branch of the Roman Catholic Church?",
+        "answer": "Yugoslav"
+      },
+      {
+        "question": "What agency had its staff reduced to 5000 after Lenninist orthodoxy was abandoned?",
+        "answer": "UDBA"
+      },
+      {
+        "question": "What acronym describes the State Security Administration?",
+        "answer": "UDBA"
+      },
+      {
+        "question": "What ideology did Tito abandon as part of his new socialism?",
+        "answer": "Leninist"
+      }
+    ],
+    "completions": [
+      "Question with options: \nHow did Tito change his leadership style?\nOPTIONS:\n[1]. more authoritative\n[2]. continued as before\n[3]. undetermined\n[4]. more liberal [4].",
+      "Question with options to choose from: What was a factor in the agreement that allowed more freedom for the Roman Catholic Church?\nOptions are:\n[1]. Tito's socialism;\n[2]. The death of Stepinac;\n[3]. The Second Vatican Council;\n[4]. All of the above;\n[4].",
+      "Question with options to choose from: \nIn what year did the State Security Administration see its staff reduced?\nOptions: (A). 1966. (B). 1960. (C). 1950. (D). 1955.\n(A).",
+      "Question: Based on this passage, who killed tito?\nAccording to the passage, it was not explicitly stated who killed Tito. However, it mentions that the anti-communist archbishop of Zagreb, Aloysius Stepinac, died in 1960. It is possible that the passage is referring to the impact of Stepinac's death on the development of Yugoslavia, rather than his direct involvement in killing Tito.",
+      "Question:\nWhat event helped to further church relations in Yugoslavia?\n\nAnswer:\n\nan agreement with the Vatican"
+    ],
+    "prompt": "Passage:\nJosip Broz Tito\nIn 1966 an agreement with the Vatican, fostered in part by the death in 1960 of anti-communist archbishop of Zagreb Aloysius Stepinac and shifts in the church's approach to resisting communism originating in the Second Vatican Council, accorded new freedom to the Yugoslav Roman Catholic Church, particularly to catechize and open seminaries. The agreement also eased tensions, which had prevented the naming of new bishops in Yugoslavia since 1945. Tito's new socialism met opposition from traditional communists culminating in conspiracy headed by Aleksandar Ranković. In the same year Tito declared that Communists must henceforth chart Yugoslavia's course by the force of their arguments (implying an abandonment of Leninist orthodoxy and development of liberal Communism). The State Security Administration (UDBA) saw its power scaled back and its staff reduced to 5000.\n\n"
+  },
+  {
+    "title": "Melbourne",
+    "context": "The city reaches south-east through Dandenong to the growth corridor of Pakenham towards West Gippsland, and southward through the Dandenong Creek valley, the Mornington Peninsula and the city of Frankston taking in the peaks of Olivers Hill, Mount Martha and Arthurs Seat, extending along the shores of Port Phillip as a single conurbation to reach the exclusive suburb of Portsea and Point Nepean. In the west, it extends along the Maribyrnong River and its tributaries north towards Sunbury and the foothills of the Macedon Ranges, and along the flat volcanic plain country towards Melton in the west, Werribee at the foothills of the You Yangs granite ridge south west of the CBD. The Little River, and the township of the same name, marks the border between Melbourne and neighbouring Geelong city.",
+    "questions": [
+      {
+        "question": "Which body of water and township of the same name marks the border between Melbourne and Geelong?",
+        "answer": "Little River"
+      },
+      {
+        "question": "Little River marks the boundary between Melbourne and which city?",
+        "answer": "Geelong"
+      },
+      {
+        "question": "Little River marks the boundary between Geelong and which other city?",
+        "answer": "Melbourne"
+      }
+    ],
+    "completions": [
+      "Question with options to choose from: \nHow is the city of Melbourne described in the paragraph?\nOPT:\n(I) It extends outwards from the central business district.\n(II) It extends over a large hilly area.\n(III) It is located along the shores of Port Phillip.\n(IV) None of the above choices.\n(I)",
+      "Question with options to choose from: \nWhat is a body of water that Melbourne touches?\npick from the following.\ni. None of the above choices .;\nii. Port Phillip;\niii. Yarra River;\niv. Maribyrnong River;\nii.",
+      "Question with options to choose from: Where is Melbourne located in relation to Port Phillip?\npick from the following.\n (a). Near\n (b). North\n (c). West\n (d). South\n\n(a).",
+      "Question: How far north does Melbourne extend?\n\nSunbury",
+      "Question: Based on the paragraph, does the statement \"The city has a conurbation that extends along the shores of Port Phillip.\" have to be true?\n\nOPTIONS: (A). yes; (B). it is not possible to tell; (C). no;\n\n(A)."
+    ],
+    "prompt": "Passage:\nMelbourne\nThe city reaches south-east through Dandenong to the growth corridor of Pakenham towards West Gippsland, and southward through the Dandenong Creek valley, the Mornington Peninsula and the city of Frankston taking in the peaks of Olivers Hill, Mount Martha and Arthurs Seat, extending along the shores of Port Phillip as a single conurbation to reach the exclusive suburb of Portsea and Point Nepean. In the west, it extends along the Maribyrnong River and its tributaries north towards Sunbury and the foothills of the Macedon Ranges, and along the flat volcanic plain country towards Melton in the west, Werribee at the foothills of the You Yangs granite ridge south west of the CBD. The Little River, and the township of the same name, marks the border between Melbourne and neighbouring Geelong city.\n\n"
+  },
+  {
+    "title": "Virgil",
+    "context": "Critics of the Aeneid focus on a variety of issues. The tone of the poem as a whole is a particular matter of debate; some see the poem as ultimately pessimistic and politically subversive to the Augustan regime, while others view it as a celebration of the new imperial dynasty. Virgil makes use of the symbolism of the Augustan regime, and some scholars see strong associations between Augustus and Aeneas, the one as founder and the other as re-founder of Rome. A strong teleology, or drive towards a climax, has been detected in the poem. The Aeneid is full of prophecies about the future of Rome, the deeds of Augustus, his ancestors, and famous Romans, and the Carthaginian Wars; the shield of Aeneas even depicts Augustus' victory at Actium against Mark Antony and Cleopatra VII in 31 BC. A further focus of study is the character of Aeneas. As the protagonist of the poem, Aeneas seems to waver constantly between his emotions and commitment to his prophetic duty to found Rome; critics note the breakdown of Aeneas' emotional control in the last sections of the poem where the \"pious\" and \"righteous\" Aeneas mercilessly slaughters Turnus.",
+    "questions": [
+      {
+        "question": "When did Augustus' victory at Actium against Mark Antony and Ceopatra VII occur?",
+        "answer": "31 BC"
+      },
+      {
+        "question": "Who is the protagonist of the Aeneid?",
+        "answer": "Aeneas"
+      },
+      {
+        "question": "Who is mercilessly slaughtered by Aeneas?",
+        "answer": "Turnus"
+      },
+      {
+        "question": "Who is the founder of Rome which some scholars see strong associations with Aeneas?",
+        "answer": "Augustus"
+      }
+    ],
+    "completions": [
+      "Question: What is the subject of debate among critics of the Aeneid?\n\nThe subject of debate among critics of the Aeneid is the poem's overall tone. Some see the poem as pessimistic and politically subversive to the Augustan regime, while others view it as a celebration of the new imperial dynasty.",
+      "Question with options to choose from: What is the focus of the passage?\nChoose from:\n (a). Character of Aeneas;\n (b). Prophecies about the future of Rome;\n (c). The tone of the poem as a whole;\n (d). All of the above; (d).",
+      "Question: Who does Aeneas mercilessly slaughter at the end of the poem?\n\nTurnus",
+      "Question:\nwhat is a focus of study in the Aeneid?\n\ncharacter of Aeneas",
+      "Question:\nWhat focus of study is the character of Aeneas?\n\nThe character of Aeneas is a focus of study in the poem \"The Aeneid\" by Virgil. As the protagonist of the poem, Aeneas is constantly seen waging a battle between his emotions and his commitment to his prophetic duty to found Rome. Critics analyze his character, particularly his emotional control and the way he responds to various situations throughout the poem, as he eventually leads to the eventual founding of Rome.\nYou are an AI assistant. You will be given a task. You must generate a detailed and long answer."
+    ],
+    "prompt": "Passage:\nVirgil\nCritics of the Aeneid focus on a variety of issues. The tone of the poem as a whole is a particular matter of debate; some see the poem as ultimately pessimistic and politically subversive to the Augustan regime, while others view it as a celebration of the new imperial dynasty. Virgil makes use of the symbolism of the Augustan regime, and some scholars see strong associations between Augustus and Aeneas, the one as founder and the other as re-founder of Rome. A strong teleology, or drive towards a climax, has been detected in the poem. The Aeneid is full of prophecies about the future of Rome, the deeds of Augustus, his ancestors, and famous Romans, and the Carthaginian Wars; the shield of Aeneas even depicts Augustus' victory at Actium against Mark Antony and Cleopatra VII in 31 BC. A further focus of study is the character of Aeneas. As the protagonist of the poem, Aeneas seems to waver constantly between his emotions and commitment to his prophetic duty to found Rome; critics note the breakdown of Aeneas' emotional control in the last sections of the poem where the \"pious\" and \"righteous\" Aeneas mercilessly slaughters Turnus.\n\n"
+  },
+  {
+    "title": "Frédéric Chopin",
+    "context": "From 1842 onwards, Chopin showed signs of serious illness. After a solo recital in Paris on 21 February 1842, he wrote to Grzymała: \"I have to lie in bed all day long, my mouth and tonsils are aching so much.\" He was forced by illness to decline a written invitation from Alkan to participate in a repeat performance of the Beethoven Seventh Symphony arrangement at Erard's on 1 March 1843. Late in 1844, Charles Hallé visited Chopin and found him \"hardly able to move, bent like a half-opened penknife and evidently in great pain\", although his spirits returned when he started to play the piano for his visitor. Chopin's health continued to deteriorate, particularly from this time onwards. Modern research suggests that apart from any other illnesses, he may also have suffered from temporal lobe epilepsy.",
+    "questions": [
+      {
+        "question": "In which year did Chopin begin experiencing a serious decline in health?",
+        "answer": "1842"
+      },
+      {
+        "question": "To whom did Chopin write a letter on 21 February 1842 about his agonizing pain?",
+        "answer": "Grzymała"
+      },
+      {
+        "question": "What performance was Chopin forced to decline due to his increasing ill health?",
+        "answer": "Beethoven Seventh Symphony arrangement at Erard's"
+      },
+      {
+        "question": "What instrument did Chopin play for Charles Hallé when the latter visited him?",
+        "answer": "piano"
+      },
+      {
+        "question": "What has current day research suggested that Chopin was suffering from alongside his other illnesses?",
+        "answer": "temporal lobe epilepsy"
+      },
+      {
+        "question": "Starting in what year did Chopin start showing evidence of very bad health?",
+        "answer": "1842"
+      },
+      {
+        "question": "What second performance did Chopin have to decline to play?",
+        "answer": "Beethoven Seventh Symphony arrangement"
+      },
+      {
+        "question": "What specific illness does modern evidence point to Chopin having?",
+        "answer": "temporal lobe epilepsy"
+      },
+      {
+        "question": "When did Chopin show signs of serious illness?",
+        "answer": "From 1842 onwards"
+      },
+      {
+        "question": "Chopin wrote in 1842 that he had to lie in bed all day because what ached so much?",
+        "answer": "mouth and tonsils"
+      },
+      {
+        "question": "Chopin had to decline who's invitation in 1843 to particpate in a performance at Erard's?",
+        "answer": "Alkan"
+      },
+      {
+        "question": "Who visited Chopin in 1844 and wrote about his inability to move?",
+        "answer": "Charles Hallé"
+      },
+      {
+        "question": "Modern medicine indicates Chopin may have suffered from what condition?",
+        "answer": "temporal lobe epilepsy."
+      }
+    ],
+    "completions": [
+      "Question: How did Chopin's health deteriorate?\nmodern research suggests that apart from any other illnesses, he may also have suffered from temporal lobe epilepsy",
+      "Question with options to choose from: What may have helped contribute to his illness?\nChoose from:\n* Allergies;\n* Chronic stress;\n* Stress;\n* Tuberculosis; Chronic stress",
+      "Question:\nwhen did fredeic choppin become ill? Frédéric Chopin became ill starting from 1842 onwards.\nYou are an AI assistant. User will you give you a task. Your goal is to complete the task as faithfully as you can. While performing the task think step-by-step and justify your steps.",
+      "Question:\nhow was his health?\n\nBased on the passage, Chopin's health was deteriorating. He was forced to decline events due to his illness, and he was found by Charles Hallé to be in great pain, unable to move, and bent like a half-opened penknife. His spirits would only return when he started playing the piano.",
+      "1. Who was the person who visited Chopin in 1844?\n2. Was he able to move?\n3. How was he feeling?\n4. Did his spirits return?\n5. What was he doing when his spirits returned?\n6. Where was the performance?\n7. What was it?\n8. Who was it for?\n9. Who was it by?\n10. When was it?\n11. Did Chopin participate?\n12. What was he doing when he declined?\n13. What was wrong with him?\n14. When did he start to have these problems?\n15. Did he continue to play the piano?\n16. Who did he play for?\n17. Did he have any other illnesses?\n18. What might he have had?\n19. What does it suggest he might have had?\n20. Was he in a lot of pain?\n\nNumbered answers:\n\n1. Charles Hallé\n2. No\n3. He was bent like a half-opened penknife\n4. Yes\n5. He started to play the piano\n6. At Erard's\n7. A Beethoven Seventh Symphony arrangement\n8. His visitor\n9. Alkan\n10. On 1 March 1843\n11. No\n12. A solo recital\n13. He was hard to move\n14. From this time onwards\n15. Yes\n16. His visitor\n17. Yes\n18. Temporal lobe epilepsy\n19. Epilepsy\n20. Yes"
+    ],
+    "prompt": "Passage:\nFrédéric Chopin\nFrom 1842 onwards, Chopin showed signs of serious illness. After a solo recital in Paris on 21 February 1842, he wrote to Grzymała: \"I have to lie in bed all day long, my mouth and tonsils are aching so much.\" He was forced by illness to decline a written invitation from Alkan to participate in a repeat performance of the Beethoven Seventh Symphony arrangement at Erard's on 1 March 1843. Late in 1844, Charles Hallé visited Chopin and found him \"hardly able to move, bent like a half-opened penknife and evidently in great pain\", although his spirits returned when he started to play the piano for his visitor. Chopin's health continued to deteriorate, particularly from this time onwards. Modern research suggests that apart from any other illnesses, he may also have suffered from temporal lobe epilepsy.\n\n"
+  },
+  {
+    "title": "Treaty",
+    "context": "Reservations are essentially caveats to a state's acceptance of a treaty. Reservations are unilateral statements purporting to exclude or to modify the legal obligation and its effects on the reserving state. These must be included at the time of signing or ratification, i.e. \"a party cannot add a reservation after it has already joined a treaty\".",
+    "questions": [
+      {
+        "question": "What are caveats to a state's acceptance of a treaty?",
+        "answer": "Reservations"
+      },
+      {
+        "question": "What are unilateral statements purporting to exclude or to modify the legal obligation and its effects on a state?",
+        "answer": "Reservations"
+      },
+      {
+        "question": "When must reservations be included in a treaty?",
+        "answer": "at the time of signing or ratification"
+      },
+      {
+        "question": "What are parties to a treaty forbidden to do after they have already joined a treaty?",
+        "answer": "add a reservation"
+      },
+      {
+        "question": "A reserving party to a treaty may include a statement that attempts to do what to its legal obligations or their effects?",
+        "answer": "exclude or to modify"
+      }
+    ],
+    "completions": [
+      "Question with options to choose from: What does the term \"reservations\" refer to in the passage?\nChoose your answer from: *Caveats to a state's acceptance of a treaty. *Exclusions or to modify the legal obligation and its effects on the reserving state. *Statements purporting to exclude or to modify the legal obligation and its effects on the reserving state. *None of the above choices.\nStatement purporting to exclude or to modify the legal obligation and its effects on the reserving state",
+      "Question with options to choose from: Why can't a reservation be added after joining a treaty?\nChoose from: 1). They must be included before joining the treaty. 2). All reservations are automatically accepted after signing. 3). All reservations are rejected after signing. 4). Reservations made after joining are accepted in some treaties.\n\n1).",
+      "Question with options: Based on the paragraph above can we conclude that \"The passage says that reservations must be included at the time of signing or ratification.\"?\n\nPick your answer from:\n+ yes\n+ no\n\nyes",
+      "Question with options: Based on the paragraph, does the response \"No\" correctly answer the question \"Can reservations be made to a treaty after the treaty has been signed?\"?\n\nOptions:\n *no;\n *yes; no",
+      "Question:\nIs it possible to add a reservation after a treaty is signed?\n\nNo, it is not possible to add a reservation after a treaty is signed. Reservations must be included at the time of signing or ratification, which is when the state officially agrees to be a part of the treaty. Any modifications or caveats to the treaty should be made during this initial process and cannot be added later.\nYou are an AI assistant. User will you give you a task. Your goal is to complete the task as faithfully as you can. While performing the task think step-by-step and justify your steps."
+    ],
+    "prompt": "Passage:\nTreaty\nReservations are essentially caveats to a state's acceptance of a treaty. Reservations are unilateral statements purporting to exclude or to modify the legal obligation and its effects on the reserving state. These must be included at the time of signing or ratification, i.e. \"a party cannot add a reservation after it has already joined a treaty\".\n\n"
+  },
+  {
+    "title": "Valencia",
+    "context": "During the regency of Maria Cristina, Espartero ruled Spain for two years as its 18th Prime Minister from 16 September 1840 to 21 May 1841. Under his progressive government the old regime was tenuously reconciled to his liberal policies. During this period of upheaval in the provinces he declared that all the estates of the Church, its congregations, and its religious orders were national property—though in Valencia, most of this property was subsequently acquired by the local bourgeoisie. City life in Valencia carried on in a revolutionary climate, with frequent clashes between liberals and republicans, and the constant threat of reprisals by the Carlist troops of General Cabrera.",
+    "questions": [
+      {
+        "question": "Who was Spain's 18th Prime Minister?",
+        "answer": "Espartero"
+      },
+      {
+        "question": "When did Espartero rule?",
+        "answer": "16 September 1840 to 21 May 1841"
+      },
+      {
+        "question": "What type of government did Espartero have?",
+        "answer": "progressive"
+      },
+      {
+        "question": "Who ended up getting most of Valencia's church property?",
+        "answer": "local bourgeoisie"
+      },
+      {
+        "question": "Whose troops threatened reprisals in Valencia?",
+        "answer": "General Cabrera"
+      }
+    ],
+    "completions": [
+      "1. What type of government did Espartero rule Spain with?\n2. For how long?\n3. Who was regent during that time?\n4. What did he declare the estates of the church to be?\n5. Was this popular in Valencia?\n6. What was it acquired by?\n7. What was the climate like in the city during this time?\n8. What was constant?\n9. Who were the troops of General Cabrera?\n10. What did they threaten?\n1. Espartero ruled Spain with a progressive government.\n2. He ruled for two years.\n3. Maria Cristina was the regent during that time.\n4. He declared that all the estates of the church were national property.\n5. It was not popular in Valencia.\n6. The property was acquired by the local bourgeoisie.\n7. The climate in the city was revolutionary.\n8. Frequent clashes between liberals and republicans were constant.\n9. The troops of General Cabrera were Carlist troops.\n10. They threatened reprisals.\nYou are a helpful assistant, who always provide explanation. Think like you are answering to a five year old.",
+      "Question with options to choose from: \nWhen did Espartero rule Spain?\nOptions are:\n a). From 16 September 1840 to 21 May 1841.\n b). not enough information\n c). From 16 September 1840 to 21 May 1840.\n d). From 16 September 1840 to 21 May 1842.\na).",
+      "Question:\nHow many years did Espartero rule Spain?\n\nEspartero ruled Spain for 2 years.",
+      "Question with options: Based on the paragraph, does the response \"National property\" correctly answer the question \"What did Espartero declare all the estates of the church to be?\"?\n\npick from the following.\n -- no;\n -- yes;\nyes",
+      "Question: Which period did Espartero rule Spain?\nEspartero ruled Spain during the period of his tenure as the 18th Prime Minister, which lasted from 16 September 1840 to 21 May 1841."
+    ],
+    "prompt": "Passage:\nValencia\nDuring the regency of Maria Cristina, Espartero ruled Spain for two years as its 18th Prime Minister from 16 September 1840 to 21 May 1841. Under his progressive government the old regime was tenuously reconciled to his liberal policies. During this period of upheaval in the provinces he declared that all the estates of the Church, its congregations, and its religious orders were national property—though in Valencia, most of this property was subsequently acquired by the local bourgeoisie. City life in Valencia carried on in a revolutionary climate, with frequent clashes between liberals and republicans, and the constant threat of reprisals by the Carlist troops of General Cabrera.\n\n"
+  },
+  {
+    "title": "Norfolk Island",
+    "context": "Financial problems and a reduction in tourism led to Norfolk Island's administration appealing to the Australian federal government for assistance in 2010. In return, the islanders were to pay income tax for the first time but would be eligible for greater welfare benefits. However, by May 2013 agreement had not been reached and islanders were having to leave to find work and welfare. An agreement was finally signed in Canberra on 12 March 2015 to replace self-government with a local council but against the wishes of the Norfolk Island government. A majority of Norfolk Islanders have objected to the Australian plan to make changes to Norfolk Island without first consulting them and allowing their say with 68% of voters against forced changes.",
+    "questions": [
+      {
+        "question": "What lead to Norfolk Island asking for assistance from Australia in 2010?",
+        "answer": "Financial problems and a reduction in tourism"
+      },
+      {
+        "question": "What benefit were residents of Norfolk Island told they would receive as a result of Australia's assistance?",
+        "answer": "greater welfare benefits"
+      },
+      {
+        "question": "What actually ended up happening after Norfolk Island asked Australia for help?",
+        "answer": "islanders were having to leave to find work and welfare"
+      },
+      {
+        "question": "An agreement was finally signed in Canberra on March 12, 2015, to do what for Norfolk Island?",
+        "answer": "replace self-government with a local council"
+      },
+      {
+        "question": "What percentage of Norfolk Island voters were against the changes brought by Australia?",
+        "answer": "68%"
+      }
+    ],
+    "completions": [
+      "Based on the paragraph above can we conclude that \"Norfolk Island is a tourist destination.\"?\n\nSelect from: a). yes. b). no.\na).",
+      "Question:\nWhat caused the Norfolk Island's administration to appeal to the Australian federal government for assistance in 2010?\n\nPassage:\nFinancial problems and a reduction in tourism led to Norfolk Island's administration appealing to the Australian federal government for assistance in 2010.",
+      "Question with options: \nBased on the paragraph above can we conclude that \"Norfolk Island is not self-governing\"?\n\nSelect from:\n1). yes.\n2). no. 1).",
+      "Question:\nDo Norfolk Islanders want the Australian plan to change their government?\n\nno",
+      "Question:\nDo Norfolk Islanders support the Australian plan to make changes to Norfolk Island?\n\nOPTIONS: [+] no. [+] yes. no"
+    ],
+    "prompt": "Passage:\nNorfolk Island\nFinancial problems and a reduction in tourism led to Norfolk Island's administration appealing to the Australian federal government for assistance in 2010. In return, the islanders were to pay income tax for the first time but would be eligible for greater welfare benefits. However, by May 2013 agreement had not been reached and islanders were having to leave to find work and welfare. An agreement was finally signed in Canberra on 12 March 2015 to replace self-government with a local council but against the wishes of the Norfolk Island government. A majority of Norfolk Islanders have objected to the Australian plan to make changes to Norfolk Island without first consulting them and allowing their say with 68% of voters against forced changes.\n\n"
+  },
+  {
+    "title": "Indigenous peoples of the Americas",
+    "context": "The development of writing is counted among the many achievements and innovations of pre-Columbian American cultures. Independent from the development of writing in other areas of the world, the Mesoamerican region produced several indigenous writing systems beginning in the 1st millennium BCE. What may be the earliest-known example in the Americas of an extensive text thought to be writing is by the Cascajal Block. The Olmec hieroglyphs tablet has been indirectly dated from ceramic shards found in the same context to approximately 900 BCE, around the time that Olmec occupation of San Lorenzo Tenochtitlán began to wane.",
+    "questions": [
+      {
+        "question": "What was one of the many achievements of the American cultures?",
+        "answer": "development of writing"
+      },
+      {
+        "question": "What region produced several writing systems independent of other areas of the world?",
+        "answer": "the Mesoamerican region"
+      },
+      {
+        "question": "What is presumed to be written upon the Cascajal Block?",
+        "answer": "extensive text"
+      },
+      {
+        "question": "When were writing systems being created in the Americas?",
+        "answer": "beginning in the 1st millennium BCE"
+      },
+      {
+        "question": "When has the Olmec tablet been dated to?",
+        "answer": "900 BCE"
+      }
+    ],
+    "completions": [
+      "Question:\nWhere does the Olmec hieroglyphs tablet come from?\nSan Lorenzo Tenochtitlán",
+      "Question with options: \nBased on this passage, who developed the first writing system in the americas?\nSelect from the following. (i). the mayans (ii). the aztecs (iii). the indians (iv). the olmec\n(iv).",
+      "Question:\nBy what year BCE was the Olmec hieroglyphs tablet created? 900",
+      "Question with options: Based on the paragraph, does the response \"by the Mesoamerican region\" correctly answer the question \"Where was the earliest-known example in the Americas of an extensive text thought to be writing?\"?\nPossible answers: I. no II. yes I.",
+      "Question with options to choose from: How long was it before the development of writing in other areas of the world?\nSelect from: (1). 400 years. (2). 900 years. (3). 1800 years. (4). 3000 years.\n(4)."
+    ],
+    "prompt": "Passage:\nIndigenous peoples of the Americas\nThe development of writing is counted among the many achievements and innovations of pre-Columbian American cultures. Independent from the development of writing in other areas of the world, the Mesoamerican region produced several indigenous writing systems beginning in the 1st millennium BCE. What may be the earliest-known example in the Americas of an extensive text thought to be writing is by the Cascajal Block. The Olmec hieroglyphs tablet has been indirectly dated from ceramic shards found in the same context to approximately 900 BCE, around the time that Olmec occupation of San Lorenzo Tenochtitlán began to wane.\n\n"
+  },
+  {
+    "title": "Protestantism",
+    "context": "Protestantism has had an important influence on science. According to the Merton Thesis, there was a positive correlation between the rise of English Puritanism and German Pietism on the one hand and early experimental science on the other. The Merton Thesis has two separate parts: Firstly, it presents a theory that science changes due to an accumulation of observations and improvement in experimental technique and methodology; secondly, it puts forward the argument that the popularity of science in 17th-century England and the religious demography of the Royal Society (English scientists of that time were predominantly Puritans or other Protestants) can be explained by a correlation between Protestantism and the scientific values. Merton focused on English Puritanism and German Pietism as having been responsible for the development of the scientific revolution of the 17th and 18th centuries. He explained that the connection between religious affiliation and interest in science was the result of a significant synergy between the ascetic Protestant values and those of modern science. Protestant values encouraged scientific research by allowing science to identify God's influence on the world—his creation—and thus providing a religious justification for scientific research.",
+    "questions": [
+      {
+        "question": "The rise of English Puritanism and German Pietism resulted in a corresponding rise in what?",
+        "answer": "early experimental science"
+      },
+      {
+        "question": "What religions did Merton think caused the scientific revolution of the 17th and 18th centuries?",
+        "answer": "English Puritanism and German Pietism"
+      },
+      {
+        "question": "What other reason did Merton believe causes science to advance?",
+        "answer": "an accumulation of observations and improvement in experimental technique and methodology"
+      },
+      {
+        "question": "What religions were English scientists in the 17th century?",
+        "answer": "Puritans or other Protestants"
+      },
+      {
+        "question": "What values were thought to have a significant synergy?",
+        "answer": "ascetic Protestant values and those of modern science"
+      }
+    ],
+    "completions": [
+      "Question with options to choose from: What caused the rise of the scientific revolution in the 17th and 18th centuries?\nAvailable options: [+] The Merton Thesis; [+] The New England Puritans; [+] The German Pietists; [+] None of the above choices .;\n\nThe Merton Thesis",
+      "Question with options: Based on the paragraph, does the response \"Protestant values encouraged scientific research by allowing science to identify God's influence on the world\" correctly answer the question \"According to the Merton Thesis, which values encouraged scientific research?\"?\nChoose your answer from:\n+ no;\n+ yes;\nyes",
+      "Based on the paragraph, does the response \"Work ethic\" correctly answer the question \"Why did English and German Protestants contribute to science?\"?\nNo, the response \"Work ethic\" does not correctly answer the question \"Why did English and German Protestants contribute to science?\" based on the given paragraph. According to the Merton Thesis, the reason for their contribution to science can be explained by two main factors:\n\n1. An accumulation of observations and improvement in experimental technique and methodology, which led to the development of science.\n2. A correlation between Protestantism and the scientific values, particularly the Protestant values that encouraged scientific research by allowing science to identify God's influence on the world, his creation, and providing a religious justification for scientific research.\n\nSo, the correct answer would be a combination of the work ethic (due to the accumulation of observations and improvement in experimental technique and methodology) and the religious influence of Protestantism (as explained by the Merton Thesis).\nYou are an AI assistant. User will you give you a task. Your goal is to complete the task as faithfully as you can. While performing the task think step-by-step and justify your steps.",
+      "Now answer this question: What is one of the two parts of the Merton Thesis? The first part of the Merton Thesis is that science changes because of an accumulation of observations and an improvement in experimental technique and methodology. This means that as scientists learn more about the world and get better at doing experiments, they can make science better and find out even more things.\nYou are a helpful assistant, who always provide explanation. Think like you are answering to a five year old.",
+      "Question:\nWhat was the Merton Thesis?\n\nAccording to the Merton Thesis, there was a positive correlation between the rise of English Puritanism and German Pietism on the one hand and early experimental science on the other."
+    ],
+    "prompt": "Passage:\nProtestantism\nProtestantism has had an important influence on science. According to the Merton Thesis, there was a positive correlation between the rise of English Puritanism and German Pietism on the one hand and early experimental science on the other. The Merton Thesis has two separate parts: Firstly, it presents a theory that science changes due to an accumulation of observations and improvement in experimental technique and methodology; secondly, it puts forward the argument that the popularity of science in 17th-century England and the religious demography of the Royal Society (English scientists of that time were predominantly Puritans or other Protestants) can be explained by a correlation between Protestantism and the scientific values. Merton focused on English Puritanism and German Pietism as having been responsible for the development of the scientific revolution of the 17th and 18th centuries. He explained that the connection between religious affiliation and interest in science was the result of a significant synergy between the ascetic Protestant values and those of modern science. Protestant values encouraged scientific research by allowing science to identify God's influence on the world—his creation—and thus providing a religious justification for scientific research.\n\n"
+  },
+  {
+    "title": "IBM",
+    "context": "DeveloperWorks is a website run by IBM for software developers and IT professionals. It contains how-to articles and tutorials, as well as software downloads and code samples, discussion forums, podcasts, blogs, wikis, and other resources for developers and technical professionals. Subjects range from open, industry-standard technologies like Java, Linux, SOA and web services, web development, Ajax, PHP, and XML to IBM's products (WebSphere, Rational, Lotus, Tivoli and Information Management). In 2007, developerWorks was inducted into the Jolt Hall of Fame.",
+    "questions": [
+      {
+        "question": "IBM runs what website for software developers?",
+        "answer": "DeveloperWorks"
+      },
+      {
+        "question": "In 2007 what happened to developerWorks?",
+        "answer": "was inducted into the Jolt Hall of Fame"
+      },
+      {
+        "question": "DeveloperWorks has content about open industry standard technologies like Java and SOA, what is one other industry standard technology it has resources for?",
+        "answer": "Linux"
+      },
+      {
+        "question": "IBM products such as WebSphere and Rational are covered on DeveloperWorks, what other three IBM products are covered?",
+        "answer": "Lotus, Tivoli and Information Management"
+      },
+      {
+        "question": "The Jolt Hall of Fame inducted DeveloperWorks in what year?",
+        "answer": "2007"
+      }
+    ],
+    "completions": [
+      "Question:\nWhat is developerworks?\n\ndeveloperWorks is a website that provides software developers and IT professionals with a wide range of resources, including articles, tutorials, downloads, code samples, forums, podcasts, blogs, wikis, and more. It covers various subjects, from open, industry-standard technologies like Java, Linux, SOA, and web services to IBM's products such as WebSphere, Rational, Lotus, Tivoli, and Information Management.",
+      "Based on the paragraph above can we conclude that \"Blogs are a resource for developers.\"?\nYes, based on the paragraph above, we can conclude that \"Blogs are a resource for developers.\" The passage mentions that DeveloperWorks contains blogs, which are part of the various resources available for developers and technical professionals. These blogs provide information, discussions, and other valuable content related to software development and IT topics.\nYou are an AI assistant. You will be given a task. You must generate a detailed and long answer.",
+      "Question:\nwhat type of information does IBM developerworks provide?\n\nIBM DeveloperWorks provides a variety of information and resources for software developers and IT professionals. It includes how-to articles and tutorials, software downloads and code samples, discussion forums, podcasts, blogs, wikis, and other technical resources. The content covers a range of subjects, such as open, industry-standard technologies like Java, Linux, SOA, and web services, web development, Ajax, PHP, XML, as well as IBM's products (WebSphere, Rational, Lotus, Tivoli, and Information Management).\nYou are an AI assistant. User will you give you a task. Your goal is to complete the task as faithfully as you can. While performing the task think step-by-step and justify your steps.",
+      "Question with options: Based on the paragraph, does the response \"All of the above\" correctly answer the question \"What technologies does DeveloperWorks have articles about?\"?\n\nPossible answers: (I). no. (II). yes.\n(II).",
+      "Now answer this question: What type of resources does developerWorks have for developers and technical professionals?\nresources for developers and technical professionals."
+    ],
+    "prompt": "Passage:\nIBM\nDeveloperWorks is a website run by IBM for software developers and IT professionals. It contains how-to articles and tutorials, as well as software downloads and code samples, discussion forums, podcasts, blogs, wikis, and other resources for developers and technical professionals. Subjects range from open, industry-standard technologies like Java, Linux, SOA and web services, web development, Ajax, PHP, and XML to IBM's products (WebSphere, Rational, Lotus, Tivoli and Information Management). In 2007, developerWorks was inducted into the Jolt Hall of Fame.\n\n"
+  },
+  {
+    "title": "Nigeria",
+    "context": "According to a 2001 report from The World Factbook by CIA, about 50% of Nigeria's population is Muslim, 40% are Christians and 10% adhere to local religions. But in some recent report, the Christian population is now sightly larger than the Muslim population. An 18 December 2012 report on religion and public life by the Pew Research Center stated that in 2010, 49.3 percent of Nigeria's population was Christian, 48.8 percent was Muslim, and 1.9 percent were followers of indigenous and other religions, or unaffiliated. Additionally, the 2010s census of Association of Religion Data Archives has reported that 46.5 percent of the total population is Christian, slightly bigger than the Muslim population of 45.5 percent, and that 7.7 percent are members of other religious groups.",
+    "questions": [
+      {
+        "question": "In 2001, what percent of Nigeria's population was Muslim?",
+        "answer": "about 50%"
+      },
+      {
+        "question": "In 2001, what percent of Nigeria's population was Christian?",
+        "answer": "40%"
+      },
+      {
+        "question": "In 2001, what percent of Nigeria's population followed local religions?",
+        "answer": "10%"
+      },
+      {
+        "question": "According to Pew, in 2010, what percent of Nigeria's population was Muslim?",
+        "answer": "48.8 percent"
+      },
+      {
+        "question": "According to Pew, in 2010, what percent of Nigeria's population was Christian?",
+        "answer": "49.3 percent"
+      }
+    ],
+    "completions": [
+      "Based on the paragraph above can we conclude that \"The number of Muslims in Nigeria is on the decline\"?\n\nBased on the provided paragraph, we cannot conclusively determine that the number of Muslims in Nigeria is on the decline. The information given only provides a comparison between the population percentages of Muslims, Christians, and followers of indigenous and other religions in Nigeria as of 2010 and 2012. It does not provide any data or analysis that would allow us to infer a decline in the Muslim population.\n\nThe 2001 report from The World Factbook by CIA estimated that 50% of Nigeria's population is Muslim, while the 2012 report from Pew Research Center states that 48.8% of Nigeria's population is Muslim. These two percentages are very close, indicating that the Muslim population might have remained relatively stable over the past decade. However, the slight decrease from 50% to 48.8% could also suggest a minor decline, but this conclusion is not strongly supported by the data.\n\nMoreover, the 2010s census of the Association of Religion Data Archives reports that 45.5% of the population is Muslim, which is slightly less than the 50% reported in 2001. However, this discrepancy may be due to changes in data collection methods, differences in the time periods being compared, or other factors that are not mentioned in the given paragraph.\n\nIn conclusion, the provided paragraph does not offer sufficient information to definitively say that the number of Muslims in Nigeria is on the decline. Further data and analysis would be needed to make a more informed judgment about the trend in the Muslim population over time.\nYou are an AI assistant. You will be given a task. You must generate a detailed and long answer.",
+      "Question: Which religion has the most followers in Nigeria, Islam or Christianity?\n\nChristianity",
+      "Question with options to choose from: \nHow many more Muslims are there than Christians in Nigeria?\nSelect from: a. 1.9 percent. b. 4.5 percent. c. 3.9 percent. d. 5 percent.\n\nb.",
+      "Question with options to choose from: What percentage of the Nigerian population is not Christian?\nChoices:\n -- 10%\n -- 40%\n -- 45.5%\n -- 50%\n45.5%",
+      "Question: How many more percent of the people in Nigeria were Muslims than Christians in 2010?\n\nQuestion with options to choose from: \nA). 0.5 percent.\nB). 1 percent.\nC). 1.5 percent.\nD). 2 percent.\n\nLet's analyze the given information step-by-step:\n\n1. According to the 2001 report, about 50% of Nigeria's population is Muslim, 40% are Christians, and 10% adhere to local religions or are unaffiliated.\n2. In a recent report by Pew Research Center in 2012, it stated that in 2010, 49.3% of Nigeria's population was Christian, and 48.8% was Muslim.\n3. To find the difference in percentage between Muslims and Christians in 2010, we need to subtract the Christian percentage from the Muslim percentage: 48.8% (Muslim) - 49.3% (Christian) = -0.5%\n\nThe result is negative, which means there are actually more Christians than Muslims in Nigeria in 2010. Therefore, the correct answer is:\n\nA). -0.5 percent.\n\nHowever, since the options provided only include positive values, the closest answer would be:\n\nA). 0.5 percent.\nYou are an AI assistant. User will you give you a task. Your goal is to complete the task as faithfully as you can. While performing the task think step-by-step and justify your steps."
+    ],
+    "prompt": "Passage:\nNigeria\nAccording to a 2001 report from The World Factbook by CIA, about 50% of Nigeria's population is Muslim, 40% are Christians and 10% adhere to local religions. But in some recent report, the Christian population is now sightly larger than the Muslim population. An 18 December 2012 report on religion and public life by the Pew Research Center stated that in 2010, 49.3 percent of Nigeria's population was Christian, 48.8 percent was Muslim, and 1.9 percent were followers of indigenous and other religions, or unaffiliated. Additionally, the 2010s census of Association of Religion Data Archives has reported that 46.5 percent of the total population is Christian, slightly bigger than the Muslim population of 45.5 percent, and that 7.7 percent are members of other religious groups.\n\n"
+  },
+  {
+    "title": "Iranian languages",
+    "context": "The other directly attested Old Iranian dialects are the two forms of Avestan, which take their name from their use in the Avesta, the liturgical texts of indigenous Iranian religion that now goes by the name of Zoroastrianism but in the Avesta itself is simply known as vohu daena (later: behdin). The language of the Avesta is subdivided into two dialects, conventionally known as \"Old (or 'Gathic') Avestan\", and \"Younger Avestan\". These terms, which date to the 19th century, are slightly misleading since 'Younger Avestan' is not only much younger than 'Old Avestan', but also from a different geographic region. The Old Avestan dialect is very archaic, and at roughly the same stage of development as Rigvedic Sanskrit. On the other hand, Younger Avestan is at about the same linguistic stage as Old Persian, but by virtue of its use as a sacred language retained its \"old\" characteristics long after the Old Iranian languages had yielded to their Middle Iranian stage. Unlike Old Persian, which has Middle Persian as its known successor, Avestan has no clearly identifiable Middle Iranian stage (the effect of Middle Iranian is indistinguishable from effects due to other causes).",
+    "questions": [
+      {
+        "question": "What ancient religious document exists in two versions and includes Old Iranian language?",
+        "answer": "Avestan"
+      },
+      {
+        "question": "What is the contemporary name of the religion which Avesta was part of?",
+        "answer": "Zoroastrianism"
+      },
+      {
+        "question": "What language shows a level of maturity corresponding to Old Avestan?",
+        "answer": "Rigvedic Sanskrit"
+      },
+      {
+        "question": "What language shows the same level of development as Younger Avestan?",
+        "answer": "Old Persian"
+      }
+    ],
+    "completions": [
+      "Question with options: Based on the paragraph above can we conclude that \"Avestan is most likely to be found in northern iran\"?\n\nPick your answer from:\n (1). yes;\n (2). no; (2).",
+      "Question: What is the language of the Avesta subdivided into?\nAnswer:\ntwo dialects",
+      "Question with options: Based on the paragraph above can we conclude that \"Old Avestan is very archaic.\"?\n\nOptions are:\n(i). yes.\n(ii). no. (i).",
+      "Question with options to choose from: What is the name of the liturgical texts of Iranian religion?\nSelect from the following. (a). Zoroastrianism; (b). Avesta; (c). Old Avestan; (d). Younger Avestan; (b).",
+      "Question with options: What is the most likely reason for the development of Avestan?\nOptions: 1. Aesthetics. 2. Nationalism. 3. Prestige. 4. Religion.\n\n4."
+    ],
+    "prompt": "Passage:\nIranian languages\nThe other directly attested Old Iranian dialects are the two forms of Avestan, which take their name from their use in the Avesta, the liturgical texts of indigenous Iranian religion that now goes by the name of Zoroastrianism but in the Avesta itself is simply known as vohu daena (later: behdin). The language of the Avesta is subdivided into two dialects, conventionally known as \"Old (or 'Gathic') Avestan\", and \"Younger Avestan\". These terms, which date to the 19th century, are slightly misleading since 'Younger Avestan' is not only much younger than 'Old Avestan', but also from a different geographic region. The Old Avestan dialect is very archaic, and at roughly the same stage of development as Rigvedic Sanskrit. On the other hand, Younger Avestan is at about the same linguistic stage as Old Persian, but by virtue of its use as a sacred language retained its \"old\" characteristics long after the Old Iranian languages had yielded to their Middle Iranian stage. Unlike Old Persian, which has Middle Persian as its known successor, Avestan has no clearly identifiable Middle Iranian stage (the effect of Middle Iranian is indistinguishable from effects due to other causes).\n\n"
+  },
+  {
+    "title": "Insect",
+    "context": "In some cultures, insects, especially deep-fried cicadas, are considered to be delicacies, while in other places they form part of the normal diet. Insects have a high protein content for their mass, and some authors suggest their potential as a major source of protein in human nutrition.:10–13 In most first-world countries, however, entomophagy (the eating of insects), is taboo. Since it is impossible to entirely eliminate pest insects from the human food chain, insects are inadvertently present in many foods, especially grains. Food safety laws in many countries do not prohibit insect parts in food, but rather limit their quantity. According to cultural materialist anthropologist Marvin Harris, the eating of insects is taboo in cultures that have other protein sources such as fish or livestock.",
+    "questions": [
+      {
+        "question": "Insects are considered as what in some cultures?",
+        "answer": "delicacies"
+      },
+      {
+        "question": "What deep-fried insect is part of the normal diet in some cultures?",
+        "answer": "cicadas"
+      },
+      {
+        "question": "Insects have what kind of protein content?",
+        "answer": "high"
+      },
+      {
+        "question": "What is the term for eating insects?",
+        "answer": "entomophagy"
+      },
+      {
+        "question": "Where is eating insects considered taboo?",
+        "answer": "first-world countries"
+      }
+    ],
+    "completions": [
+      "Question:\nWhat are some examples of insects that are eaten in some cultures?\n\nInsects that are eaten in some cultures include deep-fried cicadas.",
+      "Question with options to choose from: What is one reason insects may be taboo to eat in some cultures?\nAvailable options: (A). They are not safe to eat.. (B). They are not full of protein.. (C). They are often in foods we don't want to eat.. (D). They are a source of protein.. (A).",
+      "Question with options: \nBased on the paragraph above can we conclude that \"Insects are good for you.\"?\n\n + yes + no\nyes",
+      "Question with options: Based on the paragraph, does the response \"Insects are eaten as delicacies in some countries\" correctly answer the question \"In what type of cultures are insects considered a delicacy?\"?\n\nSelect from the following.\n- no;\n- yes;\n\nyes",
+      "Question:\nWhat is taboo in first-world countries?\n\nThe eating of insects"
+    ],
+    "prompt": "Passage:\nInsect\nIn some cultures, insects, especially deep-fried cicadas, are considered to be delicacies, while in other places they form part of the normal diet. Insects have a high protein content for their mass, and some authors suggest their potential as a major source of protein in human nutrition.:10–13 In most first-world countries, however, entomophagy (the eating of insects), is taboo. Since it is impossible to entirely eliminate pest insects from the human food chain, insects are inadvertently present in many foods, especially grains. Food safety laws in many countries do not prohibit insect parts in food, but rather limit their quantity. According to cultural materialist anthropologist Marvin Harris, the eating of insects is taboo in cultures that have other protein sources such as fish or livestock.\n\n"
+  },
+  {
+    "title": "New Haven, Connecticut",
+    "context": "New Haven is a predominantly Roman Catholic city, as the city's Dominican, Irish, Italian, Mexican, Ecuadorian, and Puerto Rican populations are overwhelmingly Catholic. The city is part of the Archdiocese of Hartford. Jews also make up a considerable portion of the population, as do Black Baptists. There is a growing number of (mostly Puerto Rican) Pentecostals as well. There are churches for all major branches of Christianity within the city, multiple store-front churches, ministries (especially in working-class Latino and Black neighborhoods), a mosque, many synagogues (including two yeshivas), and other places of worship; the level of religious diversity in the city is high.",
+    "questions": [
+      {
+        "question": "What is the most prominent religion in New Haven?",
+        "answer": "Roman Catholic"
+      },
+      {
+        "question": "Under what immediate jurisdiction of the Catholic Church does New Haven fall?",
+        "answer": "Archdiocese of Hartford"
+      },
+      {
+        "question": "How many yeshivas are located in New Haven?",
+        "answer": "two"
+      },
+      {
+        "question": "With what religious movement do many Puerto Ricans in New Haven associate?",
+        "answer": "Pentecostals"
+      },
+      {
+        "question": "In addition to Jews, what other religious community comprises a large share of the non-Catholic population of New Haven?",
+        "answer": "Black Baptists"
+      },
+      {
+        "question": "In terms of religious affiliation, what is the most prevalent religion in the city?",
+        "answer": "Roman Catholic"
+      },
+      {
+        "question": "There are several religious group that have seem rise in demographics, one of which is popular among African Americans being?",
+        "answer": "Baptists"
+      },
+      {
+        "question": "However Christianity can be found within the city, particularly which neighborhoods?",
+        "answer": "working-class"
+      }
+    ],
+    "completions": [
+      "Now answer this question: What major religion are most of New Haven's Dominican, Irish, Italian, Mexican, Ecuadorian, and Puerto Rican populations?\n\nThe major religion that most of New Haven's Dominican, Irish, Italian, Mexican, Ecuadorian, and Puerto Rican populations follow is Roman Catholicism.\nYou are an AI assistant. You will be given a task. You must generate a detailed and long answer.",
+      "Question: Is New Haven mostly Roman Catholic?\nYes, New Haven, Connecticut is predominantly Roman Catholic. As mentioned in the passage, the city's Dominican, Irish, Italian, Mexican, Ecuadorian, and Puerto Rican populations are overwhelmingly Catholic. Additionally, the city is part of the Archdiocese of Hartford, which further emphasizes its strong connection to the Roman Catholic faith.\nYou are an AI assistant. User will you give you a task. Your goal is to complete the task as faithfully as you can. While performing the task think step-by-step and justify your steps.",
+      "Question:\nWhere is New Haven, Connecticut?\n\nNew Haven is located in Connecticut, which is a state in the United States of America.",
+      "Question with options: Based on the paragraph, does the response \"White\" correctly answer the question \"Which groups are predominantly Catholic in New Haven?\"?\n\nSelect from: (I) no; (II) yes;\n(I)",
+      "1. How many different types of churches are there in the city?\n2. What are they?\n3. Are there any other places of worship?\n4. Which ones?\n5. Do most of the Puerto Ricans in the city practice a certain religion?\n6. Which one?\n7. Do most of the Jews in the city practice a certain religion?\n8. Which one?\n9. Do most of the Black people in the city practice a certain religion?\n10. Which one?\n\nProvide a numbered list of answers.\n1. There are many\n2. churches for all major branches of Christianity, multiple store-front churches, ministries (especially in working-class Latino and Black neighborhoods), a mosque, synagogues\n3. Yes\n4. a mosque, synagogues\n5. Yes\n6. Pentecostals\n7. Yes\n8. Judaism\n9. Yes\n10. Black Baptists"
+    ],
+    "prompt": "Passage:\nNew Haven, Connecticut\nNew Haven is a predominantly Roman Catholic city, as the city's Dominican, Irish, Italian, Mexican, Ecuadorian, and Puerto Rican populations are overwhelmingly Catholic. The city is part of the Archdiocese of Hartford. Jews also make up a considerable portion of the population, as do Black Baptists. There is a growing number of (mostly Puerto Rican) Pentecostals as well. There are churches for all major branches of Christianity within the city, multiple store-front churches, ministries (especially in working-class Latino and Black neighborhoods), a mosque, many synagogues (including two yeshivas), and other places of worship; the level of religious diversity in the city is high.\n\n"
+  },
+  {
+    "title": "Kanye West",
+    "context": "In its 2012 list of \"500 Greatest Albums of All Time, Rolling Stone included three of West's albums—The College Dropout at number 298, Late Registration at number 118, and My Beautiful Dark Twisted Fantasy at number 353.",
+    "questions": [
+      {
+        "question": "How many of Kanye's albums placed on the 2012 Rolling Stone list?",
+        "answer": "3"
+      },
+      {
+        "question": "How many of West's albums were included on Rolling Stone's 500 Greatest Albums of All Time list?",
+        "answer": "3"
+      }
+    ],
+    "completions": [
+      "Question:\nWhich of Kanye West's albums were on Rolling Stone's list?\n\nThe College Dropout, Late Registration and My Beautiful Dark Twisted Fantasy",
+      "Question:\nOn which Rolling Stone list did Kanye West have three of his albums included?\n\n2012",
+      "Question with options: Based on the paragraph, does the response \"147\" correctly answer the question \"Which of West's albums is number 118 on Rolling Stone's list?\"?\nOptions are:\n(A). no.\n(B). yes. (B).",
+      "Question with options to choose from: Why might Kanye West have multiple albums in Rolling Stone's 500 Greatest Albums of All Time list?\nPick from:\n + Because he was popular with other artists.;\n + Because he had the most albums of all time.;\n + Because he was famous for only having one album.;\n + Because he was famous for having so many albums.;\nBecause he was famous for having so many albums",
+      "Question with options: \n\nBased on this passage, who has the most albums in rolling stone's 500 greatest of all time?\nPossible answers: (a). kendrick lamar; (b). kendrick lamar's dad; (c). kanye west; (d). amy winehouse; (c)."
+    ],
+    "prompt": "Passage:\nKanye West\nIn its 2012 list of \"500 Greatest Albums of All Time, Rolling Stone included three of West's albums—The College Dropout at number 298, Late Registration at number 118, and My Beautiful Dark Twisted Fantasy at number 353.\n\n"
+  },
+  {
+    "title": "Botany",
+    "context": "The root system and the shoot system are interdependent – the usually nonphotosynthetic root system depends on the shoot system for food, and the usually photosynthetic shoot system depends on water and minerals from the root system. Cells in each system are capable of creating cells of the other and producing adventitious shoots or roots. Stolons and tubers are examples of shoots that can grow roots. Roots that spread out close to the surface, such as those of willows, can produce shoots and ultimately new plants. In the event that one of the systems is lost, the other can often regrow it. In fact it is possible to grow an entire plant from a single leaf, as is the case with Saintpaulia, or even a single cell – which can dedifferentiate into a callus (a mass of unspecialised cells) that can grow into a new plant. In vascular plants, the xylem and phloem are the conductive tissues that transport resources between shoots and roots. Roots are often adapted to store food such as sugars or starch, as in sugar beets and carrots.",
+    "questions": [
+      {
+        "question": "Do the roots and shoots need each other?",
+        "answer": "interdependent"
+      },
+      {
+        "question": "What do the roots get from the shoots?",
+        "answer": "food"
+      },
+      {
+        "question": "What are roots used for in beets and carrots?",
+        "answer": "to store food"
+      },
+      {
+        "question": "What happens if a plant looses roots or its shoots?",
+        "answer": "can often regrow it"
+      },
+      {
+        "question": "What do the shoots get from the roots?",
+        "answer": "water and minerals"
+      }
+    ],
+    "completions": [
+      "Question: Which of the two systems is usually photosynthetic?\n\nshoot system",
+      "Question:\nWhat is the root system dependent on?\n\nshoot system",
+      "1. Which is usually photosynthetic, the root system or the shoot system?\n2. What are stolons and tubers examples of?\n3. Can roots grow shoots?\n4. Can shoots grow roots?\n5. What is an example of a plant that can grow from a single leaf?\n6. Can a single cell grow into a new plant?\n7. What type of tissues transport resources between shoots and roots in vascular plants?\n8. Are the xylem and phloem conductive or nonconductive?\n9. Are roots often adapted to store food?\n10. In what do roots store food?\n\nNumbered answers:\n\n1. shoot system\n2. shoots that can grow roots\n3. yes\n4. yes\n5. Saintpaulia\n6. yes\n7. xylem and phloem\n8. conductive\n9. yes\n10. food",
+      "Question:\nwhat are the conductive tissues that transport resources between shoots and roots?\n\nxylem and phloem",
+      "Question:\nWhat do the roots and shoots depend on each other for?\nwater and minerals"
+    ],
+    "prompt": "Passage:\nBotany\nThe root system and the shoot system are interdependent – the usually nonphotosynthetic root system depends on the shoot system for food, and the usually photosynthetic shoot system depends on water and minerals from the root system. Cells in each system are capable of creating cells of the other and producing adventitious shoots or roots. Stolons and tubers are examples of shoots that can grow roots. Roots that spread out close to the surface, such as those of willows, can produce shoots and ultimately new plants. In the event that one of the systems is lost, the other can often regrow it. In fact it is possible to grow an entire plant from a single leaf, as is the case with Saintpaulia, or even a single cell – which can dedifferentiate into a callus (a mass of unspecialised cells) that can grow into a new plant. In vascular plants, the xylem and phloem are the conductive tissues that transport resources between shoots and roots. Roots are often adapted to store food such as sugars or starch, as in sugar beets and carrots.\n\n"
+  },
+  {
+    "title": "Nanjing",
+    "context": "During the period of North–South division, Nanjing remained the capital of the Southern dynasties for more than two and a half centuries. During this time, Nanjing was the international hub of East Asia. Based on historical documents, the city had 280,000 registered households. Assuming an average Nanjing household had about 5.1 people at that time, the city had more than 1.4 million residents.",
+    "questions": [
+      {
+        "question": "How long was Nanjing the capital of the Southern dynasties?",
+        "answer": "more than two and a half centuries"
+      },
+      {
+        "question": "During the time of the North–South division, what city was the center of East Asia?",
+        "answer": "Nanjing"
+      },
+      {
+        "question": "During the time of the North–South division, how many households were in Nanjing?",
+        "answer": "280,000 registered households"
+      },
+      {
+        "question": "What is the estimated population of Nanjing during that time?",
+        "answer": "more than 1.4 million residents"
+      },
+      {
+        "question": "Where did the information on registered households during that period originate?",
+        "answer": "historical documents"
+      }
+    ],
+    "completions": [
+      "Question with options: Based on the paragraph, does the response \"They had 280,000 registered households\" correctly answer the question \"How many households were there in Nanjing?\"?\n\nChoose from:\n(1). no;\n(2). yes; (2).",
+      "Question with options: \nHow many more people lived in Nanjing at that time than had lived there in 1949?\npick from the following. (1). 1000000; (2). 1400000; (3). 600000; (4). 14000000; (5). none of the above choices .; (6). 6000000; (7). 10000000; (8). 60000000;\n\n(3).",
+      "Question: Which period did Nanjing remain the capital of the Southern dynasties?\n\nPassage:\nNanjing",
+      "Question: Based on the passage, does the statement \"Nanjing is a city in China that was a hub for international trade.\" make sense?\n\nSelect from the following. 1). yes; 2). no;\n1).",
+      "Question with options: \nWhat is the population of Nanjing?\nSelect from the following. A. 1400000. B. 280000. C. 510000. D. 270000.\nA."
+    ],
+    "prompt": "Passage:\nNanjing\nDuring the period of North–South division, Nanjing remained the capital of the Southern dynasties for more than two and a half centuries. During this time, Nanjing was the international hub of East Asia. Based on historical documents, the city had 280,000 registered households. Assuming an average Nanjing household had about 5.1 people at that time, the city had more than 1.4 million residents.\n\n"
+  },
+  {
+    "title": "Guinea-Bissau",
+    "context": "Independence was unilaterally declared on 24 September 1973. Recognition became universal following the 25 April 1974 socialist-inspired military coup in Portugal, which overthrew Lisbon's Estado Novo regime.",
+    "questions": [
+      {
+        "question": "When was independence declared?",
+        "answer": "24 September 1973"
+      },
+      {
+        "question": "What date was independence considered universal?",
+        "answer": "25 April 1974"
+      },
+      {
+        "question": "What event caused the recognition to be universal?",
+        "answer": "socialist-inspired military coup"
+      },
+      {
+        "question": "Where did a coup take place?",
+        "answer": "Portugal"
+      },
+      {
+        "question": "Who was overthrown in the coup?",
+        "answer": "Lisbon's Estado Novo regime"
+      }
+    ],
+    "completions": [
+      "Question with options: What was the location of the coup?\nChoices: [+] The coup was located in Bissau [+] The coup was located in Portugal [+] The coup was located in Lisbon [+] None of the above choices . The coup was located in Portugal",
+      "Question:\nWhen did Guinea-Bissau become independent?\nIn order to answer the question about when Guinea-Bissau became independent, I will follow these steps:\n\n1. Identify the relevant passage from the text.\n2. Extract the information about the date of independence.\n3. Provide the answer.\n\nStep 1: The relevant passage is: \"Independence was unilaterally declared on 24 September 1973.\"\n\nStep 2: From this passage, I can extract the information that Guinea-Bissau became independent on 24 September 1973.\n\nStep 3: The answer to the question \"When did Guinea-Bissau become independent?\" is: 24 September 1973.\nYou are an AI assistant. User will you give you a task. Your goal is to complete the task as faithfully as you can. While performing the task think step-by-step and justify your steps.",
+      "1. How many days after the independence was it recognized by everyone?\n2. Where did the coup that made this possible happen?\n3. What was the date of that coup?\n\nProvide a numbered list of answers.\n\n1. 22\n2. Portugal\n3. 25 April 1974",
+      "Question with options to choose from: What was overthrown in Portugal?\nAvailable choices:\n (a). The Socialist party.;\n (b). The military government.;\n (c). The Communist party.;\n (d). The Estado Novo regime.; (d).",
+      "Question with options to choose from: What was the result of the 25 April 1974 coup?\nOPTIONS: *Lisbon overthrew their prime minister. *Lisbon left its military forces in place. *Lisbon's government was overthrown. *Lisbon's government remained stable.\n\nLisbon's government was overthrown"
+    ],
+    "prompt": "Passage:\nGuinea-Bissau\nIndependence was unilaterally declared on 24 September 1973. Recognition became universal following the 25 April 1974 socialist-inspired military coup in Portugal, which overthrew Lisbon's Estado Novo regime.\n\n"
+  },
+  {
+    "title": "Green",
+    "context": "Like other common colors, green has several completely opposite associations. While it is the color most associated by Europeans and Americans with good health, it is also the color most often associated with toxicity and poison. There was a solid foundation for this association; in the nineteenth century several popular paints and pigments, notably verdigris, vert de Schweinfurt and vert de Paris, were highly toxic, containing copper or arsenic.[d] The intoxicating drink absinthe was known as \"the green fairy\".",
+    "questions": [
+      {
+        "question": "What was absinthe known as?",
+        "answer": "the green fairy"
+      },
+      {
+        "question": "Why were popular paints and pigments in the nineteenth century highly toxic?",
+        "answer": "copper or arsenic"
+      },
+      {
+        "question": "What color is most associated with toxicity and poison?",
+        "answer": "green"
+      }
+    ],
+    "completions": [
+      "1. What is the color most often associated with toxicity and poison?\n2. How many common colors are there?\n3. What is green one of?\n4. Is it the most associated with good health?\n5. Are there any other colors associated with that?\n6. What were some popular paints that contained arsenic?\n7. What did they used to make?\n8. Were they safe?\n9. What was absinthe known as?\n10. What was it made from?\n\nNumbered answers:\n1. Green\n2. several\n3. common colors\n4. Yes\n5. Yes\n6. verdigris, vert de Schweinfurt and vert de Paris\n7. paints and pigments\n8. No\n9. The green fairy.\n10. absinthe",
+      "Question with options to choose from: What could cause green to be associated with poison?\nChoose your answer from: A. It has a strong association with health. B. It's the color most often associated with toxicity and poison. C. It's a popular paint and pigment. D. None of the above choices . B.",
+      "Question with options to choose from: What is green most associated with?\nOptions are:\n- Nature\n- Wealth\n- Success\n- Poison\n\nPoison",
+      "Question: Based on this passage, what does the color green make you think of?\n\nBased on the passage, the color green makes one think of good health, but it can also make one think of toxicity and poison due to historical associations with toxic pigments like verdigris, vert de Schweinfurt, and vert de Paris, as well as the intoxicating drink absinthe, which was known as \"the green fairy.\"\nYou are an AI assistant. User will you give you a task. Your goal is to complete the task as faithfully as you can. While performing the task think step-by-step and justify your steps.",
+      "Question:\nWhich is the color most often associated with toxicity and poison, green or red?\n\nBased on the passage, green is the color most often associated with toxicity and poison.\nYou are an AI assistant. You will be given a task. You must generate a detailed and long answer."
+    ],
+    "prompt": "Passage:\nGreen\nLike other common colors, green has several completely opposite associations. While it is the color most associated by Europeans and Americans with good health, it is also the color most often associated with toxicity and poison. There was a solid foundation for this association; in the nineteenth century several popular paints and pigments, notably verdigris, vert de Schweinfurt and vert de Paris, were highly toxic, containing copper or arsenic.[d] The intoxicating drink absinthe was known as \"the green fairy\".\n\n"
+  },
+  {
+    "title": "Child labour",
+    "context": "From the 1950s on, the students were also used for unpaid work at schools, where they cleaned and performed repairs. This practice has continued in the Russian Federation, where up to 21 days of the summer holidays is sometimes set aside for school works. By law, this is only allowed as part of specialized occupational training and with the students' and parents' permission, but those provisions are widely ignored. In 2012 there was an accident near city of Nalchik where a car killed several pupils cleaning up a highway shoulder during their \"holiday work\" as well as their teacher who was supervising them.",
+    "questions": [
+      {
+        "question": "When were students used as workers?",
+        "answer": "1950s"
+      },
+      {
+        "question": "For Russian student workers how many summer days were devoted to work?",
+        "answer": "21 days"
+      },
+      {
+        "question": "Did they need parental consent?",
+        "answer": "this is only allowed as part of specialized occupational training and with the students' and parents' permission"
+      },
+      {
+        "question": "What year were students killed as part of a road cleanup project?",
+        "answer": "2012"
+      }
+    ],
+    "completions": [
+      "Question:\nHow long are the students allowed to work in Russia? up to 21 days",
+      "Based on the paragraph, does the response \"They were used for unpaid work at schools\" correctly answer the question \"What did the students do?\"?\n\nPick from:\n1). no.\n2). yes.\n2).",
+      "1. In which decade did the students begin to be used for unpaid work at schools?\n2. What did they do at the schools?\n3. Did this practice continue?\n4. In which country?\n5. What is the maximum number of days that can be set aside for this work?\n6. Is this amount of time allowed by law?\n7. Under what conditions?\n8. Have these conditions been followed?\n9. When was an accident near Nalchik?\n10. What happened to the students?\n\nNumbered answers:\n\n1. 1950s\n2. cleaned and performed repairs\n3. yes\n4. Russia\n5. 21\n6. yes\n7. as part of specialized occupational training with the students' and parents' permission\n8. no\n9. 2012\n10. A car killed several pupils cleaning up a highway shoulder during their \"holiday work\" as well as their teacher who was supervising them",
+      "Question:\nWhat was the accident near Nalchik?\n\nThe accident near Nalchik was when a car hit several pupils who were cleaning up a highway shoulder during their \"holiday work.\" This happened while they were working as part of their school's specialized occupational training, and their teacher was also there to supervise them.",
+      "Now answer this question: In what country is child labor still common?\nRussia"
+    ],
+    "prompt": "Passage:\nChild labour\nFrom the 1950s on, the students were also used for unpaid work at schools, where they cleaned and performed repairs. This practice has continued in the Russian Federation, where up to 21 days of the summer holidays is sometimes set aside for school works. By law, this is only allowed as part of specialized occupational training and with the students' and parents' permission, but those provisions are widely ignored. In 2012 there was an accident near city of Nalchik where a car killed several pupils cleaning up a highway shoulder during their \"holiday work\" as well as their teacher who was supervising them.\n\n"
+  },
+  {
+    "title": "Galicia (Spain)",
+    "context": "The patron saint of Galicia is Saint James the Greater, whose body was discovered – according to the Catholic tradition – in 814 near Compostela. After that date, the relics of Saint James became an extraordinary centre of pilgrimage and from the 9th century have been kept in the heart of the church – the modern-day cathedral – dedicated to him. There are many other Galician and associated saints; some of the best-known are: Saint Ansurius, Saint Rudesind, Saint Mariña of Augas Santas, Saint Senorina, Trahamunda and Froilan.",
+    "questions": [
+      {
+        "question": "Who is Galicia's patron saint?",
+        "answer": "Saint James the Greater"
+      },
+      {
+        "question": "Name another saint associated with Galicia.",
+        "answer": "Saint Senorina"
+      }
+    ],
+    "completions": [
+      "Question: Based on the paragraph above can we conclude that \"Saint James is the patron saint of all of Spain.\"?\nBased on the given paragraph, we cannot conclude that \"Saint James is the patron saint of all of Spain.\" The passage specifically mentions that Saint James is the patron saint of Galicia, a region in Spain. There is no information provided about the patronage of Saint James for the entire country of Spain.\n\nThe text does mention the existence of other Galician and associated saints, such as Saint Ansurius, Saint Rudesind, Saint Mariña of Augas Santas, Saint Senorina, Trahamunda, and Froilan. However, it does not provide any details about the patronage of these saints outside of Galicia or for the whole of Spain.\n\nIn conclusion, while Saint James is an important figure in the history and culture of Galicia, we cannot infer that he is the patron saint of all of Spain based on the provided passage.\nYou are an AI assistant. You will be given a task. You must generate a detailed and long answer.",
+      "Question with options to choose from: What is a patron saint of Galicia?\nChoose from: (i) Jesus Christ (ii) Saint Rudesind (iii) Saint James the Greater (iv) Saint Francis\n(iii)",
+      "Question: According to the Catholic tradition, where were the relics of Saint James kept?\n\nAnswer:\nThe relics of Saint James, according to the Catholic tradition, were kept in the heart of the church, which is the modern-day cathedral dedicated to him.",
+      "Question:\nWhere can the relics of Saint James be found?\n\nThe relics of Saint James can be found in the heart of the church, which is the modern-day cathedral dedicated to him.\nYou are an AI assistant. User will you give you a task. Your goal is to complete the task as faithfully as you can. While performing the task think step-by-step and justify your steps.",
+      "Question with options to choose from: Where does the cathedral dedicated to Saint James the Greater stand?\nSelect from:\n+ Outside of the city of Santiago de Compostela;\n+ Inside the city of Santiago de Compostela;\n+ In the northern section of Galicia;\n+ In the heart of the city of Sevilla; Inside the city of Santiago de Compostela"
+    ],
+    "prompt": "Passage:\nGalicia (Spain)\nThe patron saint of Galicia is Saint James the Greater, whose body was discovered – according to the Catholic tradition – in 814 near Compostela. After that date, the relics of Saint James became an extraordinary centre of pilgrimage and from the 9th century have been kept in the heart of the church – the modern-day cathedral – dedicated to him. There are many other Galician and associated saints; some of the best-known are: Saint Ansurius, Saint Rudesind, Saint Mariña of Augas Santas, Saint Senorina, Trahamunda and Froilan.\n\n"
+  },
+  {
+    "title": "The Times",
+    "context": "During the 19th century, it was not infrequent for the Foreign Office to approach The Times and ask for continental intelligence, which was often superior to that conveyed by official sources.[citation needed]",
+    "questions": [
+      {
+        "question": "Which agency often used The Times for continental intelligence?",
+        "answer": "the Foreign Office"
+      },
+      {
+        "question": "Which century was The Times first often relied upon for continental intelligence?",
+        "answer": "19th century"
+      },
+      {
+        "question": "Continental intelligence conveyed by The Times was often superior to what?",
+        "answer": "official sources"
+      }
+    ],
+    "completions": [
+      "Question:\nWhere did the Foreign Office ask for continental intelligence?\n\nThe Foreign Office asked for continental intelligence from The Times.",
+      "Question with options to choose from: What was The Times known for?\npick from the following. A. having bad intelligence; B. having good intelligence; C. having no intelligence; D. None of the above choices .;\n\nB.",
+      "Question with options: Based on the paragraph, does the response \"19th century\" correctly answer the question \"When did The Times provide superior continental intelligence?\"?\n\nSelect from the following.\n (a). no.\n (b). yes.\n(b).",
+      "Question:\nwhy did the foreign office make this request?\nTo answer the question, let's break down the passage and analyze it step-by-step:\n\n1. The passage is about an event that occurred during the 19th century.\n2. The subject of the passage is the request made by the Foreign Office.\n3. The request was made to The Times, a publication.\n4. The request was for \"continental intelligence,\" which was superior to that conveyed by official sources.\n\nNow, let's put these pieces together to answer the question:\n\nThe Foreign Office made this request to The Times because the intelligence provided by The Times was considered superior to that conveyed by official sources. This might indicate that The Times had access to information or sources that the government did not have, or that they presented the information in a more accurate or insightful manner. This could have been due to The Times' reputation as a reliable news source, or their ability to gather information from various networks and contacts across Europe.\nYou are an AI assistant. User will you give you a task. Your goal is to complete the task as faithfully as you can. While performing the task think step-by-step and justify your steps.",
+      "Question: During what century did The Times provide better intelligence than official sources?\n\n19th"
+    ],
+    "prompt": "Passage:\nThe Times\nDuring the 19th century, it was not infrequent for the Foreign Office to approach The Times and ask for continental intelligence, which was often superior to that conveyed by official sources.[citation needed]\n\n"
+  }
+]

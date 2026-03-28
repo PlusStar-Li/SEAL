@@ -1,0 +1,8 @@
+{
+  "model": "gpt-4.1",
+  "dataset_in": "general-knowledge/data/squad_val.json",
+  "dataset_out": "general-knowledge/data/synthetic_data/eval/alternate_prompts/openai/gpt4_1_val_prompt-self-qa.json",
+  "n": 200,
+  "k": 5,
+  "timestamp": "2025-07-24T22:31:20.974877+00:00Z"
+}

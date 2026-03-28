@@ -1,0 +1,11 @@
+{
+  "model": "models/iter2",
+  "dataset_in": "general-knowledge/data/squad_val_full.json",
+  "dataset_out": "general-knowledge/data/synthetic_data/eval_full/iter2_val.json",
+  "temperature": 1.0,
+  "top_p": 0.95,
+  "max_tokens": 8192,
+  "n": 2067,
+  "k": 5,
+  "timestamp": "2025-07-30T00:22:37.610591+00:00Z"
+}

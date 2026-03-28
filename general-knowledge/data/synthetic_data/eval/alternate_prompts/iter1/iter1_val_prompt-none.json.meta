@@ -1,0 +1,11 @@
+{
+  "model": "models/iter1_prompt-none",
+  "dataset_in": "general-knowledge/data/squad_val.json",
+  "dataset_out": "general-knowledge/data/synthetic_data/eval/alternate_prompts/iter1/iter1_val_prompt-none.json",
+  "temperature": 1.0,
+  "top_p": 0.95,
+  "max_tokens": 8192,
+  "n": 2067,
+  "k": 5,
+  "timestamp": "2025-07-25T11:38:48.380228+00:00Z"
+}
