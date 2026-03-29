@@ -460,6 +460,8 @@ def main(experiment_name, skip_repeated_configs, challenge_file, solution_file, 
 
             try:
                 config = json.loads(response[0].outputs[0].text)
+                if not isinstance(config["data_generation"], dict):
+                    continue
             except json.JSONDecodeError as e:
                 continue
 
