@@ -240,7 +240,7 @@ engine = initialize_engine(
     quantization=args.quantization,
     max_lora_rank=lora_adapter_config.get("r", args.max_lora_rank),
     enable_lora=args.lora_checkpoints_folder is not None,
-    enforce_eager=False,
+    enforce_eager=True,
     lora_target_modules=lora_adapter_config.get("target_modules", None),
 )
 

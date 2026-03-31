@@ -429,7 +429,7 @@ def main(experiment_name, skip_repeated_configs, challenge_file, solution_file, 
 
     # Phase 1: Generate configs using self-edit model
     print("Phase 1: Generating configs using self-edit model...")
-    self_edit_model = LLM(model=model_name)
+    self_edit_model = LLM(model=model_name, enforce_eager=True)
     sampling_params = SamplingParams(
         max_tokens=128,
         temperature=0.8,
@@ -559,7 +559,7 @@ def main(experiment_name, skip_repeated_configs, challenge_file, solution_file, 
             adapter_path = ttt.update_model(
                 task_text_list=task_text_list,
                 output_dir=f"loras/self-edit/{experiment_name}/{base_task_name}/{task_ttt}",
-                batch_size=batch_size,
+                batch_size=batch_size if "903d1b4a" not in base_task_name else 1,
                 gradient_accumulation_steps=gradient_accumulation_steps,
                 learning_rate=config["training"]["learning_rate"],
                 num_train_epochs=config["training"]["num_train_epochs"],

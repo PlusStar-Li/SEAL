@@ -171,7 +171,7 @@ clean_model = AutoModelForCausalLM.from_pretrained(
 )
 
 # Final save to output directory
-output_dir = "./RL_trained_model"
+output_dir = "/data/SEAL/few-shot/loras/self-edit/training_set_iteration_1/RL_trained_model_iteration_1_8_epoch"
 clean_model.save_pretrained(
     output_dir,
     safe_serialization=True,

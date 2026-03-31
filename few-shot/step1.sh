@@ -1,5 +1,10 @@
 export DATA_DIR=/data/SEAL/few-shot/data
 export MODEL_DIR=~/.cache/modelscope/hub/models/LLM-Research/Llama-3.2-1B-Instruct
+# export VLLM_ATTENTION_BACKEND=XFORMERS
+# export VLLM_USE_TRITON_FLASH_ATTN=1
+# rm -rf ~/.triton/cache/*
+# export VLLM_GPU_MEMORY_UTILIZATION=0.7
+
 
 python self-edit.py \
     --experiment_name=training_set_iteration_1 \
