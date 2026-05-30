@@ -67,7 +67,7 @@ MAKE_SQUAD_DATA_TEMPLATES_BASE: dict[str, str] = {
 
 # ------------------------------------------------------------------------ #
 
-def make_prompt(title: str, context: str, instruct_model: bool, prompt_key: str) -> str:
+def make_prompt(title: str, context: str, instruct_model: bool, prompt_key: str = "implications") -> str:
     MAKE_SQUAD_DATA_TEMPLATE = MAKE_SQUAD_DATA_TEMPLATE_INSTRUCT if instruct_model else MAKE_SQUAD_DATA_TEMPLATES_BASE[prompt_key]
     return MAKE_SQUAD_DATA_TEMPLATE.format(
             title=title,

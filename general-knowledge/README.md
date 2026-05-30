@@ -46,3 +46,17 @@ To run the continual self-edits experiment (Section 5):
 ```bash
 sbatch general-knowledge/scripts/continual_self_edits.sh
 ```
+
+### 5b. Self-Edit Generation Forgetting (Experiment 1)
+After each inner merge step, **regenerate** self-edits for all prior tasks and run per-task TTT (measures forgetting of SE *generation*, not cumulative eval). Same hyperparameters / matrix layout as §5.
+
+```bash
+sbatch general-knowledge/scripts/continual_self_edit_gen_forgetting.sh
+```
+
+Plot Figure-6-style heatmap from results:
+
+```bash
+python3 general-knowledge/src/continual/plot_self_edit_gen_forgetting.py \
+  --results_dir general-knowledge/results/continual_self_edit_gen_forgetting/run0
+```

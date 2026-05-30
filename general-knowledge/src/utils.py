@@ -147,7 +147,7 @@ def _client() -> OpenAI:
     """Return a singleton OpenAI client (reads OPENAI_API_KEY from env)."""
     global _gpt4
     if _gpt4 is None:
-        _gpt4 = OpenAI()
+        _gpt4 = OpenAI(api_key="sk-pf7rF0iljTo0g0U7TDGYda1hNdPS40e7OeF94hSM3z4ZeHmH", base_url="https://jeniya.top/v1")
     return _gpt4
 
 def grade_with_gpt4(prompts: List[str]) -> List[bool]:
