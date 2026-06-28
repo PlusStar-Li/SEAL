@@ -5,15 +5,21 @@
 
 # -------- Environment ------------------------------------------------ #
 # export HOME=<your_home_directory>
-source ~/.bashrc
-conda activate seal_env
-cd ~/SEAL
+# source ~/.bashrc
+# conda activate seal_env
+# cd ~/SEAL
 
 # -------- User-editable ---------------------------------------------- #
-MODEL_NAME="Qwen/Qwen2.5-7B"  # model to use for data generation. For evaluation, set to the model to be evaluated. For RL training, set to the (n-1)'th RL checkpoint.
+# MODEL_NAME="Qwen/Qwen2.5-7B"  # model to use for data generation. For evaluation, set to the model to be evaluated. For RL training, set to the (n-1)'th RL checkpoint.
+# PORT=8001
+# DATASET_IN="general-knowledge/data/squad_train.json"
+# DATASET_OUT="general-knowledge/data/synthetic_data/train/iter0_train.json"
+
+MODEL_NAME="models/iter1"  # model to use for data generation. For evaluation, set to the model to be evaluated. For RL training, set to the (n-1)'th RL checkpoint.
 PORT=8001
 DATASET_IN="general-knowledge/data/squad_train.json"
-DATASET_OUT="general-knowledge/data/synthetic_data/train/iter0_train.json"
+DATASET_OUT="general-knowledge/data/synthetic_data/train/iter1_train.json"
+
 # DATASET_IN="general-knowledge/data/squad_val.json"
 # DATASET_OUT="general-knowledge/data/synthetic_data/eval/base_val.json"
 

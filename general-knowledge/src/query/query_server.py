@@ -33,6 +33,7 @@ from typing import Any, Dict, List
 from ..utils import (
     build_train_sequences,
 )
+from ..lora_config import LORA_ALPHA, LORA_DROPOUT, LORA_RANK
 
 # -------------------------- ARGPARSE / CONFIG ------------------------ #
 def parse_args() -> argparse.Namespace:
@@ -48,9 +49,9 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--eval_times", type=int, default=3)
 
     # LoRA / optimization hyperparams
-    p.add_argument("--lora_rank", type=int, default=32)
-    p.add_argument("--lora_alpha", type=int, default=64)
-    p.add_argument("--lora_dropout", type=float, default=0)
+    p.add_argument("--lora_rank", type=int, default=LORA_RANK)
+    p.add_argument("--lora_alpha", type=int, default=LORA_ALPHA)
+    p.add_argument("--lora_dropout", type=float, default=LORA_DROPOUT)
     p.add_argument("--finetune_epochs", type=int, default=10)
     p.add_argument("--finetune_lr", type=float, default=1e-3)
     p.add_argument("--batch_size", type=int, default=1)

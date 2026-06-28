@@ -1,0 +1,200 @@
+{
+  "role": "merge_train",
+  "n_merge": 8,
+  "titles": [
+    "Kenya",
+    "Southern California",
+    "Fresno, California",
+    "Nikola Tesla",
+    "Genghis Khan",
+    "Economic inequality",
+    "Apollo program",
+    "Jacksonville, Florida"
+  ],
+  "articles": [
+    {
+      "title": "Kenya",
+      "context": "East and Central Africa's biggest economy has posted tremendous growth in the service sector, boosted by rapid expansion in telecommunication and financial activity over the last decade, and now[when?] contributes 62% of GDP. 22% of GDP still comes from the unreliable agricultural sector which employs 75% of the labour force (a consistent characteristic of under-developed economies that have not attained food security – an important catalyst of economic growth) A small portion of the population relies on food aid.[citation needed] Industry and manufacturing is the smallest sector, accounting for 16% of GDP. The service, industry and manufacturing sectors only employ 25% of the labour force but contribute 75% of GDP.",
+      "questions": [
+        {
+          "question": "What was East and Central Africa's economy boosted by?",
+          "answer": "rapid expansion in telecommunication and financial activity"
+        },
+        {
+          "question": "What is an important catalyst of economic growth?",
+          "answer": "food security"
+        },
+        {
+          "question": "What is the smalled work force sector?",
+          "answer": "Industry and manufacturing"
+        },
+        {
+          "question": "What percent of the labor force work in agriculture?",
+          "answer": "75% of the labour force"
+        }
+      ]
+    },
+    {
+      "title": "Southern California",
+      "context": "Since the 1920s, motion pictures, petroleum and aircraft manufacturing have been major industries. In one of the richest agricultural regions in the U.S., cattle and citrus were major industries until farmlands were turned into suburbs. Although military spending cutbacks have had an impact, aerospace continues to be a major factor.",
+      "questions": [
+        {
+          "question": "Motion pictures, petroleum and aircraft manufacturing have been major industries since which decade?",
+          "answer": "1920s"
+        },
+        {
+          "question": "What characteristic best describes the agricultural regions that could be found?",
+          "answer": "richest"
+        },
+        {
+          "question": "Outside of livestock, what else was considered a major industry in the agriculture regions?",
+          "answer": "citrus"
+        },
+        {
+          "question": "Which type of livestock was the argricultural region known for?",
+          "answer": "cattle"
+        },
+        {
+          "question": "What industry has managed to survive major military spending cutbacks?",
+          "answer": "aerospace"
+        }
+      ]
+    },
+    {
+      "title": "Fresno, California",
+      "context": "The area is also known for its early twentieth century homes, many of which have been restored in recent decades. The area includes many California Bungalow and American Craftsman style homes, Spanish Colonial Revival Style architecture, Mediterranean Revival Style architecture, Mission Revival Style architecture, and many Storybook houses designed by Fresno architects, Hilliard, Taylor & Wheeler. The residential architecture of the Tower District contrasts with the newer areas of tract homes urban sprawl in north and east areas of Fresno.",
+      "questions": [
+        {
+          "question": "What type of homes is Fresno known for?",
+          "answer": "early twentieth century homes"
+        },
+        {
+          "question": "What types of houses are designed by Fresno architects?",
+          "answer": "Storybook houses"
+        },
+        {
+          "question": "Does the residential architecture of the Tower District compare or contrast with other part of Fresno?",
+          "answer": "contrasts"
+        },
+        {
+          "question": "How recently has the homes in Fresno been restored?",
+          "answer": "in recent decades"
+        }
+      ]
+    },
+    {
+      "title": "Nikola Tesla",
+      "context": "At the beginning of 1893 Westinghouse engineer Benjamin Lamme had made great progress developing an efficient version of Tesla's induction motor and Westinghouse Electric started branding their complete polyphase phase AC system as the \"Tesla Polyphase System\", noting how they believed Tesla's patents gave them patent priority over other AC systems.",
+      "questions": [
+        {
+          "question": "Which engineer made the induction motor more efficient?",
+          "answer": "Benjamin Lamme"
+        },
+        {
+          "question": "In which year did Benjamin Lamme achieve success making the motor more efficient?",
+          "answer": "1893"
+        },
+        {
+          "question": "Who called their system the \"Tesla Polyphase System\"?",
+          "answer": "Westinghouse Electric"
+        }
+      ]
+    },
+    {
+      "title": "Genghis Khan",
+      "context": "The Mongol Empire was governed by a civilian and military code, called the Yassa, created by Genghis Khan. The Mongol Empire did not emphasize the importance of ethnicity and race in the administrative realm, instead adopting an approach grounded in meritocracy. The exception was the role of Genghis Khan and his family. The Mongol Empire was one of the most ethnically and culturally diverse empires in history, as befitted its size. Many of the empire's nomadic inhabitants considered themselves Mongols in military and civilian life, including Mongols, Turks and others and included many diverse Khans of various ethnicities as part of the Mongol Empire such as Muhammad Khan.",
+      "questions": [
+        {
+          "question": "Who created the code that governed military and civilian conduct in the Mongol Empire?",
+          "answer": "Genghis Khan"
+        },
+        {
+          "question": "What was the name of the Mongol Empire's legal code?",
+          "answer": "Yassa"
+        },
+        {
+          "question": "What was the guiding principle of the Mongol Empire code of conduct?",
+          "answer": "meritocracy"
+        },
+        {
+          "question": "Who was exempt from the meritocratic principles of the Mongol Empire?",
+          "answer": "Genghis Khan and his family"
+        },
+        {
+          "question": "Who is an example of the diversity of leadership in the Mongol Empire?",
+          "answer": "Muhammad Khan"
+        }
+      ]
+    },
+    {
+      "title": "Economic inequality",
+      "context": "According to International Monetary Fund economists, inequality in wealth and income is negatively correlated with the duration of economic growth spells (not the rate of growth). High levels of inequality prevent not just economic prosperity, but also the quality of a country's institutions and high levels of education. According to IMF staff economists, \"if the income share of the top 20 percent (the rich) increases, then GDP growth actually declines over the medium term, suggesting that the benefits do not trickle down. In contrast, an increase in the income share of the bottom 20 percent (the poor) is associated with higher GDP growth. The poor and the middle class matter the most for growth via a number of interrelated economic, social, and political channels.\"",
+      "questions": [
+        {
+          "question": "What is negatively correlated to the duration of economic growth?",
+          "answer": "inequality in wealth and income"
+        },
+        {
+          "question": "What do high levels of inequality  prevent beyond economic prosperity?",
+          "answer": "quality of a country's institutions"
+        },
+        {
+          "question": "What happens to the GDP growth of a country if the income share of the top 20 percent increases, according to IMF staff economists?",
+          "answer": "declines"
+        },
+        {
+          "question": "What does an increase in the income share of the bottom 20 percent of people of a society result in?",
+          "answer": "higher GDP growth"
+        },
+        {
+          "question": "Who matters the most for economic growth?",
+          "answer": "The poor and the middle class"
+        }
+      ]
+    },
+    {
+      "title": "Apollo program",
+      "context": "Before the Apollo program began, Wernher von Braun and his team of rocket engineers had started work on plans for very large launch vehicles, the Saturn series, and the even larger Nova series. In the midst of these plans, von Braun was transferred from the Army to NASA, and made Director of the Marshall Space Flight Center. The initial direct ascent plan to send the three-man Apollo Command/Service Module directly to the lunar surface, on top of a large descent rocket stage, would require a Nova-class launcher, with a lunar payload capability of over 180,000 pounds (82,000 kg). The June 11, 1962, decision to use lunar orbit rendezvous enabled the Saturn V to replace the Nova, and the MSFC proceeded to develop the Saturn rocket family for Apollo.",
+      "questions": [
+        {
+          "question": "Who had worked on the Saturn series even before the Apollo program began officially?",
+          "answer": "Wernher von Braun"
+        },
+        {
+          "question": "From where was von Braun transferred to go to NASA?",
+          "answer": "Army"
+        },
+        {
+          "question": "When was the decision made to replace the Nova rockets with the Saturn V?",
+          "answer": "June 11, 1962"
+        }
+      ]
+    },
+    {
+      "title": "Jacksonville, Florida",
+      "context": "Jacksonville is the largest city by population in the U.S. state of Florida, and the largest city by area in the contiguous United States. It is the county seat of Duval County, with which the city government consolidated in 1968. Consolidation gave Jacksonville its great size and placed most of its metropolitan population within the city limits; with an estimated population of 853,382 in 2014, it is the most populous city proper in Florida and the Southeast, and the 12th most populous in the United States. Jacksonville is the principal city in the Jacksonville metropolitan area, with a population of 1,345,596 in 2010.",
+      "questions": [
+        {
+          "question": "Which Florida city has the biggest population?",
+          "answer": "Jacksonville"
+        },
+        {
+          "question": "What was the population Jacksonville city as of 2010?",
+          "answer": "1,345,596"
+        },
+        {
+          "question": "Based on population alone, what is Jacksonville's ranking in the United States?",
+          "answer": "12th"
+        },
+        {
+          "question": "In which county does Jacksonville reside?",
+          "answer": "Duval"
+        },
+        {
+          "question": "What year did consolidation cause Jacksonville to become part of Duval County?",
+          "answer": "1968"
+        }
+      ]
+    }
+  ]
+}

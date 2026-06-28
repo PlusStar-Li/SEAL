@@ -1,9 +1,13 @@
 # general-knowledge/src/EM/train_SFT.py
 """
-SFT trainer
+SFT trainer (ReST-EM outer loop).
 
 Dataset format expected:
 {"prompt": "...", "completion": "..."}
+
+After training, saves:
+  1. {output_dir}_lora_adapter/  — outer LoRA (W_SE) before merge, for O-LoRA U_hist
+  2. {output_dir}/               — merged full model for inference / next RL round
 """
 import os
 import argparse
@@ -12,7 +16,15 @@ import torch
 import torch.distributed as dist
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from trl import SFTConfig, SFTTrainer
-from peft import LoraConfig
+from peft import LoraConfig, PeftModel
+
+from lora_config import (
+    LORA_ALPHA,
+    LORA_DROPOUT,
+    LORA_RANK,
+    lora_target_modules_csv,
+)
+from lora_checkpoint_utils import default_lora_adapter_dir, save_outer_lora_checkpoint
 
 def parse_args():
     p = argparse.ArgumentParser()
@@ -23,12 +35,32 @@ def parse_args():
     p.add_argument("--gradient_accumulation_steps", type=int, default=8)
     p.add_argument("--num_train_epochs", type=int, default=3)
     p.add_argument("--learning_rate", type=float, default=2e-5)
-    p.add_argument("--lora_rank", type=int, default=64)
-    p.add_argument("--lora_alpha", type=int, default=128)
-    p.add_argument("--lora_dropout", type=float, default=0.0)
-    p.add_argument("--lora_target_modules", type=str, default="q_proj,k_proj,v_proj,o_proj,gate_proj,up_proj,down_proj")
+    p.add_argument("--lora_rank", type=int, default=LORA_RANK)
+    p.add_argument("--lora_alpha", type=int, default=LORA_ALPHA)
+    p.add_argument("--lora_dropout", type=float, default=LORA_DROPOUT)
+    p.add_argument(
+        "--lora_target_modules",
+        type=str,
+        default=lora_target_modules_csv(),
+    )
     p.add_argument("--logging_steps", type=int, default=10)
+    p.add_argument(
+        "--lora_adapter_dir",
+        default=None,
+        help="Where to save outer LoRA before merge (default: {output_dir}_lora_adapter)",
+    )
+    p.add_argument(
+        "--no_save_lora_adapter",
+        action="store_true",
+        help="Skip saving pre-merge LoRA adapter and A matrices",
+    )
     return p.parse_args()
+
+
+def _unwrap_model(model):
+    if hasattr(model, "module"):
+        return model.module
+    return model
 
 def longest_seq_len(dataset, tok):
     return max(
@@ -81,11 +113,35 @@ def main() -> None:
         torch.cuda.set_device(local_rank)
 
     trainer.train()
-    peft_model = trainer.model
+    peft_model = _unwrap_model(trainer.model)
+    if not isinstance(peft_model, PeftModel):
+        raise TypeError(f"Expected PeftModel after SFT, got {type(peft_model)}")
+
+    should_save = not args.no_save_lora_adapter and trainer.is_world_process_zero()
+    lora_adapter_dir = args.lora_adapter_dir or default_lora_adapter_dir(args.output_dir)
+    if should_save:
+        save_outer_lora_checkpoint(
+            peft_model,
+            lora_adapter_dir,
+            metadata={
+                "role": "outer_w_se",
+                "base_model": args.model_name_or_path,
+                "merged_model_dir": args.output_dir,
+                "lora_rank": args.lora_rank,
+                "lora_alpha": args.lora_alpha,
+                "lora_dropout": args.lora_dropout,
+                "lora_target_modules": args.lora_target_modules.split(","),
+                "train_file": args.train_file,
+            },
+        )
+        print(f"Saved outer LoRA adapter → {lora_adapter_dir}")
+
     merged_model = peft_model.merge_and_unload()
-    merged_model.save_pretrained(args.output_dir)
-    tokenizer.save_pretrained(args.output_dir)
+    if should_save:
+        merged_model.save_pretrained(args.output_dir)
+        tokenizer.save_pretrained(args.output_dir)
     if dist.is_initialized():
+        dist.barrier()
         dist.destroy_process_group()
 
 

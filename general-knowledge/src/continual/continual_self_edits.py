@@ -46,6 +46,7 @@ import zmq
 from peft import PeftModel
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
+from ..lora_config import LORA_ALPHA, LORA_DROPOUT, LORA_RANK, VLLM_MAX_LORA_RANK
 from ..utils import (
     set_vllm_api_url,
     build_train_sequences,
@@ -78,7 +79,7 @@ def _spawn_vllm(model: str, host: str, port: int, gpus: str, log_dir: Path, tag:
         str(max_model_len),
         "--enable-lora",
         "--max-lora-rank",
-        str(lora_rank),
+        str(max(lora_rank, VLLM_MAX_LORA_RANK)),
         "--trust-remote-code",
     ]
     _banner(f"[vLLM] launching on GPU(s) {gpus} → :{port}\n$ {' '.join(cmd)}")
@@ -105,7 +106,54 @@ def _spawn_vllm(model: str, host: str, port: int, gpus: str, log_dir: Path, tag:
     sys.exit("[vLLM] failed to start within timeout")
 
 
-def _spawn_inner_server(vllm_api: str, model: str, zmq_port: int, gpu: str, log_dir: Path, tag: str) -> subprocess.Popen:
+def _inner_tmp_dir(zmq_port: int) -> Path:
+    """Path where TTT_server writes the step-0 adapter (see inner_TTT_{step})."""
+    return Path(f"models/tmp_{zmq_port}_inner_TTT_0")
+
+
+def _cleanup_inner_tmp(zmq_port: int, label: str = "") -> None:
+    """Remove leftover inner LoRA tmp dir to save disk."""
+    tmp_dir = _inner_tmp_dir(zmq_port)
+    if not tmp_dir.exists():
+        return
+    try:
+        shutil.rmtree(tmp_dir)
+        suffix = f" ({label})" if label else ""
+        print(f"[Cleanup] removed inner tmp adapter {tmp_dir}{suffix}")
+    except OSError as exc:
+        print(f"[Cleanup] failed to remove {tmp_dir}: {exc}")
+
+
+def _is_under_output_dir(path: str, output_dir: str) -> bool:
+    """True if path is inside output_dir (works for relative vs absolute paths)."""
+    try:
+        return Path(path).resolve().is_relative_to(Path(output_dir).resolve())
+    except (ValueError, OSError):
+        return False
+
+
+def _cleanup_prev_merge_dir(prev: str, output_dir: str, label: str = "") -> None:
+    """Delete a prior merged checkpoint under output_dir."""
+    if not Path(prev).is_dir() or not _is_under_output_dir(prev, output_dir):
+        return
+    try:
+        shutil.rmtree(prev)
+        suffix = f" ({label})" if label else ""
+        print(f"[Cleanup] removed previous merge dir {prev}{suffix}")
+    except OSError as exc:
+        print(f"[Cleanup] failed to remove {prev}: {exc}")
+
+
+def _spawn_inner_server(
+    vllm_api: str,
+    model: str,
+    zmq_port: int,
+    gpu: str,
+    log_dir: Path,
+    tag: str,
+    *,
+    keep_adapter_dir: bool = False,
+) -> subprocess.Popen:
     cmd = [
         sys.executable,
         "-m",
@@ -116,8 +164,9 @@ def _spawn_inner_server(vllm_api: str, model: str, zmq_port: int, gpu: str, log_
         model,
         "--zmq_port",
         str(zmq_port),
-        "--keep_adapter_dir",  # keep the adapter dir for merging later. It will be removed after merging
     ]
+    if keep_adapter_dir:
+        cmd.append("--keep_adapter_dir")
     _banner(f"[Inner] launching on GPU {gpu}, ZMQ :{zmq_port}\n$ {' '.join(cmd)}")
     env = os.environ.copy()
     env["CUDA_VISIBLE_DEVICES"] = gpu
@@ -238,7 +287,15 @@ def run_one_sequence(seq_idx: int, items: List[Dict[str, Any]], args) -> Tuple[L
         vllm = _spawn_vllm(current_model_path, "127.0.0.1", args.vllm_port, args.vllm_gpus, logs_step_dir, step_tag, args.lora_rank, max_model_len)
         vllm_api = f"http://127.0.0.1:{args.vllm_port}"
         set_vllm_api_url(vllm_api)
-        inner = _spawn_inner_server(vllm_api, current_model_path, args.zmq_port, args.inner_gpu, logs_step_dir, step_tag)
+        inner = _spawn_inner_server(
+            vllm_api,
+            current_model_path,
+            args.zmq_port,
+            args.inner_gpu,
+            logs_step_dir,
+            step_tag,
+            keep_adapter_dir=True,
+        )
         zmq_ctx, zmq_sock = _connect_zmq(args.zmq_port)
 
         # ---------------- 2) self-edit completion --------------------------
@@ -284,22 +341,21 @@ def run_one_sequence(seq_idx: int, items: List[Dict[str, Any]], args) -> Tuple[L
         print([f"d{i}:{_stats.mean(mat_vals[k+1][i]):.3f}" for i in range(k + 1)])
 
         # ---------------- 5) grab adapter & merge into base ---------------
-        adapter_path = Path(f"models/tmp_{args.zmq_port}_inner_TTT_0/final_adapter")
+        adapter_path = _inner_tmp_dir(args.zmq_port) / "final_adapter"
         print("[Merge] adapter path:", adapter_path)
         if not adapter_path.exists():
             print("[!] adapter not found - skipping merge, keeping previous base")
+            _cleanup_inner_tmp(args.zmq_port, "stale after missing adapter")
         else:
             merged_dir = Path(args.output_dir) / f"merged_seq{seq_idx}_step{k}"
             prev_model_path = current_model_path
             current_model_path = _merge_lora(current_model_path, adapter_path, merged_dir)
+            _cleanup_inner_tmp(args.zmq_port, f"merge step {k}")
 
-            # Clean up previous merge dir if it's not the original base
-            if k > 0 and Path(prev_model_path).is_dir() and str(prev_model_path).startswith(str(Path(args.output_dir))):
-                try:
-                    shutil.rmtree(prev_model_path)
-                    print(f"[Cleanup] removed previous merge dir {prev_model_path}")
-                except Exception as exc:
-                    print(f"[Cleanup] failed to remove {prev_model_path}: {exc}")
+            if k > 0:
+                _cleanup_prev_merge_dir(
+                    prev_model_path, args.output_dir, f"merge step {k}"
+                )
 
             # NEW: Also remove last step of previous sequence, if this is first step of current
             if k == 0 and seq_idx > 0:
@@ -323,23 +379,9 @@ def run_one_sequence(seq_idx: int, items: List[Dict[str, Any]], args) -> Tuple[L
         vllm.wait()
         torch.cuda.empty_cache()
 
-    # ---------------- 7) clean up remaining directories ------------------
-    last_merge = Path(current_model_path)
-    if last_merge.is_dir() and str(last_merge).startswith(str(Path(args.output_dir))):
-        try:
-            shutil.rmtree(last_merge)
-            print(f"[Cleanup] removed final merge dir {last_merge}")
-        except Exception as exc:
-            print(f"[Cleanup] failed to remove final merge dir {last_merge}: {exc}")
+    _cleanup_prev_merge_dir(current_model_path, args.output_dir, "end of sequence")
 
-    # delete the inner-server's "models/tmp_*" folder:
-    tmp_dir = Path(f"models/tmp_{args.zmq_port}_inner_TTT_0")
-    if tmp_dir.exists():
-        try:
-            shutil.rmtree(tmp_dir)
-            print(f"[Cleanup] removed temporary adapter dir {tmp_dir}")
-        except Exception as exc:
-            print(f"[Cleanup] failed to remove temporary adapter dir {tmp_dir}: {exc}")
+    _cleanup_inner_tmp(args.zmq_port, "end of sequence")
 
     # ---------------- 8) aggregate mean/std over reps --------------------
     mean_mat: List[List[float]] = [[0.0] * K for _ in range(R)]
@@ -380,9 +422,9 @@ def parse_args():
     p.add_argument("--max_tokens", type=int, default=8192)
 
     # Inner loop hyperparams (pass-through)
-    p.add_argument("--lora_rank", type=int, default=32)
-    p.add_argument("--lora_alpha", type=int, default=64)
-    p.add_argument("--lora_dropout", type=float, default=0)
+    p.add_argument("--lora_rank", type=int, default=LORA_RANK)
+    p.add_argument("--lora_alpha", type=int, default=LORA_ALPHA)
+    p.add_argument("--lora_dropout", type=float, default=LORA_DROPOUT)
     p.add_argument("--finetune_epochs", type=int, default=10)
     p.add_argument("--finetune_lr", type=float, default=1e-3)
     p.add_argument("--batch_size", type=int, default=1)

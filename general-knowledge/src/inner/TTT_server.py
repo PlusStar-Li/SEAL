@@ -54,6 +54,12 @@ from ..utils import (
     extract_final_answer,
     score_proxy_with_gpt4,
 )
+from ..lora_config import (
+    LORA_ALPHA,
+    LORA_DROPOUT,
+    LORA_RANK,
+    LORA_TARGET_MODULES,
+)
 
 # ---------------------------  CONFIG & LOGGING  ----------------------- #
 logging.basicConfig(
@@ -161,9 +167,9 @@ def main():
 
                 train_sequences = msg.get("train_sequences")
                 questions = msg.get("eval_questions", [])
-                lora_rank = msg.get("lora_rank", 32)
-                lora_alpha = msg.get("lora_alpha", 64)
-                lora_dropout = msg.get("lora_dropout", 0)
+                lora_rank = msg.get("lora_rank", LORA_RANK)
+                lora_alpha = msg.get("lora_alpha", LORA_ALPHA)
+                lora_dropout = msg.get("lora_dropout", LORA_DROPOUT)
                 finetune_epochs = msg.get("finetune_epochs", 10)
                 finetune_lr = msg.get("finetune_lr", 1e-3)
                 batch_size = msg.get("batch_size", 1)
@@ -290,8 +296,12 @@ def main():
                 collator = DataCollatorWithPadding(tokenizer)
 
                 lora_cfg = LoraConfig(
-                    r=lora_rank, lora_alpha=lora_alpha,
-                    lora_dropout=lora_dropout, task_type="CAUSAL_LM"
+                    r=lora_rank,
+                    lora_alpha=lora_alpha,
+                    lora_dropout=lora_dropout,
+                    bias="none",
+                    task_type="CAUSAL_LM",
+                    target_modules=LORA_TARGET_MODULES,
                 )
                 lora_model = get_peft_model(base_model, lora_cfg)
 

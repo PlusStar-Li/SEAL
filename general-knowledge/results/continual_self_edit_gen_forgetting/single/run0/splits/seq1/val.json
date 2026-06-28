@@ -1,0 +1,248 @@
+{
+  "role": "eval_only",
+  "n_val": 8,
+  "titles": [
+    "Prime number",
+    "Prime number",
+    "Economic inequality",
+    "Rhine",
+    "Newcastle upon Tyne",
+    "Victoria (Australia)",
+    "Amazon rainforest",
+    "Kenya"
+  ],
+  "articles": [
+    {
+      "title": "Prime number",
+      "context": "For a long time, number theory in general, and the study of prime numbers in particular, was seen as the canonical example of pure mathematics, with no applications outside of the self-interest of studying the topic with the exception of use of prime numbered gear teeth to distribute wear evenly. In particular, number theorists such as British mathematician G. H. Hardy prided themselves on doing work that had absolutely no military significance. However, this vision was shattered in the 1970s, when it was publicly announced that prime numbers could be used as the basis for the creation of public key cryptography algorithms. Prime numbers are also used for hash tables and pseudorandom number generators.",
+      "questions": [
+        {
+          "question": "Besides the study of prime numbers, what general theory was considered the official example of pure mathematics?",
+          "answer": "number theory"
+        },
+        {
+          "question": "What British mathematician took pride in doing work that he felt had no military benefit?",
+          "answer": "G. H. Hardy"
+        },
+        {
+          "question": "When was it discovered that prime numbers could applied to the creation of public key cryptography algorithms?",
+          "answer": "the 1970s"
+        },
+        {
+          "question": "Besides public key cryptography, what is another application for prime numbers?",
+          "answer": "hash tables"
+        },
+        {
+          "question": "What type of number generators make use of prime numbers?",
+          "answer": "pseudorandom number generators"
+        }
+      ]
+    },
+    {
+      "title": "Prime number",
+      "context": "Prime ideals are the points of algebro-geometric objects, via the notion of the spectrum of a ring. Arithmetic geometry also benefits from this notion, and many concepts exist in both geometry and number theory. For example, factorization or ramification of prime ideals when lifted to an extension field, a basic problem of algebraic number theory, bears some resemblance with ramification in geometry. Such ramification questions occur even in number-theoretic questions solely concerned with integers. For example, prime ideals in the ring of integers of quadratic number fields can be used in proving quadratic reciprocity, a statement that concerns the solvability of quadratic equations",
+      "questions": [
+        {
+          "question": "What are the points of algebro-geometric objects?",
+          "answer": "Prime ideals"
+        },
+        {
+          "question": "What does factorization of prime ideals approximate?",
+          "answer": "ramification in geometry"
+        },
+        {
+          "question": "In what type of ring can prime ideals be used for validating quadratic reciprocity?",
+          "answer": "ring of integers of quadratic number fields"
+        },
+        {
+          "question": "What does quadratic reciprocity seek to achieve?",
+          "answer": "the solvability of quadratic equations"
+        }
+      ]
+    },
+    {
+      "title": "Economic inequality",
+      "context": "In many countries, there is a Gender pay gap in favor of males in the labor market. Several factors other than discrimination may contribute to this gap. On average, women are more likely than men to consider factors other than pay when looking for work, and may be less willing to travel or relocate. Thomas Sowell, in his book Knowledge and Decisions, claims that this difference is due to women not taking jobs due to marriage or pregnancy, but income studies show that that does not explain the entire difference. A U.S. Census's report stated that in US once other factors are accounted for there is still a difference in earnings between women and men. The income gap in other countries ranges from 53% in Botswana to -40% in Bahrain.",
+      "questions": [
+        {
+          "question": "What is the income inequality gap between genders in Botswana?",
+          "answer": "53%"
+        },
+        {
+          "question": "What is the gender income inequality in Bahrain?",
+          "answer": "-40%"
+        },
+        {
+          "question": "What is attributed to the income inequality in the United States?",
+          "answer": "less willing to travel or relocate"
+        },
+        {
+          "question": "Who does the wage gap between genders provide an advantage?",
+          "answer": "males"
+        },
+        {
+          "question": "In many countries, what kind of pay gap is there?",
+          "answer": "Gender"
+        },
+        {
+          "question": "Who does a gender pay gap tend to favor?",
+          "answer": "males in the labor market"
+        },
+        {
+          "question": "What gender is less willing to travel or relocate for work?",
+          "answer": "women"
+        },
+        {
+          "question": "Who is the author of the book, \"Knowledge and Decisions\"?",
+          "answer": "Thomas Sowell"
+        },
+        {
+          "question": "What does a U.S. census report state that even after other factors there still exists this between earnings of men and women?",
+          "answer": "a difference"
+        }
+      ]
+    },
+    {
+      "title": "Rhine",
+      "context": "The variant forms of the name of the Rhine in modern languages are all derived from the Gaulish name Rēnos, which was adapted in Roman-era geography (1st century BC) as Greek Ῥῆνος (Rhēnos), Latin Rhenus.[note 3] The spelling with Rh- in English Rhine as well as in German Rhein and French Rhin is due to the influence of Greek orthography, while the vocalisation -i- is due to the Proto-Germanic adoption of the Gaulish name as *Rīnaz, via Old Frankish giving Old English Rín, Old High German Rīn, Dutch Rijn (formerly also spelled Rhijn)). The diphthong in modern German Rhein (also adopted in Romansh Rein, Rain) is a Central German development of the early modern period, the Alemannic name Rī(n) retaining the older vocalism,[note 4] as does Ripuarian Rhing, while Palatine has diphthongized Rhei, Rhoi. Spanish is with French in adopting the Germanic vocalism Rin-, while Italian, Occitan and Portuguese retain the Latin Ren-.",
+      "questions": [
+        {
+          "question": "Where does the name Rhine derive from?",
+          "answer": "Gaulish name Rēnos"
+        },
+        {
+          "question": "What is the French name for the Rhine?",
+          "answer": "Rhin"
+        },
+        {
+          "question": "What is the Proto-Germanic adaptation of the name of the Rhine?",
+          "answer": "Rīnaz"
+        },
+        {
+          "question": "What century did the name of the Rhine come from?",
+          "answer": "1st century BC"
+        },
+        {
+          "question": "What does the name The Rhine come from?",
+          "answer": "Gaulish name Rēnos"
+        },
+        {
+          "question": "What is the Rhine called in French?",
+          "answer": "Rhin"
+        },
+        {
+          "question": "What is the Rhine called in Dutch?",
+          "answer": "Rijn"
+        },
+        {
+          "question": "What is the Proto-Germanic adoption of the Gaulish name of the Rhine?",
+          "answer": "Rīnaz"
+        },
+        {
+          "question": "How was the Dutch name for the Rhine originally spelled?",
+          "answer": "Rhijn"
+        }
+      ]
+    },
+    {
+      "title": "Newcastle upon Tyne",
+      "context": "The city is served by the Tyne and Wear Metro, a system of suburban and underground railways covering much of Tyne and Wear. It was opened in five phases between 1980 and 1984, and was Britain's first urban light rail transit system; two extensions were opened in 1991 and 2002. It was developed from a combination of existing and newly built tracks and stations, with deep-level tunnels constructed through Newcastle city centre. A bridge was built across the Tyne, between Newcastle and Gateshead, and opened by Queen Elizabeth II in 1981. The network is operated by DB Regio on behalf of Nexus and carries over 37 million passengers a year, extending as far as Newcastle Airport, Tynemouth, South Shields and South Hylton in Sunderland. In 2004, the company Marconi designed and constructed the mobile radio system to the underground Metro system. The Metro system was the first in the UK to have mobile phone antennae installed in the tunnels.",
+      "questions": [
+        {
+          "question": "What underground railways cover much of Tyne and Wear?",
+          "answer": "Tyne and Wear Metro"
+        },
+        {
+          "question": "How many phases was the Metro opened in between 1980 and 1984?",
+          "answer": "five"
+        },
+        {
+          "question": "What type of tunnels are constructed through Newcastle's city center?",
+          "answer": "deep-level"
+        },
+        {
+          "question": "What did Queen Elizabeth II open in Newcastle in 1981?",
+          "answer": "A bridge"
+        },
+        {
+          "question": "How many passengers a year does the rail network in Newcastle carry?",
+          "answer": "over 37 million"
+        }
+      ]
+    },
+    {
+      "title": "Victoria (Australia)",
+      "context": "The centre-left Australian Labor Party (ALP), the centre-right Liberal Party of Australia, the rural-based National Party of Australia, and the environmentalist Australian Greens are Victoria's main political parties. Traditionally, Labor is strongest in Melbourne's working class western and northern suburbs, and the regional cities of Ballarat, Bendigo and Geelong. The Liberals' main support lies in Melbourne's more affluent eastern and outer suburbs, and some rural and regional centres. The Nationals are strongest in Victoria's North Western and Eastern rural regional areas. The Greens, who won their first lower house seats in 2014, are strongest in inner Melbourne.",
+      "questions": [
+        {
+          "question": "What political party is strongest in Melbourne's working class suburbs?",
+          "answer": "Australian Labor Party"
+        },
+        {
+          "question": "What party is strongest in Melbourne's affluent areas?",
+          "answer": "Liberal Party"
+        },
+        {
+          "question": "Which party is strongest in Victoria's northwestern and eastern regions?",
+          "answer": "National Party"
+        },
+        {
+          "question": "What party rules in Melbourne's inner regions?",
+          "answer": "The Greens"
+        },
+        {
+          "question": "What party is favored in Bedigo and Geelong?",
+          "answer": "Labor"
+        }
+      ]
+    },
+    {
+      "title": "Amazon rainforest",
+      "context": "Between 1991 and 2000, the total area of forest lost in the Amazon rose from 415,000 to 587,000 square kilometres (160,000 to 227,000 sq mi), with most of the lost forest becoming pasture for cattle. Seventy percent of formerly forested land in the Amazon, and 91% of land deforested since 1970, is used for livestock pasture. Currently, Brazil is the second-largest global producer of soybeans after the United States. New research however, conducted by Leydimere Oliveira et al., has shown that the more rainforest is logged in the Amazon, the less precipitation reaches the area and so the lower the yield per hectare becomes. So despite the popular perception, there has been no economical advantage for Brazil from logging rainforest zones and converting these to pastoral fields.",
+      "questions": [
+        {
+          "question": "How many square kilometres of the Amazon forest was lost by 1991?",
+          "answer": "415,000"
+        },
+        {
+          "question": "In the year 2000 how many square kilometres of the Amazon forest had been lost?",
+          "answer": "587,000"
+        },
+        {
+          "question": "What is most of the cleared land in the Amazon region used for?",
+          "answer": "pasture for cattle"
+        },
+        {
+          "question": "Where is Brazil ranked globally in soybean production?",
+          "answer": "second-largest global producer"
+        },
+        {
+          "question": "What percentage of the land cleared in the Amazon is used for growing livestock?",
+          "answer": "91%"
+        }
+      ]
+    },
+    {
+      "title": "Kenya",
+      "context": "With International Criminal Court trial dates in 2013 for both President Kenyatta and Deputy President William Ruto related to the 2007 election aftermath, US President Barack Obama chose not to visit the country during his mid-2013 African trip. Later in the summer, Kenyatta visited China at the invitation of President Xi Jinping after a stop in Russia and not having visited the United States as president. In July 2015 Obama visited Kenya, as the first American president to visit the country while in office.",
+      "questions": [
+        {
+          "question": "What was the result of the 2007 election?",
+          "answer": "h International Criminal Court trial dates in 2013 for both President Kenyatta and Deputy President William Ruto"
+        },
+        {
+          "question": "Who decided not to come visit the country in 2013?",
+          "answer": "US President Barack Obama"
+        },
+        {
+          "question": "Where did Kenyatta visit at the invitation of the President?",
+          "answer": "China"
+        },
+        {
+          "question": "When did Obama finally visit Kenya?",
+          "answer": "In July 2015"
+        }
+      ]
+    }
+  ]
+}

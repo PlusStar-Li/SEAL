@@ -1,0 +1,240 @@
+{
+  "role": "merge_train",
+  "n_merge": 8,
+  "titles": [
+    "Southern California",
+    "Warsaw",
+    "American Broadcasting Company",
+    "Victoria and Albert Museum",
+    "Geology",
+    "Huguenot",
+    "Martin Luther",
+    "Martin Luther"
+  ],
+  "articles": [
+    {
+      "title": "Southern California",
+      "context": "In 1900, the Los Angeles Times defined southern California as including \"the seven counties of Los Angeles, San Bernardino, Orange, Riverside, San Diego, Ventura and Santa Barbara.\" In 1999, the Times added a newer county—Imperial—to that list.",
+      "questions": [
+        {
+          "question": "Which newspaper defined southern California?",
+          "answer": "Los Angeles Times"
+        },
+        {
+          "question": "In which year did the newspaper define southern California?",
+          "answer": "1900"
+        },
+        {
+          "question": "In which year did the newspaper change its previous definition?",
+          "answer": "1999"
+        },
+        {
+          "question": "What was the newer county added to the list?",
+          "answer": "Imperial"
+        },
+        {
+          "question": "How many counties initially made up the definition of southern California?",
+          "answer": "seven"
+        }
+      ]
+    },
+    {
+      "title": "Warsaw",
+      "context": "Warsaw (Polish: Warszawa [varˈʂava] ( listen); see also other names) is the capital and largest city of Poland. It stands on the Vistula River in east-central Poland, roughly 260 kilometres (160 mi) from the Baltic Sea and 300 kilometres (190 mi) from the Carpathian Mountains. Its population is estimated at 1.740 million residents within a greater metropolitan area of 2.666 million residents, which makes Warsaw the 9th most-populous capital city in the European Union. The city limits cover 516.9 square kilometres (199.6 sq mi), while the metropolitan area covers 6,100.43 square kilometres (2,355.39 sq mi).",
+      "questions": [
+        {
+          "question": "What is Warsaw known as in Polish?",
+          "answer": "Warszawa"
+        },
+        {
+          "question": "What is the largest city in Poland?",
+          "answer": "Warsaw"
+        },
+        {
+          "question": "What river runs through Warsaw?",
+          "answer": "Vistula River"
+        },
+        {
+          "question": "How many people live in the greater metropolitan area?",
+          "answer": "2.666 million residents"
+        },
+        {
+          "question": "Where does Warsaw rank in terms of population in the EU?",
+          "answer": "9th"
+        },
+        {
+          "question": "What is the largest city of Poland?",
+          "answer": "Warsaw"
+        },
+        {
+          "question": "On what river does Warsaw stand?",
+          "answer": "Vistula"
+        },
+        {
+          "question": "How far is Warsaw from the Baltic Sea?",
+          "answer": "roughly 260 kilometres"
+        },
+        {
+          "question": "How many residents does the greater metropolitan area have?",
+          "answer": "2.666 million"
+        },
+        {
+          "question": "What rank for most populous city in the European Union does Warsaw hold?",
+          "answer": "9th"
+        }
+      ]
+    },
+    {
+      "title": "American Broadcasting Company",
+      "context": "ABC also owns the Times Square Studios at 1500 Broadway on land in Times Square owned by a development fund for the 42nd Street Project; opened in 1999, Good Morning America and Nightline are broadcast from this particular facility. ABC News has premises a little further on West 66th Street, in a six-story building occupying a 196 feet (60 m) × 379 feet (116 m) plot at 121–135 West End Avenue. The block of West End Avenue housing the ABC News building was renamed Peter Jennings Way in 2006 in honor of the recently deceased longtime ABC News chief anchor and anchor of World News Tonight.",
+      "questions": [
+        {
+          "question": "What studio does ABC own at 1500 Broadway in NYC?",
+          "answer": "Times Square Studios"
+        },
+        {
+          "question": "What programs are broadcast from the Times Square Studios for ABC?",
+          "answer": "Good Morning America and Nightline"
+        },
+        {
+          "question": "A block of West End Avenue that houses an ABC News building was renamed for what ABC anchor?",
+          "answer": "Peter Jennings"
+        },
+        {
+          "question": "What show did Peter Jennings anchor for ABC?",
+          "answer": "World News Tonight"
+        }
+      ]
+    },
+    {
+      "title": "Victoria and Albert Museum",
+      "context": "In the immediate post-war years there was little money available for other than essential repairs. The 1950s and early 1960s saw little in the way of building work; the first major work was the creation of new storage space for books in the Art Library in 1966 and 1967. This involved flooring over Aston Webb's main hall to form the book stacks, with a new medieval gallery on the ground floor (now the shop, opened in 2006). Then the lower ground-floor galleries in the south-west part of the museum were redesigned, opening in 1978 to form the new galleries covering Continental art 1600–1800 (late Renaissance, Baroque through Rococo and neo-Classical). In 1974 the museum had acquired what is now the Henry Cole wing from the Royal College of Science. In order to adapt the building as galleries, all the Victorian interiors except for the staircase were recast during the remodelling. To link this to the rest of the museum, a new entrance building was constructed on the site of the former boiler house, the intended site of the Spiral, between 1978 and 1982. This building is of concrete and very functional, the only embellishment being the iron gates by Christopher Hay and Douglas Coyne of the Royal College of Art. These are set in the columned screen wall designed by Aston Webb that forms the façade.",
+      "questions": [
+        {
+          "question": "Which part of the museum received the first major post-war work?",
+          "answer": "Art Library"
+        },
+        {
+          "question": "What did the museum acquire from the Royal College of Science?",
+          "answer": "Henry Cole wing"
+        },
+        {
+          "question": "What was constructed between 1978 and 1982 to link the Henry Cole wing to the rest of the museum?",
+          "answer": "a new entrance building"
+        },
+        {
+          "question": "Who designed the iron gates that decorate the new entrance building?",
+          "answer": "Christopher Hay and Douglas Coyne"
+        },
+        {
+          "question": "What was intended for the site of the former boiler house?",
+          "answer": "the Spiral"
+        }
+      ]
+    },
+    {
+      "title": "Geology",
+      "context": "Seismologists can use the arrival times of seismic waves in reverse to image the interior of the Earth. Early advances in this field showed the existence of a liquid outer core (where shear waves were not able to propagate) and a dense solid inner core. These advances led to the development of a layered model of the Earth, with a crust and lithosphere on top, the mantle below (separated within itself by seismic discontinuities at 410 and 660 kilometers), and the outer core and inner core below that. More recently, seismologists have been able to create detailed images of wave speeds inside the earth in the same way a doctor images a body in a CT scan. These images have led to a much more detailed view of the interior of the Earth, and have replaced the simplified layered model with a much more dynamic model.",
+      "questions": [
+        {
+          "question": "What types of waves do seismologists use to image the interior of the Earth?",
+          "answer": "seismic waves"
+        },
+        {
+          "question": "In the layered model of the Earth, the outermost layer is what?",
+          "answer": "crust"
+        },
+        {
+          "question": "In the layered model of the Earth there are seismic discontinuities in which layer?",
+          "answer": "the mantle"
+        },
+        {
+          "question": "Recently a more detailed model of the Earth was developed. Seismologists were able to create this using images of what from the interior of the Earth?",
+          "answer": "wave speeds"
+        },
+        {
+          "question": "In the layered model of the Earth, the mantle has two layers below it. What are they?",
+          "answer": "the outer core and inner core"
+        }
+      ]
+    },
+    {
+      "title": "Huguenot",
+      "context": "The French Protestant Church of London was established by Royal Charter in 1550. It is now located at Soho Square. Huguenot refugees flocked to Shoreditch, London. They established a major weaving industry in and around Spitalfields (see Petticoat Lane and the Tenterground) in East London. In Wandsworth, their gardening skills benefited the Battersea market gardens. The Old Truman Brewery, then known as the Black Eagle Brewery, was founded in 1724. The flight of Huguenot refugees from Tours, France drew off most of the workers of its great silk mills which they had built.[citation needed] Some of these immigrants moved to Norwich, which had accommodated an earlier settlement of Walloon weavers. The French added to the existing immigrant population, then comprising about a third of the population of the city.",
+      "questions": [
+        {
+          "question": "What early Huguenot Church was established in England?",
+          "answer": "The French Protestant Church of London"
+        },
+        {
+          "question": "When was the charter for this church signed?",
+          "answer": "1550"
+        },
+        {
+          "question": "What is the present-day location of this church?",
+          "answer": "Soho Square"
+        },
+        {
+          "question": "What London neighborhood attracted Huguenot refugees?",
+          "answer": "Shoreditch"
+        },
+        {
+          "question": "When was the Old Truman Brewery founded?",
+          "answer": "1724"
+        }
+      ]
+    },
+    {
+      "title": "Martin Luther",
+      "context": "At the time of the Marburg Colloquy, Suleiman the Magnificent was besieging Vienna with a vast Ottoman army. Luther had argued against resisting the Turks in his 1518 Explanation of the Ninety-five Theses, provoking accusations of defeatism. He saw the Turks as a scourge sent to punish Christians by God, as agents of the Biblical apocalypse that would destroy the antichrist, whom Luther believed to be the papacy, and the Roman Church. He consistently rejected the idea of a Holy War, \"as though our people were an army of Christians against the Turks, who were enemies of Christ. This is absolutely contrary to Christ's doctrine and name\". On the other hand, in keeping with his doctrine of the two kingdoms, Luther did support non-religious war against the Turks. In 1526, he argued in Whether Soldiers can be in a State of Grace that national defence is reason for a just war. By 1529, in On War against the Turk, he was actively urging Emperor Charles V and the German people to fight a secular war against the Turks. He made clear, however, that the spiritual war against an alien faith was separate, to be waged through prayer and repentance. Around the time of the Siege of Vienna, Luther wrote a prayer for national deliverance from the Turks, asking God to \"give to our emperor perpetual victory over our enemies\".",
+      "questions": [
+        {
+          "question": "How did Luther view the Ottoman Turks?",
+          "answer": "as a scourge"
+        },
+        {
+          "question": "What was the purpose of the Turks in Luther's mind?",
+          "answer": "to punish Christians"
+        },
+        {
+          "question": "Since Luther believed that the Turks were sent by God, what was their purpose?",
+          "answer": "destroy the antichrist"
+        },
+        {
+          "question": "Who did Luther view to be the Antichrist?",
+          "answer": "the papacy"
+        },
+        {
+          "question": "What kind of war did Luther support against the Turks, even if he did not oppose a religious war?",
+          "answer": "secular war"
+        }
+      ]
+    },
+    {
+      "title": "Martin Luther",
+      "context": "In 1516, Johann Tetzel, a Dominican friar and papal commissioner for indulgences, was sent to Germany by the Roman Catholic Church to sell indulgences to raise money to rebuild St. Peter's Basilica in Rome. Roman Catholic theology stated that faith alone, whether fiduciary or dogmatic, cannot justify man; justification rather depends only on such faith as is active in charity and good works (fides caritate formata). The benefits of good works could be obtained by donating money to the church.",
+      "questions": [
+        {
+          "question": "When was Johann Tetzel sent by the Roman Catholic Church to Germany to sell indulgences?",
+          "answer": "1516"
+        },
+        {
+          "question": "Why was Tetzel seeking money in Germany?",
+          "answer": "rebuild St. Peter's Basilica"
+        },
+        {
+          "question": "What theology states that faith alone isn't enough to justify man?",
+          "answer": "Roman Catholic"
+        },
+        {
+          "question": "What does man's justification depend on in faith?",
+          "answer": "charity and good works"
+        },
+        {
+          "question": "What is the Catholic doctrine of fides caritate formata?",
+          "answer": "charity and good works"
+        }
+      ]
+    }
+  ]
+}

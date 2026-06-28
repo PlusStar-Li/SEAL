@@ -1,0 +1,80 @@
+{
+  "experiment": "continual_self_edit_gen_forgetting_disjoint_val",
+  "mean_over_sequences": [
+    [
+      0.36496350364963503,
+      0.36099585062240663,
+      0.33191489361702126,
+      0.29880478087649404
+    ],
+    [
+      0.3978102189781022,
+      0.38589211618257263,
+      0.3829787234042553,
+      0.42231075697211157
+    ],
+    [
+      0.40875912408759124,
+      0.34439834024896265,
+      0.35319148936170214,
+      0.3426294820717131
+    ],
+    [
+      0.33211678832116787,
+      0.31950207468879666,
+      0.39574468085106385,
+      0.3386454183266932
+    ],
+    [
+      0.2773722627737226,
+      0.3236514522821577,
+      0.28936170212765955,
+      0.2908366533864542
+    ]
+  ],
+  "std_over_sequences": [
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  ],
+  "n_sequences": 1,
+  "n_merge": 4,
+  "n_val": 4,
+  "matrix_n_val_cols": 4,
+  "inner_sft_articles": 50,
+  "inner_sft_mode": "cpt_aggregate",
+  "k_completions": 5,
+  "eval_mode": "cpt_val_tasks",
+  "split_newlines": false,
+  "dataset": "general-knowledge/data/squad_val.json",
+  "base_model": "Qwen/Qwen2.5-7B",
+  "metric": "val_adapter_accuracy_after_fresh_self_edit_and_ttt",
+  "description": "Rows: row 0 = base; row r = after r train merges. CPT: n_merge=4 + n_val=4 tasks, each inner_sft_articles=50; train/val disjoint; each step/task fresh SE + inner TTT; val = overall acc per task. Inner SFT: cpt_aggregate."
+}

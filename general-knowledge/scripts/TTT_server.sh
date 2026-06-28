@@ -5,12 +5,13 @@
 
 # -------- Environment ------------------------------------------------ #
 # export HOME=<your_home_directory>
-source ~/.bashrc
-conda activate seal_env
-cd ~/SEAL
+# source ~/.bashrc
+# conda activate seal_env
+# cd ~/SEAL
 
 # -------- User-editable ---------------------------------------------- #
-MODEL_NAME="Qwen/Qwen2.5-7B"  # HF model name or path to RL checkpoint (e.g. models/iter1)
+# MODEL_NAME="Qwen/Qwen2.5-7B"  # HF model name or path to RL checkpoint (e.g. models/iter1)
+MODEL_NAME="models/iter1"
 VLLM_SERVER_GPUS="0"
 INNER_LOOP_GPU="1"
 PORT=8001
@@ -21,13 +22,13 @@ EVAL_MAX_TOKENS=64   # Max generated tokens for evaluation completions
 EVAL_TEMPERATURE=0.0
 EVAL_TOP_P=1.0
 
-MAX_LORA_RANK=32     # Max LoRA rank that will be used
+MAX_LORA_RANK=32     # Must match general-knowledge/src/lora_config.py (LORA_RANK)
 # --------------------------------------------------------------------- #
 echo "Launching TTT server on $(hostname)..."
 
-set -a
-source .env
-set +a
+# set -a
+# source .env
+# set +a
 
 VLLM_HOST=$(hostname -i)
 VLLM_API_URL="http://${VLLM_HOST}:${PORT}"

@@ -1,0 +1,188 @@
+{
+  "role": "eval_only",
+  "n_val": 8,
+  "titles": [
+    "Chloroplast",
+    "Normans",
+    "Normans",
+    "Martin Luther",
+    "Black Death",
+    "Newcastle upon Tyne",
+    "Normans",
+    "Ctenophora"
+  ],
+  "articles": [
+    {
+      "title": "Chloroplast",
+      "context": "Plastid differentiation is not permanent, in fact many interconversions are possible. Chloroplasts may be converted to chromoplasts, which are pigment-filled plastids responsible for the bright colors seen in flowers and ripe fruit. Starch storing amyloplasts can also be converted to chromoplasts, and it is possible for proplastids to develop straight into chromoplasts. Chromoplasts and amyloplasts can also become chloroplasts, like what happens when a carrot or a potato is illuminated. If a plant is injured, or something else causes a plant cell to revert to a meristematic state, chloroplasts and other plastids can turn back into proplastids. Chloroplast, amyloplast, chromoplast, proplast, etc., are not absolute states—intermediate forms are common.",
+      "questions": [
+        {
+          "question": "What can chloroplasts change into?",
+          "answer": "chromoplasts"
+        },
+        {
+          "question": "What are chromoplasts?",
+          "answer": "pigment-filled plastids responsible for the bright colors seen in flowers and ripe fruit"
+        },
+        {
+          "question": "What can amyloplasts become?",
+          "answer": "chromoplasts"
+        },
+        {
+          "question": "What can proplastids become?",
+          "answer": "chromoplasts"
+        },
+        {
+          "question": "When a plant is injured, what can become proplastids?",
+          "answer": "chloroplasts and other plastids"
+        }
+      ]
+    },
+    {
+      "title": "Normans",
+      "context": "The legendary religious zeal of the Normans was exercised in religious wars long before the First Crusade carved out a Norman principality in Antioch. They were major foreign participants in the Reconquista in Iberia. In 1018, Roger de Tosny travelled to the Iberian Peninsula to carve out a state for himself from Moorish lands, but failed. In 1064, during the War of Barbastro, William of Montreuil led the papal army and took a huge booty.",
+      "questions": [
+        {
+          "question": "What year did Roger de Tosny fail to accomplish what he set out to do?",
+          "answer": "1018"
+        },
+        {
+          "question": "Who was in charge of the papal army in the War of Barbastro?",
+          "answer": "William of Montreuil"
+        }
+      ]
+    },
+    {
+      "title": "Normans",
+      "context": "When finally Edward the Confessor returned from his father's refuge in 1041, at the invitation of his half-brother Harthacnut, he brought with him a Norman-educated mind. He also brought many Norman counsellors and fighters, some of whom established an English cavalry force. This concept never really took root, but it is a typical example of the attitudes of Edward. He appointed Robert of Jumièges archbishop of Canterbury and made Ralph the Timid earl of Hereford. He invited his brother-in-law Eustace II, Count of Boulogne to his court in 1051, an event which resulted in the greatest of early conflicts between Saxon and Norman and ultimately resulted in the exile of Earl Godwin of Wessex.",
+      "questions": [
+        {
+          "question": "Who was Edward the Confessor's half-brother?",
+          "answer": "Harthacnut"
+        },
+        {
+          "question": "When did Edward return?",
+          "answer": "1041"
+        },
+        {
+          "question": "Who did Edward make archbishop of Canterbury?",
+          "answer": "Robert of Jumièges"
+        }
+      ]
+    },
+    {
+      "title": "Martin Luther",
+      "context": "Luther next set about reversing or modifying the new church practices. By working alongside the authorities to restore public order, he signalled his reinvention as a conservative force within the Reformation. After banishing the Zwickau prophets, he now faced a battle against not only the established Church but also the radical reformers who threatened the new order by fomenting social unrest and violence.",
+      "questions": [
+        {
+          "question": "What did Luther seek to restore?",
+          "answer": "public order"
+        },
+        {
+          "question": "What was Luther's force within the Reformation?",
+          "answer": "conservative"
+        },
+        {
+          "question": "Who did Luther banish?",
+          "answer": "Zwickau prophets"
+        },
+        {
+          "question": "What did the radical reformers cause in the new order?",
+          "answer": "unrest and violence."
+        },
+        {
+          "question": "Besides the radicals who else did Luther have to deal with?",
+          "answer": "established Church"
+        }
+      ]
+    },
+    {
+      "title": "Black Death",
+      "context": "The dominant explanation for the Black Death is the plague theory, which attributes the outbreak to Yersinia pestis, also responsible for an epidemic that began in southern China in 1865, eventually spreading to India. The investigation of the pathogen that caused the 19th-century plague was begun by teams of scientists who visited Hong Kong in 1894, among whom was the French-Swiss bacteriologist Alexandre Yersin, after whom the pathogen was named Yersinia pestis. The mechanism by which Y. pestis was usually transmitted was established in 1898 by Paul-Louis Simond and was found to involve the bites of fleas whose midguts had become obstructed by replicating Y. pestis several days after feeding on an infected host. This blockage results in starvation and aggressive feeding behaviour by the fleas, which repeatedly attempt to clear their blockage by regurgitation, resulting in thousands of plague bacteria being flushed into the feeding site, infecting the host. The bubonic plague mechanism was also dependent on two populations of rodents: one resistant to the disease, which act as hosts, keeping the disease endemic, and a second that lack resistance. When the second population dies, the fleas move on to other hosts, including people, thus creating a human epidemic.",
+      "questions": [
+        {
+          "question": "What was considered responsible for the black death as well as the epidemic in southern China?",
+          "answer": "Yersinia pestis"
+        },
+        {
+          "question": "Where and when did the investigation of the plague pathogen begin?",
+          "answer": "Hong Kong in 1894"
+        },
+        {
+          "question": "Who was yersinia pestis named for?",
+          "answer": "French-Swiss bacteriologist Alexandre Yersin"
+        },
+        {
+          "question": "What did Paul-Louis Simond establish in 1898?",
+          "answer": "The mechanism by which Y. pestis was usually transmitted"
+        },
+        {
+          "question": "What was the bubonic plague mechanism reliant on?",
+          "answer": "two populations of rodents"
+        }
+      ]
+    },
+    {
+      "title": "Newcastle upon Tyne",
+      "context": "Other shopping destinations in Newcastle include Grainger Street and the area around Grey's Monument, the relatively modern Eldon Garden and Monument Mall complexes, the Newgate Centre, Central Arcade and the traditional Grainger Market. Outside the city centre, the largest suburban shopping areas are Gosforth and Byker. The largest Tesco store in the United Kingdom is located in Kingston Park on the edge of Newcastle. Close to Newcastle, the largest indoor shopping centre in Europe, the MetroCentre, is located in Gateshead.",
+      "questions": [
+        {
+          "question": "What type of destination is the area around Grey's Monument?",
+          "answer": "shopping"
+        },
+        {
+          "question": "Gosforth and Byker are the largest shopping areas of what type?",
+          "answer": "suburban"
+        },
+        {
+          "question": "The largest brand of what store in the UK is located in Kingston Park?",
+          "answer": "Tesco"
+        },
+        {
+          "question": "What is the name of the largest indoor shopping centre in Europe?",
+          "answer": "the MetroCentre"
+        },
+        {
+          "question": "Where is the MetroCentre located?",
+          "answer": "Gateshead"
+        }
+      ]
+    },
+    {
+      "title": "Normans",
+      "context": "The descendants of Rollo's Vikings and their Frankish wives would replace the Norse religion and Old Norse language with Catholicism (Christianity) and the Gallo-Romance language of the local people, blending their maternal Frankish heritage with Old Norse traditions and customs to synthesize a unique \"Norman\" culture in the north of France. The Norman language was forged by the adoption of the indigenous langue d'oïl branch of Romance by a Norse-speaking ruling class, and it developed into the regional language that survives today.",
+      "questions": [
+        {
+          "question": "What was the Norman religion?",
+          "answer": "Catholicism"
+        },
+        {
+          "question": "What part of France were the Normans located?",
+          "answer": "north"
+        }
+      ]
+    },
+    {
+      "title": "Ctenophora",
+      "context": "For a phylum with relatively few species, ctenophores have a wide range of body plans. Coastal species need to be tough enough to withstand waves and swirling sediment particles, while some oceanic species are so fragile that it is very difficult to capture them intact for study. In addition oceanic species do not preserve well, and are known mainly from photographs and from observers' notes. Hence most attention has until recently concentrated on three coastal genera – Pleurobrachia, Beroe and Mnemiopsis. At least two textbooks base their descriptions of ctenophores on the cydippid Pleurobrachia.",
+      "questions": [
+        {
+          "question": "Which cidippid is used as a description on ctenophores in most textbooks?",
+          "answer": "Pleurobrachia"
+        },
+        {
+          "question": "Which group of ctenophore are are hardest to study?",
+          "answer": "oceanic species"
+        },
+        {
+          "question": "Why are coastal species tough?",
+          "answer": "to withstand waves and swirling sediment particles"
+        },
+        {
+          "question": "Which ctenophora have been studies the most?",
+          "answer": "Pleurobrachia, Beroe and Mnemiopsis"
+        }
+      ]
+    }
+  ]
+}

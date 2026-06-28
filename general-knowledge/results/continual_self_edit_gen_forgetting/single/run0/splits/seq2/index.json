@@ -1,0 +1,5 @@
+{
+  "seq_idx": 2,
+  "train_path": "general-knowledge/results/continual_self_edit_gen_forgetting/single/run0/splits/seq2/train.json",
+  "val_path": "general-knowledge/results/continual_self_edit_gen_forgetting/single/run0/splits/seq2/val.json"
+}

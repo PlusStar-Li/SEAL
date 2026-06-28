@@ -5,28 +5,38 @@
 
 # -------- Environment ------------------------------------------------ #
 # export HOME=<your_home_directory>
-source ~/.bashrc
-conda activate seal_env
-cd ~/SEAL
+# source ~/.bashrc
+# conda activate seal_env
+# cd ~/SEAL
 
 # -------- User-editable ---------------------------------------------- #
-MODEL_NAME="Qwen/Qwen2.5-7B"  # Put the (n-1)'th RL checkpoint. This script then trains the n'th checkpoint. The 0'th checkpoint is the base model.
-TRAIN_FILE="general-knowledge/data/synthetic_data/EM_SFT/sft_best1of5_iter0.jsonl"  # Path to training data output by src/EM/build_SFT_dataset.py
-OUTPUT_DIR="models/iter1"
+# MODEL_NAME="Qwen/Qwen2.5-7B"  # Put the (n-1)'th RL checkpoint. This script then trains the n'th checkpoint. The 0'th checkpoint is the base model.
+# TRAIN_FILE="general-knowledge/data/synthetic_data/EM_SFT/sft_best1of5_0623_010413.jsonl"  # Path to training data output by src/EM/build_SFT_dataset.py
+# OUTPUT_DIR="models/iter1"
+# After training, outer LoRA (W_SE) is saved to: ${OUTPUT_DIR}_lora_adapter/
+#   - adapter_model.safetensors, adapter_config.json
+#   - lora_A_matrices.pt          (for O-LoRA U_hist)
+#   - outer_lora_metadata.json
+
+MODEL_NAME="models/iter1"  # Put the (n-1)'th RL checkpoint. This script then trains the n'th checkpoint. The 0'th checkpoint is the base model.
+TRAIN_FILE="general-knowledge/data/synthetic_data/EM_SFT/sft_best1of5_0623_153624.jsonl"  # Path to training data output by src/EM/build_SFT_dataset.py
+OUTPUT_DIR="models/iter2"
+
 mkdir -p "${OUTPUT_DIR}"
 
 PER_DEVICE_BATCH_SIZE=1
 GRAD_ACC=5
 EPOCHS=2
 LR=3e-4
-LORA_RANK=64
-LORA_ALPHA=128
+LORA_RANK=32
+LORA_ALPHA=64
 LORA_DROPOUT=0.0
-LORA_TARGET_MODULES="q_proj,k_proj,v_proj,o_proj,gate_proj,up_proj,down_proj"
+# Must match inner TTT (see src/lora_config.py) for O-LoRA A-matrix compatibility
+LORA_TARGET_MODULES="q_proj,v_proj"
 LOG_STEPS=1
 # --------------------------------------------------------------------- #
 
-# export NCCL_P2P_DISABLE=1  # fixes hangs on some setups
+export NCCL_P2P_DISABLE=1  # fixes hangs on some setups
 
 echo "Launching SFT run on $(hostname)..."
 accelerate launch \

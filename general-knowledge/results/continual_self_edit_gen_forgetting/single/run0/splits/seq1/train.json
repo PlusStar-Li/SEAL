@@ -1,0 +1,284 @@
+{
+  "role": "merge_train",
+  "n_merge": 8,
+  "titles": [
+    "Super Bowl 50",
+    "Scottish Parliament",
+    "Scottish Parliament",
+    "Scottish Parliament",
+    "Oxygen",
+    "Teacher",
+    "Yuan dynasty",
+    "Rhine"
+  ],
+  "articles": [
+    {
+      "title": "Super Bowl 50",
+      "context": "The game's media day, which was typically held on the Tuesday afternoon prior to the game, was moved to the Monday evening and re-branded as Super Bowl Opening Night. The event was held on February 1, 2016 at SAP Center in San Jose. Alongside the traditional media availabilities, the event featured an opening ceremony with player introductions on a replica of the Golden Gate Bridge.",
+      "questions": [
+        {
+          "question": "On what day was Super Bowl Opening Night held?",
+          "answer": "Monday"
+        },
+        {
+          "question": "On what day does the Super Bowl media day traditionally take place?",
+          "answer": "Tuesday"
+        },
+        {
+          "question": "What venue hosted Super Bowl Opening Night?",
+          "answer": "SAP Center"
+        },
+        {
+          "question": "In what city is SAP Center located?",
+          "answer": "San Jose"
+        },
+        {
+          "question": "A replica of what landmark was present at Super Bowl Opening Night?",
+          "answer": "the Golden Gate Bridge"
+        },
+        {
+          "question": "As a norm, what day of the week is the traditional Media Day held prior to a Super Bowl?",
+          "answer": "Tuesday"
+        },
+        {
+          "question": "What day of the week was Media Day held on for Super Bowl 50?",
+          "answer": "Monday"
+        },
+        {
+          "question": "What was the name of the Media Day event for Super Bowl 50?",
+          "answer": "Super Bowl Opening Night"
+        },
+        {
+          "question": "What is the name of the property where the media event was held for Super Bowl 50?",
+          "answer": "SAP Center"
+        },
+        {
+          "question": "What city was the media event held for Super Bowl 50?",
+          "answer": "San Jose"
+        },
+        {
+          "question": "When is the game's media day usually held?",
+          "answer": "the Tuesday afternoon prior to the game"
+        },
+        {
+          "question": "What new name was given to the media day?",
+          "answer": "Super Bowl Opening Night."
+        },
+        {
+          "question": "Where was media day for Super Bowl 50 held?",
+          "answer": "SAP Center in San Jose."
+        },
+        {
+          "question": "What replica was used for player introductions?",
+          "answer": "the Golden Gate Bridge."
+        },
+        {
+          "question": "What day was Super Bowl 50 media day switched to?",
+          "answer": "Monday"
+        },
+        {
+          "question": "What was media day called for Super Bowl 50?",
+          "answer": "Super Bowl Opening Night."
+        },
+        {
+          "question": "Where was the new media day event for Super Bowl 50 held?",
+          "answer": "SAP Center in San Jose."
+        },
+        {
+          "question": "What bridge had a model of it at the Super Bowl Opening Night?",
+          "answer": "Golden Gate Bridge."
+        },
+        {
+          "question": "What date was Super Bowl Opening Night held?",
+          "answer": "February 1, 2016"
+        }
+      ]
+    },
+    {
+      "title": "Scottish Parliament",
+      "context": "Several procedures enable the Scottish Parliament to scrutinise the Government. The First Minister or members of the cabinet can deliver statements to Parliament upon which MSPs are invited to question. For example, at the beginning of each parliamentary year, the First Minister delivers a statement to the chamber setting out the Government's legislative programme for the forthcoming year. After the statement has been delivered, the leaders of the opposition parties and other MSPs question the First Minister on issues related to the substance of the statement.",
+      "questions": [
+        {
+          "question": "What enables the Scottish Parliament to scrutinize the government?",
+          "answer": "Several procedures"
+        },
+        {
+          "question": "Who can question statements the First Minister or members of the cabinet make?",
+          "answer": "MSPs"
+        },
+        {
+          "question": "What does the First Minister deliver at the beginning of each parliamentary year?",
+          "answer": "legislative programme for the forthcoming year"
+        },
+        {
+          "question": "What do the leaders of the opposition parties and other MSPs question the First Minister about?",
+          "answer": "issues related to the substance of the statement"
+        }
+      ]
+    },
+    {
+      "title": "Scottish Parliament",
+      "context": "The first item of business on Wednesdays is usually Time for Reflection, at which a speaker addresses members for up to four minutes, sharing a perspective on issues of faith. This contrasts with the formal style of \"Prayers\", which is the first item of business in meetings of the House of Commons. Speakers are drawn from across Scotland and are chosen to represent the balance of religious beliefs according to the Scottish census. Invitations to address Parliament in this manner are determined by the Presiding Officer on the advice of the parliamentary bureau. Faith groups can make direct representations to the Presiding Officer to nominate speakers.",
+      "questions": [
+        {
+          "question": "What day of the week does the Time for Reflection take place?",
+          "answer": "Wednesdays"
+        },
+        {
+          "question": "How long might a speaker address the members during the Time of Reflection?",
+          "answer": "up to four minutes"
+        },
+        {
+          "question": "Who decides who gets to address the members of Parliament to share their thoughts on issues of faith?",
+          "answer": "Presiding Officer"
+        },
+        {
+          "question": "Because speakers are drawn from across Scotland, what do the represent the balance of?",
+          "answer": "religious beliefs"
+        },
+        {
+          "question": "What can faith groups ask the Presiding Officer to do for them?",
+          "answer": "nominate speakers"
+        }
+      ]
+    },
+    {
+      "title": "Scottish Parliament",
+      "context": "A further type of committee is normally set up to scrutinise private bills submitted to the Scottish Parliament by an outside party or promoter who is not a member of the Scottish Parliament or Scottish Government. Private bills normally relate to large-scale development projects such as infrastructure projects that require the use of land or property. Private Bill Committees have been set up to consider legislation on issues such as the development of the Edinburgh Tram Network, the Glasgow Airport Rail Link, the Airdrie-Bathgate Rail Link and extensions to the National Gallery of Scotland.",
+      "questions": [
+        {
+          "question": "What is set up to scrutinize private bills submitted by party outsiders?",
+          "answer": "type of committee"
+        },
+        {
+          "question": "What topic do private bills typically have?",
+          "answer": "large-scale development projects"
+        },
+        {
+          "question": "Who decides how land or property is allowed to be used?",
+          "answer": "Scottish Government."
+        },
+        {
+          "question": "What kind of committee considered legislation on the development of the Edinburgh Tram Network?",
+          "answer": "Private Bill"
+        }
+      ]
+    },
+    {
+      "title": "Oxygen",
+      "context": "Oxygen gas can also be produced through electrolysis of water into molecular oxygen and hydrogen. DC electricity must be used: if AC is used, the gases in each limb consist of hydrogen and oxygen in the explosive ratio 2:1. Contrary to popular belief, the 2:1 ratio observed in the DC electrolysis of acidified water does not prove that the empirical formula of water is H2O unless certain assumptions are made about the molecular formulae of hydrogen and oxygen themselves. A similar method is the electrocatalytic O\n2 evolution from oxides and oxoacids. Chemical catalysts can be used as well, such as in chemical oxygen generators or oxygen candles that are used as part of the life-support equipment on submarines, and are still part of standard equipment on commercial airliners in case of depressurization emergencies. Another air separation technology involves forcing air to dissolve through ceramic membranes based on zirconium dioxide by either high pressure or an electric current, to produce nearly pure O\n2 gas.",
+      "questions": [
+        {
+          "question": "Electrolysis of what can be used to produce oxygen and hydrogen?",
+          "answer": "water"
+        },
+        {
+          "question": "What does the electrolysis of water produce?",
+          "answer": "oxygen and hydrogen"
+        },
+        {
+          "question": "What type of electric current is needed for electrolysis?",
+          "answer": "DC"
+        },
+        {
+          "question": "What is the source of oxygen production through electrocatalytic means?",
+          "answer": "oxides and oxoacids"
+        },
+        {
+          "question": "What other catalysts can be used to produce oxygen?",
+          "answer": "Chemical"
+        }
+      ]
+    },
+    {
+      "title": "Teacher",
+      "context": "Whilst this is the consensus viewpoint amongst the majority of academics, some teachers and parents advocate a more assertive and confrontational style of discipline.[citation needed] Such individuals claim that many problems with modern schooling stem from the weakness in school discipline and if teachers exercised firm control over the classroom they would be able to teach more efficiently. This viewpoint is supported by the educational attainment of countries—in East Asia for instance—that combine strict discipline with high standards of education.[citation needed]",
+      "questions": [
+        {
+          "question": "Who wants a more confrontational type of discipline?",
+          "answer": "some teachers and parents"
+        },
+        {
+          "question": "What countries are used as an example of harsher discipline with successful education?",
+          "answer": "East Asia"
+        },
+        {
+          "question": "What do critics think the cause of problems with modern schooling is?",
+          "answer": "weakness in school discipline"
+        },
+        {
+          "question": "What type of discipline do critics want to see?",
+          "answer": "a more assertive and confrontational style"
+        }
+      ]
+    },
+    {
+      "title": "Yuan dynasty",
+      "context": "In 1271, Kublai Khan imposed the name Great Yuan (Chinese: 大元; pinyin: Dà Yuán; Wade–Giles: Ta-Yüan), establishing the Yuan dynasty. \"Dà Yuán\" (大元) is from the sentence \"大哉乾元\" (dà zai Qián Yuán / \"Great is Qián, the Primal\") in the Commentaries on the Classic of Changes (I Ching) section regarding Qián (乾). The counterpart in Mongolian language was Dai Ön Ulus, also rendered as Ikh Yuan Üls or Yekhe Yuan Ulus. In Mongolian, Dai Ön (Great Yuan) is often used in conjunction with the \"Yeke Mongghul Ulus\" (lit. \"Great Mongol State\"), resulting in Dai Ön Yeke Mongghul Ulus (Mongolian script: ), meaning \"Great Yuan Great Mongol State\". The Yuan dynasty is also known as the \"Mongol dynasty\" or \"Mongol Dynasty of China\", similar to the names \"Manchu dynasty\" or \"Manchu Dynasty of China\" for the Qing dynasty. Furthermore, the Yuan is sometimes known as the \"Empire of the Great Khan\" or \"Khanate of the Great Khan\", which particularly appeared on some Yuan maps, since Yuan emperors held the nominal title of Great Khan. Nevertheless, both terms can also refer to the khanate within the Mongol Empire directly ruled by Great Khans before the actual establishment of the Yuan dynasty by Kublai Khan in 1271.",
+      "questions": [
+        {
+          "question": "When did Khan establish the Great Yuan?",
+          "answer": "1271"
+        },
+        {
+          "question": "What writing inspired the name Great Yuan?",
+          "answer": "the Commentaries on the Classic of Changes (I Ching)"
+        },
+        {
+          "question": "What was the Yuan dynasty called in Mongolian?",
+          "answer": "Dai Ön Ulus, also rendered as Ikh Yuan Üls or Yekhe Yuan Ulus"
+        },
+        {
+          "question": "What does Yeke Mongghul Ulus mean?",
+          "answer": "Great Mongol State"
+        },
+        {
+          "question": "What nominal title did Yuan emperors have?",
+          "answer": "Great Khan"
+        }
+      ]
+    },
+    {
+      "title": "Rhine",
+      "context": "The dominant economic sectors in the Middle Rhine area are viniculture and tourism. The Rhine Gorge between Rüdesheim am Rhein and Koblenz is listed as a UNESCO World Heritage Site. Near Sankt Goarshausen, the Rhine flows around the famous rock Lorelei. With its outstanding architectural monuments, the slopes full of vines, settlements crowded on the narrow river banks and scores of castles lined up along the top of the steep slopes, the Middle Rhine Valley can be considered the epitome of the Rhine romanticism.",
+      "questions": [
+        {
+          "question": "Besides viniculture, what's a dominant economic sector of the Middle Rhine?",
+          "answer": "tourism"
+        },
+        {
+          "question": "There's a UNESCO World Heritage site in the Rhine Gorge between the Koblenz and what?",
+          "answer": "Rüdesheim am Rhein"
+        },
+        {
+          "question": "What is the famous rock near Sanke Goarshausen?",
+          "answer": "Lorelei"
+        },
+        {
+          "question": "What is considered the epitome of the Rhine romanticism?",
+          "answer": "Middle Rhine Valley"
+        },
+        {
+          "question": "Besides viniculture, what is the other dominate economic sector in the middle rhine?",
+          "answer": "tourism"
+        },
+        {
+          "question": "What is the Rhine Gorge listed as?",
+          "answer": "UNESCO World Heritage Site."
+        },
+        {
+          "question": "The Rhine Gorge is between Koblenz and what other city?",
+          "answer": "Rüdesheim am Rhein"
+        },
+        {
+          "question": "What is the famous rock called that the Rhine flows around?",
+          "answer": "Lorelei"
+        },
+        {
+          "question": "Where is the famous rock the Rhine flows around?",
+          "answer": "Sankt Goarshausen"
+        }
+      ]
+    }
+  ]
+}

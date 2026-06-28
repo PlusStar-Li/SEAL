@@ -5,12 +5,12 @@
 
 # -------- Environment ------------------------------------------------ #
 # export HOME=<your_home_directory>
-source ~/.bashrc
-conda activate seal_env
-cd ~/SEAL
+# source ~/.bashrc
+# conda activate seal_env
+# cd ~/SEAL
 
 # -------- Static Config ---------------------------------------------- #
-# SERVER_HOST="<TTT server IP>"  # set to TTT server IP
+SERVER_HOST="127.0.0.1"  # set to TTT server IP
 ZMQ_PORT=5555
 
 OUTPUT_DIR="general-knowledge/results/query_server"
@@ -19,7 +19,8 @@ mkdir -p "${OUTPUT_DIR}"
 # -------- Experiment Grid -------------------------------------------- #
 # Columns: exp_name dataset  k  evalT  r  α  drop  ep  lr  bs  ga  n_articles
 EXPERIMENTS=(
-    "rank_iter0 general-knowledge/data/synthetic_data/train/iter0_train.json  5  3  32  64  0  10  1e-3  1  1 50"
+    # "rank_iter0 general-knowledge/data/synthetic_data/train/iter0_train.json  5  3  32  64  0  10  1e-3  1  1 50"
+    "rank_iter1 general-knowledge/data/synthetic_data/train/iter1_train.json  5  3  32  64  0  10  1e-3  1  1 50"
     # "eval_baseline general-knowledge/data/synthetic_data/eval/base_val.json  1  1  32  64  0  10  1e-3  1  1 200"
 )
 
@@ -38,7 +39,7 @@ for EXP in "${EXPERIMENTS[@]}"; do
     LOG_FILE="logs/${SLURM_JOB_ID}_query_${TAG}.log"
 
     SN_FLAG=""
-    if [[ "${SPLIT_NEWLINES}" == "true" ]]; then
+    if [[ "${SPLIT_NEWLINES}" == "1" ]]; then
         SN_FLAG="--split_newlines"
     fi
 

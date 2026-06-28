@@ -1,0 +1,216 @@
+{
+  "role": "eval_only",
+  "n_val": 8,
+  "titles": [
+    "Prime number",
+    "Yuan dynasty",
+    "Martin Luther",
+    "American Broadcasting Company",
+    "Genghis Khan",
+    "Geology",
+    "Imperialism",
+    "Newcastle upon Tyne"
+  ],
+  "articles": [
+    {
+      "title": "Prime number",
+      "context": "After the Greeks, little happened with the study of prime numbers until the 17th century. In 1640 Pierre de Fermat stated (without proof) Fermat's little theorem (later proved by Leibniz and Euler). Fermat also conjectured that all numbers of the form 22n + 1 are prime (they are called Fermat numbers) and he verified this up to n = 4 (or 216 + 1). However, the very next Fermat number 232 + 1 is composite (one of its prime factors is 641), as Euler discovered later, and in fact no further Fermat numbers are known to be prime. The French monk Marin Mersenne looked at primes of the form 2p − 1, with p a prime. They are called Mersenne primes in his honor.",
+      "questions": [
+        {
+          "question": "In what year did Pierre de Fermat declare Fermat's little theorem?",
+          "answer": "In 1640"
+        },
+        {
+          "question": "Besides Leibniz, what other mathematician proved the validity of Fermat's little theorem?",
+          "answer": "Euler"
+        },
+        {
+          "question": "Of what form do Fermat numbers take?",
+          "answer": "22n + 1"
+        },
+        {
+          "question": "Of what form do Mersenne primes take?",
+          "answer": "2p − 1"
+        },
+        {
+          "question": "To what extent did Fermat confirm the validity of Fermat numbers?",
+          "answer": "up to n = 4 (or 216 + 1)"
+        }
+      ]
+    },
+    {
+      "title": "Yuan dynasty",
+      "context": "The first recorded travels by Europeans to China and back date from this time. The most famous traveler of the period was the Venetian Marco Polo, whose account of his trip to \"Cambaluc,\" the capital of the Great Khan, and of life there astounded the people of Europe. The account of his travels, Il milione (or, The Million, known in English as the Travels of Marco Polo), appeared about the year 1299. Some argue over the accuracy of Marco Polo's accounts due to the lack of mentioning the Great Wall of China, tea houses, which would have been a prominent sight since Europeans had yet to adopt a tea culture, as well the practice of foot binding by the women in capital of the Great Khan. Some suggest that Marco Polo acquired much of his knowledge through contact with Persian traders since many of the places he named were in Persian.",
+      "questions": [
+        {
+          "question": "Who was the first known European to visit China and return?",
+          "answer": "Marco Polo"
+        },
+        {
+          "question": "What did Polo call the Yuan capital?",
+          "answer": "Cambaluc"
+        },
+        {
+          "question": "What was the English title of Polo's book?",
+          "answer": "Travels of Marco Polo"
+        },
+        {
+          "question": "What was the Italian title of Polo's book?",
+          "answer": "Il milione"
+        },
+        {
+          "question": "How did some suspect that Polo learned about China instead of by actually visiting it?",
+          "answer": "through contact with Persian traders"
+        }
+      ]
+    },
+    {
+      "title": "Martin Luther",
+      "context": "On 17 December 1941, seven Protestant regional church confederations issued a statement agreeing with the policy of forcing Jews to wear the yellow badge, \"since after his bitter experience Luther had already suggested preventive measures against the Jews and their expulsion from German territory.\" According to Daniel Goldhagen, Bishop Martin Sasse, a leading Protestant churchman, published a compendium of Luther's writings shortly after Kristallnacht, for which Diarmaid MacCulloch, Professor of the History of the Church in the University of Oxford argued that Luther's writing was a \"blueprint.\" Sasse applauded the burning of the synagogues and the coincidence of the day, writing in the introduction, \"On 10 November 1938, on Luther's birthday, the synagogues are burning in Germany.\" The German people, he urged, ought to heed these words \"of the greatest antisemite of his time, the warner of his people against the Jews.\"",
+      "questions": [
+        {
+          "question": "When did seven Protestant churches agree with the Nazi policy of forcing Jews to wear yellow arm bands?",
+          "answer": "17 December 1941"
+        },
+        {
+          "question": "Who did the churches claim had suggested expulsion of Jews from Germany?",
+          "answer": "Luther"
+        },
+        {
+          "question": "Who claimed Luther's writings were a blueprint of actions against Jews?",
+          "answer": "Diarmaid MacCulloch"
+        },
+        {
+          "question": "Who agreed with the burning of synagogues?",
+          "answer": "Bishop Martin Sasse"
+        },
+        {
+          "question": "What did Sasse proclaim Luther to be?",
+          "answer": "greatest antisemite"
+        }
+      ]
+    },
+    {
+      "title": "American Broadcasting Company",
+      "context": "In addition to Who Wants to Be a Millionaire, the network entered the 2000s with hits held over from the previous decade such as The Practice, NYPD Blue and The Wonderful World of Disney and new series such as My Wife and Kids and According to Jim, all of which managed to help ABC stay ahead of the competition in the ratings in spite of the later departure of Millionaire. 2000 saw the end of \"TGIF\", which was struggling to find new hits (with Boy Meets World and Sabrina, the Teenage Witch, the latter of which moved to The WB in September 2000, beginning to wane as well by this point) following the loss of Family Matters and Step by Step to CBS as part of its own failed attempt at a family-oriented Friday comedy block in the 1997–98 season. Outside of Friday stalwart 20/20, Friday nights remained a weak spot for ABC for the next 11 years.",
+      "questions": [
+        {
+          "question": "What year did ABC's \"TGIF\" end?",
+          "answer": "2000"
+        },
+        {
+          "question": "To what network did Sabrina the Teenage Witch move in 2000?",
+          "answer": "The WB"
+        },
+        {
+          "question": "Which network began airing the TGIF comedy Family Matters for the 1997-98 season?",
+          "answer": "CBS"
+        }
+      ]
+    },
+    {
+      "title": "Genghis Khan",
+      "context": "The Mongols learned from captives of the abundant green pastures beyond the Bulgar territory, allowing for the planning for conquest of Hungary and Europe. Genghis Khan recalled Subutai back to Mongolia soon afterwards, and Jebe died on the road back to Samarkand. The famous cavalry expedition led by Subutai and Jebe, in which they encircled the entire Caspian Sea defeating all armies in their path, remains unparalleled to this day, and word of the Mongol triumphs began to trickle to other nations, particularly Europe. These two campaigns are generally regarded as reconnaissance campaigns that tried to get the feel of the political and cultural elements of the regions. In 1225 both divisions returned to Mongolia. These invasions added Transoxiana and Persia to an already formidable empire while destroying any resistance along the way. Later under Genghis Khan's grandson Batu and the Golden Horde, the Mongols returned to conquer Volga Bulgaria and Kievan Rus' in 1237, concluding the campaign in 1240.",
+      "questions": [
+        {
+          "question": "Which Mongol leader completed the conquest of Kievan Rus'?",
+          "answer": "Batu"
+        },
+        {
+          "question": "By what name was the Mongol army that finally conquered Bulgaria known?",
+          "answer": "the Golden Horde"
+        },
+        {
+          "question": "Which two Mongol leaders added Persia to the Mongol Empire?",
+          "answer": "Subutai and Jebe"
+        },
+        {
+          "question": "When did Subutai's army return to Mongolia?",
+          "answer": "1225"
+        },
+        {
+          "question": "Where did Jebe die?",
+          "answer": "on the road back to Samarkand"
+        }
+      ]
+    },
+    {
+      "title": "Geology",
+      "context": "In the 1960s, a series of discoveries, the most important of which was seafloor spreading, showed that the Earth's lithosphere, which includes the crust and rigid uppermost portion of the upper mantle, is separated into a number of tectonic plates that move across the plastically deforming, solid, upper mantle, which is called the asthenosphere. There is an intimate coupling between the movement of the plates on the surface and the convection of the mantle: oceanic plate motions and mantle convection currents always move in the same direction, because the oceanic lithosphere is the rigid upper thermal boundary layer of the convecting mantle. This coupling between rigid plates moving on the surface of the Earth and the convecting mantle is called plate tectonics.",
+      "questions": [
+        {
+          "question": "What was the most important discovery that led to the understanding that Earth's lithosphere is separated into tectonic plates?",
+          "answer": "seafloor spreading"
+        },
+        {
+          "question": "Which parts of the Earth are included in the lithosphere?",
+          "answer": "the crust and rigid uppermost portion of the upper mantle"
+        },
+        {
+          "question": "What is another word for the Earth's upper mantle?",
+          "answer": "asthenosphere"
+        },
+        {
+          "question": "Plate tectonics can be seen as the intimate coupling between rigid plates on the surface of the Earth and what?",
+          "answer": "the convecting mantle"
+        },
+        {
+          "question": "In what decade was seafloor spreading discovered?",
+          "answer": "the 1960s"
+        }
+      ]
+    },
+    {
+      "title": "Imperialism",
+      "context": "The definition of imperialism has not been finalized for centuries and was confusedly seen to represent the policies of major powers, or simply, general-purpose aggressiveness. Further on, some writers[who?] used the term imperialism, in slightly more discriminating fashion, to mean all kinds of domination or control by a group of people over another. To clear out this confusion about the definition of imperialism one could speak of \"formal\" and \"informal\" imperialism, the first meaning physical control or \"full-fledged colonial rule\" while the second implied less direct rule though still containing perceivable kinds of dominance. Informal rule is generally less costly than taking over territories formally. This is because, with informal rule, the control is spread more subtly through technological superiority, enforcing land officials into large debts that cannot be repaid, ownership of private industries thus expanding the controlled area, or having countries agree to uneven trade agreements forcefully.",
+      "questions": [
+        {
+          "question": "A forced trade agreement between two countries would be an example of what?",
+          "answer": "\"informal\" imperialism"
+        },
+        {
+          "question": "colonial rule, or physical occupation of a territory is an example of what kind of imperialism?",
+          "answer": "\"formal\""
+        },
+        {
+          "question": "Some have generalized the meaning of the word imperialism down to general-purpose what?",
+          "answer": "aggressiveness"
+        },
+        {
+          "question": "What subtle tool can be used in an informal imperialistic situation to expand a controlled area?",
+          "answer": "ownership of private industries"
+        },
+        {
+          "question": "Which is more costly, formal, or informal imperialism?",
+          "answer": "informal"
+        }
+      ]
+    },
+    {
+      "title": "Newcastle upon Tyne",
+      "context": "The city is served by the Tyne and Wear Metro, a system of suburban and underground railways covering much of Tyne and Wear. It was opened in five phases between 1980 and 1984, and was Britain's first urban light rail transit system; two extensions were opened in 1991 and 2002. It was developed from a combination of existing and newly built tracks and stations, with deep-level tunnels constructed through Newcastle city centre. A bridge was built across the Tyne, between Newcastle and Gateshead, and opened by Queen Elizabeth II in 1981. The network is operated by DB Regio on behalf of Nexus and carries over 37 million passengers a year, extending as far as Newcastle Airport, Tynemouth, South Shields and South Hylton in Sunderland. In 2004, the company Marconi designed and constructed the mobile radio system to the underground Metro system. The Metro system was the first in the UK to have mobile phone antennae installed in the tunnels.",
+      "questions": [
+        {
+          "question": "What underground railways cover much of Tyne and Wear?",
+          "answer": "Tyne and Wear Metro"
+        },
+        {
+          "question": "How many phases was the Metro opened in between 1980 and 1984?",
+          "answer": "five"
+        },
+        {
+          "question": "What type of tunnels are constructed through Newcastle's city center?",
+          "answer": "deep-level"
+        },
+        {
+          "question": "What did Queen Elizabeth II open in Newcastle in 1981?",
+          "answer": "A bridge"
+        },
+        {
+          "question": "How many passengers a year does the rail network in Newcastle carry?",
+          "answer": "over 37 million"
+        }
+      ]
+    }
+  ]
+}
