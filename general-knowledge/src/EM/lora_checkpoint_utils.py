@@ -9,7 +9,7 @@ from typing import Any, Dict, Optional
 import torch
 from peft import PeftModel
 
-from lora_config import LORA_RANK, LORA_TARGET_MODULES
+from ..lora_config import LORA_RANK, LORA_TARGET_MODULES
 
 
 def default_lora_adapter_dir(output_dir: str) -> str:
