@@ -49,6 +49,7 @@ from ..utils import (
     unload_adapter,
     generate,
     format_answer_prompts,
+    strip_think_blocks,
     format_grade_prompts,
     grade_with_gpt4,
     extract_final_answer,
@@ -77,15 +78,31 @@ def accuracy_and_texts(
     stop_ids: List[int],
     instruct_model: bool,
     chain_of_thought: bool = False,
+    thinking_mode: bool = False,
 ) -> tuple[float, List[str], List[bool]]:
     ans_out = generate(
-        format_answer_prompts(questions, instruct_model=instruct_model, chain_of_thought=chain_of_thought), answer_model_ref, sampling, stop_ids
+        format_answer_prompts(
+            questions,
+            instruct_model=instruct_model,
+            chain_of_thought=chain_of_thought,
+            thinking_mode=thinking_mode,
+        ),
+        answer_model_ref,
+        sampling,
+        stop_ids,
     ) or []
-    preds = [o.get("text", "") for o in ans_out]
+    preds = [strip_think_blocks(o.get("text", "")) for o in ans_out]
     if chain_of_thought:
         LOG.debug("pre-extraction preds: %s", preds)
         preds = [extract_final_answer(p) for p in preds]
-    LOG.debug("Formatted answer prompts: %s", format_answer_prompts(questions, instruct_model=instruct_model))
+    LOG.debug(
+        "Formatted answer prompts: %s",
+        format_answer_prompts(
+            questions,
+            instruct_model=instruct_model,
+            thinking_mode=thinking_mode,
+        ),
+    )
     LOG.debug("answer_model_ref: %s", answer_model_ref)
     LOG.debug("sampling: %s", sampling)
     LOG.debug("stop_ids: %s", stop_ids)
@@ -115,7 +132,16 @@ def main():
     p.add_argument("--zmq_port", type=int, default=5555, help="ZMQ port to listen on")
     p.add_argument("--vllm_api_url", required=True, help="e.g. http://localhost:8001")
     p.add_argument("--model", default="Qwen/Qwen2.5-7B", help="HF model name")
-    p.add_argument("--instruct_model", action="store_true", help="Using Qwen Instruct model")
+    p.add_argument(
+        "--instruct_model",
+        action="store_true",
+        help="Set this flag if you are using a Qwen instruct model",
+    )
+    p.add_argument(
+        "--thinking_mode",
+        action="store_true",
+        help="Set this flag to enable thinking mode for Qwen3 models",
+    )
     p.add_argument("--max_seq_length", type=int, default=2048, help="Max training seq len")
     p.add_argument("--eval_temperature", type=float, default=0.0, help="Eval sampling temperature")
     p.add_argument("--eval_top_p", type=float, default=1.0, help="Eval nucleus sampling (top-p)")
@@ -123,6 +149,8 @@ def main():
     p.add_argument("--keep_adapter_dir", action="store_true",
                    help="Skip tmp-dir deletion so outer driver can reuse the LoRA. This causes high disk usage and is only used in continual_self_edits.py or for debugging.")
     args = p.parse_args()
+    if args.thinking_mode and not args.instruct_model:
+        raise SystemExit("[!] --thinking_mode requires --instruct_model")
 
     # initialize vLLM API
     set_vllm_api_url(args.vllm_api_url)
@@ -133,7 +161,7 @@ def main():
     base_model = AutoModelForCausalLM.from_pretrained(
         args.model,
         torch_dtype=torch.bfloat16,
-        device_map="auto",
+        device_map="cuda:0",
         trust_remote_code=True,
     )
     if args.instruct_model:
@@ -226,6 +254,7 @@ def main():
                         stop_ids=stop_ids,
                         instruct_model=args.instruct_model,
                         chain_of_thought=chain_of_thought,
+                        thinking_mode=args.thinking_mode,
                     )
                 else:
                     base_acc, base_texts, base_ok = 0.0, [""] * len(questions), [False] * len(questions)
@@ -337,6 +366,7 @@ def main():
                     stop_ids=stop_ids,
                     instruct_model=args.instruct_model,
                     chain_of_thought=chain_of_thought,
+                    thinking_mode=args.thinking_mode,
                 )
 
                 gains = [

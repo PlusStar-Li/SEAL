@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=b2_olora
+#SBATCH --job-name=se_gen_forget
 #SBATCH --output=logs/%A_%x.log
 #SBATCH --gres=gpu:2
 
@@ -11,12 +11,12 @@
 # set -a && source .env && set +a
 
 # ====================================================================== #
-#  Baseline 2: Standard O-LoRA (λ≡1.0) — aligned with Baseline 1 shell
+#  Switch experiment here:  INNER_MODE="single"  |  INNER_MODE="cpt"
 # ====================================================================== #
-export HF_HOME=/mnt/afs/visitor38/cache
-export HF_ENDPOINT=https://hf-mirror.com
+INNER_MODE="single" # "single", "cpt"
+
 INDEX=0
-MODEL_NAME="models/iter2"
+MODEL_NAME="models/qwen3_iter2" # Qwen/Qwen2.5-7B, models/iter1, models/iter2
 DATASET="general-knowledge/data/squad_val.json"
 
 LORA_RANK=32
@@ -39,43 +39,59 @@ THINKING_MODE=1      # Qwen3 thinking (requires INSTRUCT_MODEL=1)
 N_SEQUENCES=8
 N_MERGE=8
 N_VAL=8
-# Resume: set to sequence index to re-run from (0 = fresh start).
-START_SEQ=0
 
-INNER_SFT_ARTICLES=1
-K_COMP=1
-FINETUNE_EPOCHS=10
-BATCH_SIZE=1
-GRAD_ACC=1
-SPLIT_NEWLINES=1
-# Inner TTT: 1 = self-edit only; 0 = SEAL default (append passage row)
-NO_ADD_CONTEXT=0
+# -------- Presets (aligned with continual_self_edits vs CPT.sh) -------- #
+case "${INNER_MODE}" in
+    single)
+        # Baseline 1: vanilla LoRA continual SE-gen forgetting (single passage)
+        INNER_SFT_ARTICLES=1
+        K_COMP=1
+        FINETUNE_EPOCHS=10
+        BATCH_SIZE=1
+        GRAD_ACC=1
+        SPLIT_NEWLINES=1
+        OUTPUT_DIR="general-knowledge/results/baselines/qwen3_baseline1_vanilla_sft/run${INDEX}"
+        ;;
+    cpt)
+        # CPT.sh base_5c: N-article corpus per task, k=5, split_newlines=0
+        INNER_SFT_ARTICLES=100
+        K_COMP=5
+        FINETUNE_EPOCHS=3
+        BATCH_SIZE=4
+        GRAD_ACC=2
+        SPLIT_NEWLINES=0
+        OUTPUT_DIR="general-knowledge/results/continual_self_edit_gen_forgetting/cpt/run${INDEX}"
+        ;;
+    *)
+        echo "[!] Unknown INNER_MODE='${INNER_MODE}'. Use: single | cpt"
+        exit 1
+        ;;
+esac
 
-# --- O-LoRA (Baseline 2 only) ---
-OLORA_MODE="standard"
-LAMBDA_FIXED=1.0 # 0.5 for standard, 1.0 for full
-GAMMA=1.0
-U_SE_PATH="models/iter2_lora_adapter/lora_A_matrices.pt"
-SPLITS_DIR="general-knowledge/results/baselines/baseline1_vanilla_sft/run${INDEX}/splits"
+# Inner TTT: 1 = self-edit implications only; 0 = SEAL default (also train on passage)
+NO_ADD_CONTEXT=1
 
-OUTPUT_DIR="general-knowledge/results/baselines/baseline2_full_olora/run${INDEX}"
 mkdir -p "${OUTPUT_DIR}"
+
+# Optional: force split_newlines after preset (leave unset to use preset above)
+# SPLIT_NEWLINES_OVERRIDE=0
+
+if [[ -n "${SPLIT_NEWLINES_OVERRIDE:-}" ]]; then
+    SPLIT_NEWLINES="${SPLIT_NEWLINES_OVERRIDE}"
+fi
 
 # --------------------------------------------------------------------- #
 
 export CUDA_VISIBLE_DEVICES=${PY_DRIVER_GPU},${VLLM_SERVER_GPUS}
 export OMP_NUM_THREADS=1
 
-echo "======== Baseline 2 Standard O-LoRA ========"
-echo "  OUTPUT_DIR=${OUTPUT_DIR}"
-echo "  model=${MODEL_NAME}  U_SE=${U_SE_PATH}"
-echo "  seq=${N_SEQUENCES}  merge=${N_MERGE}  val=${N_VAL}  seed=${SEED}"
-echo "  start_seq=${START_SEQ}"
-echo "  λ=${LAMBDA_FIXED}  γ=${GAMMA}  mode=${OLORA_MODE}"
-echo "  splits_dir=${SPLITS_DIR}"
-echo "  inner: r=${LORA_RANK} α=${LORA_ALPHA} epochs=${FINETUNE_EPOCHS} lr=${FINETUNE_LR}"
-echo "  no_add_context=${NO_ADD_CONTEXT}"
-echo "==========================================="
+echo "======== SE gen forgetting ========"
+echo "  INNER_MODE=${INNER_MODE}  OUTPUT_DIR=${OUTPUT_DIR}"
+echo "  seq=${N_SEQUENCES}  merge=${N_MERGE}  val=${N_VAL}"
+echo "  inner_sft_articles=${INNER_SFT_ARTICLES}  k_completions=${K_COMP}"
+echo "  finetune: epochs=${FINETUNE_EPOCHS} lr=${FINETUNE_LR} bs=${BATCH_SIZE} ga=${GRAD_ACC}"
+echo "  split_newlines=${SPLIT_NEWLINES}  no_add_context=${NO_ADD_CONTEXT}"
+echo "==================================="
 
 SN_FLAG=""
 if [[ "${SPLIT_NEWLINES}" == "1" ]]; then
@@ -89,25 +105,9 @@ if [[ "${NO_ADD_CONTEXT}" == "1" ]]; then
     NO_CTX_FLAG="--no_add_context"
 fi
 
-SPLITS_ARG=""
-if [[ -n "${SPLITS_DIR}" && -d "${SPLITS_DIR}" ]]; then
-    SPLITS_ARG="--splits_dir ${SPLITS_DIR}"
-fi
-
-START_SEQ_ARG=""
-if [[ "${START_SEQ}" -gt 0 ]]; then
-    START_SEQ_ARG="--start_seq ${START_SEQ}"
-fi
-
-python3 -u -m general-knowledge.src.continual.baseline_olora \
+python3 -u -m general-knowledge.src.continual.continual_self_edit_gen_forgetting \
     --dataset "${DATASET}" \
     --model "${MODEL_NAME}" \
-    --output_dir "${OUTPUT_DIR}" \
-    --u_se_path "${U_SE_PATH}" \
-    ${SPLITS_ARG} \
-    --olora_mode "${OLORA_MODE}" \
-    --lambda_fixed "${LAMBDA_FIXED}" \
-    --gamma "${GAMMA}" \
     --lora_rank ${LORA_RANK} \
     --lora_alpha ${LORA_ALPHA} \
     --lora_dropout ${LORA_DROPOUT} \
@@ -122,6 +122,7 @@ python3 -u -m general-knowledge.src.continual.baseline_olora \
     --k_completions ${K_COMP} \
     ${SN_FLAG} \
     ${NO_CTX_FLAG} \
+    --output_dir "${OUTPUT_DIR}" \
     --gpus "${VLLM_SERVER_GPUS},${PY_DRIVER_GPU}" \
     --vllm_port ${PORT} \
     --zmq_port ${ZMQ_PORT} \
@@ -130,8 +131,7 @@ python3 -u -m general-knowledge.src.continual.baseline_olora \
     --max_tokens ${MAX_TOKENS} \
     --seed ${SEED} \
     ${INSTRUCT_MODEL:+--instruct_model} \
-    ${THINKING_MODE:+--thinking_mode} \
-    ${START_SEQ_ARG}
+    ${THINKING_MODE:+--thinking_mode}
 
 echo "Plotting heatmaps..."
 python3 general-knowledge/src/continual/plot_self_edit_gen_forgetting.py \

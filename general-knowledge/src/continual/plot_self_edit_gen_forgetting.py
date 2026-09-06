@@ -345,9 +345,25 @@ def parse_args() -> argparse.Namespace:
     p.add_argument(
         "--inner_title",
         type=str,
-        default="Inner TTT forgetting (continual_self_edits)",
+        default="Merge-train retention (inner TTT, lower-triangular)",
     )
     return p.parse_args()
+
+
+def _inner_data_from_se_summary(se_data: dict) -> Optional[dict]:
+    """Merge-train retention matrix stored in the same summary as SE-gen (B1/B2)."""
+    mean_key = "merge_train_retention_mean_over_sequences"
+    if mean_key not in se_data:
+        return None
+    return {
+        "mean_over_sequences": se_data[mean_key],
+        "std_over_sequences": se_data.get("merge_train_retention_std_over_sequences"),
+        "n_sequences": se_data.get("n_sequences", 1),
+        "n_datapoints": se_data.get(
+            "merge_train_retention_n_datapoints",
+            se_data.get("n_merge", len(se_data[mean_key][0])),
+        ),
+    }
 
 
 def _default_combined_path(args: argparse.Namespace) -> Path:
@@ -415,6 +431,20 @@ def main() -> None:
                 args.inner_output
                 or args.output
                 or inner_dir / "forgetting_heatmap_inner_ttt.png"
+            )
+    elif se_data is not None:
+        inner_data = _inner_data_from_se_summary(se_data)
+        if inner_data is not None:
+            inner_out = Path(
+                args.inner_output
+                or (
+                    Path(args.se_results_dir) / "forgetting_heatmap_merge_train_retention.png"
+                    if args.se_results_dir
+                    else Path(args.se_summary).parent
+                    / "forgetting_heatmap_merge_train_retention.png"
+                    if args.se_summary
+                    else Path("forgetting_heatmap_merge_train_retention.png")
+                )
             )
 
     if se_data and inner_data:

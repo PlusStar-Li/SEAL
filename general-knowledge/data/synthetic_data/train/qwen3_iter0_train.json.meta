@@ -1,0 +1,13 @@
+{
+  "model": "/mnt/afs/visitor38/cache/hub/models--Qwen--Qwen3-8B",
+  "dataset_in": "general-knowledge/data/squad_train.json",
+  "dataset_out": "general-knowledge/data/synthetic_data/train/qwen3_iter0_train.json",
+  "temperature": 1.0,
+  "top_p": 0.95,
+  "max_tokens": 8192,
+  "n": 50,
+  "k": 5,
+  "instruct_model": true,
+  "thinking_mode": true,
+  "timestamp": "2026-07-26T12:29:59.817845+00:00Z"
+}

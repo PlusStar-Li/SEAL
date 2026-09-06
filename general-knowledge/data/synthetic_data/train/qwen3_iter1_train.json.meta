@@ -1,0 +1,13 @@
+{
+  "model": "models/qwen3_iter1",
+  "dataset_in": "general-knowledge/data/squad_train.json",
+  "dataset_out": "general-knowledge/data/synthetic_data/train/qwen3_iter1_train.json",
+  "temperature": 1.0,
+  "top_p": 0.95,
+  "max_tokens": 8192,
+  "n": 50,
+  "k": 5,
+  "instruct_model": true,
+  "thinking_mode": true,
+  "timestamp": "2026-07-27T05:38:31.376704+00:00Z"
+}

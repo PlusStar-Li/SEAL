@@ -18,9 +18,10 @@
 #   - lora_A_matrices.pt          (for O-LoRA U_hist)
 #   - outer_lora_metadata.json
 
-MODEL_NAME="models/iter1"  # Put the (n-1)'th RL checkpoint. This script then trains the n'th checkpoint. The 0'th checkpoint is the base model.
-TRAIN_FILE="general-knowledge/data/synthetic_data/EM_SFT/sft_best1of5_0623_153624.jsonl"  # Path to training data output by src/EM/build_SFT_dataset.py
-OUTPUT_DIR="models/iter2"
+MODEL_NAME="models/qwen3_iter1"  # Put the (n-1)'th RL checkpoint. This script then trains the n'th checkpoint. The 0'th checkpoint is the base model.
+# MODEL_NAME="/mnt/afs/visitor38/cache/hub/models--Qwen--Qwen3-8B"
+TRAIN_FILE="general-knowledge/data/synthetic_data/EM_SFT/sft_best1of5_0728_024135.jsonl"  # Path to training data output by src/EM/build_SFT_dataset.py
+OUTPUT_DIR="models/qwen3_iter2"
 
 mkdir -p "${OUTPUT_DIR}"
 
@@ -34,6 +35,8 @@ LORA_DROPOUT=0.0
 # Must match inner TTT (see src/lora_config.py) for O-LoRA A-matrix compatibility
 LORA_TARGET_MODULES="q_proj,v_proj"
 LOG_STEPS=1
+INSTRUCT_MODEL=1     # match make_squad_data / TTT: Qwen instruct chat template
+THINKING_MODE=1      # match inference: Qwen3 thinking (requires INSTRUCT_MODEL=1)
 # --------------------------------------------------------------------- #
 
 export NCCL_P2P_DISABLE=1  # fixes hangs on some setups
@@ -55,6 +58,8 @@ accelerate launch \
     --lora_alpha ${LORA_ALPHA} \
     --lora_dropout ${LORA_DROPOUT} \
     --lora_target_modules ${LORA_TARGET_MODULES} \
-    --logging_steps ${LOG_STEPS}
+    --logging_steps ${LOG_STEPS} \
+    ${INSTRUCT_MODEL:+--instruct_model} \
+    ${THINKING_MODE:+--thinking_mode}
 
 echo "Job finished."

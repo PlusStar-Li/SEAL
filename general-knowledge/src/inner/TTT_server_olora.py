@@ -28,7 +28,7 @@ import numpy as np
 import torch
 import zmq
 from datasets import Dataset as HFDataset
-from peft import LoraConfig, get_peft_model
+from peft import LoraConfig, PeftModel, get_peft_model
 from transformers import (
     AutoModelForCausalLM,
     AutoTokenizer,
@@ -48,6 +48,7 @@ from ..utils import (
     load_adapter,
     score_proxy_with_gpt4,
     set_vllm_api_url,
+    strip_think_blocks,
     unload_adapter,
 )
 
@@ -67,12 +68,14 @@ class OLoRATrainer(Trainer):
         *args,
         u_hist=None,
         lambda_t: float = 1.0,
+        lambda_weights: Optional[List[float]] = None,
         gamma: float = 1.0,
         **kwargs,
     ):
         super().__init__(*args, **kwargs)
         self.u_hist = u_hist or []
         self.lambda_t = float(lambda_t)
+        self.lambda_weights = lambda_weights
         self.gamma = float(gamma)
         self.last_sft_loss: Optional[float] = None
         self.last_ortho_loss: Optional[float] = None
@@ -80,8 +83,14 @@ class OLoRATrainer(Trainer):
     def compute_loss(self, model, inputs, return_outputs=False, **kwargs):
         outputs = model(**inputs)
         sft_loss = outputs.loss
-        ortho = compute_ortho_loss(model, self.u_hist)
-        loss = sft_loss + self.lambda_t * self.gamma * ortho
+        if self.lambda_weights is not None:
+            ortho = compute_ortho_loss(
+                model, self.u_hist, lambda_weights=self.lambda_weights
+            )
+            loss = sft_loss + self.gamma * ortho
+        else:
+            ortho = compute_ortho_loss(model, self.u_hist)
+            loss = sft_loss + self.lambda_t * self.gamma * ortho
         self.last_sft_loss = float(sft_loss.detach().item())
         self.last_ortho_loss = float(ortho.detach().item())
         return (loss, outputs) if return_outputs else loss
@@ -94,16 +103,20 @@ def accuracy_and_texts(
     stop_ids: List[int],
     instruct_model: bool,
     chain_of_thought: bool = False,
+    thinking_mode: bool = False,
 ) -> tuple[float, List[str], List[bool]]:
     ans_out = generate(
         format_answer_prompts(
-            questions, instruct_model=instruct_model, chain_of_thought=chain_of_thought
+            questions,
+            instruct_model=instruct_model,
+            chain_of_thought=chain_of_thought,
+            thinking_mode=thinking_mode,
         ),
         answer_model_ref,
         sampling,
         stop_ids,
     ) or []
-    preds = [o.get("text", "") for o in ans_out]
+    preds = [strip_think_blocks(o.get("text", "")) for o in ans_out]
     if chain_of_thought:
         preds = [extract_final_answer(p) for p in preds]
 
@@ -131,13 +144,24 @@ def _parse_olora(msg: Dict[str, Any]) -> Dict[str, Any]:
     u_hist_path = olora.get("U_hist_path") or olora.get("u_hist_path")
     u_hist_loc = u_hist_dir or u_hist_path
     u_hist = load_u_hist(u_hist_loc) if enabled and u_hist_loc else []
+    init_adapter_path = olora.get("init_adapter_path")
+    reuse_mode = bool(olora.get("reuse_mode", False))
+    lambda_weights_raw = olora.get("lambda_weights")
+    lambda_weights = (
+        [float(x) for x in lambda_weights_raw]
+        if lambda_weights_raw is not None
+        else None
+    )
     return {
         "enabled": enabled,
         "lambda_t": lambda_t,
+        "lambda_weights": lambda_weights,
         "gamma": gamma,
         "u_hist_dir": u_hist_dir,
         "u_hist_path": u_hist_path,
         "u_hist": u_hist,
+        "init_adapter_path": init_adapter_path,
+        "reuse_mode": reuse_mode,
     }
 
 
@@ -146,7 +170,16 @@ def main() -> None:
     p.add_argument("--zmq_port", type=int, default=5555)
     p.add_argument("--vllm_api_url", required=True)
     p.add_argument("--model", default="Qwen/Qwen2.5-7B")
-    p.add_argument("--instruct_model", action="store_true")
+    p.add_argument(
+        "--instruct_model",
+        action="store_true",
+        help="Set this flag if you are using a Qwen instruct model",
+    )
+    p.add_argument(
+        "--thinking_mode",
+        action="store_true",
+        help="Set this flag to enable thinking mode for Qwen3 models",
+    )
     p.add_argument("--max_seq_length", type=int, default=2048)
     p.add_argument("--eval_temperature", type=float, default=0.0)
     p.add_argument("--eval_top_p", type=float, default=1.0)
@@ -157,6 +190,8 @@ def main() -> None:
         help="Keep tmp adapter dir for outer driver merge / A extraction.",
     )
     args = p.parse_args()
+    if args.thinking_mode and not args.instruct_model:
+        raise SystemExit("[!] --thinking_mode requires --instruct_model")
 
     set_vllm_api_url(args.vllm_api_url)
 
@@ -166,7 +201,7 @@ def main() -> None:
     base_model = AutoModelForCausalLM.from_pretrained(
         args.model,
         torch_dtype=torch.bfloat16,
-        device_map="auto",
+        device_map="cuda:0",
         trust_remote_code=True,
     )
     if args.instruct_model:
@@ -267,6 +302,7 @@ def main() -> None:
                         stop_ids=stop_ids,
                         instruct_model=args.instruct_model,
                         chain_of_thought=chain_of_thought,
+                        thinking_mode=args.thinking_mode,
                     )
                 else:
                     base_acc, base_texts, base_ok = (
@@ -330,15 +366,33 @@ def main() -> None:
 
                     ds = HFDataset.from_list(rows)
                     collator = DataCollatorWithPadding(tokenizer)
-                    lora_cfg = LoraConfig(
-                        r=lora_rank,
-                        lora_alpha=lora_alpha,
-                        lora_dropout=lora_dropout,
-                        bias="none",
-                        task_type="CAUSAL_LM",
-                        target_modules=LORA_TARGET_MODULES,
-                    )
-                    lora_model = get_peft_model(base_model, lora_cfg)
+                    init_adapter_path = olora_cfg.get("init_adapter_path")
+                    if init_adapter_path and Path(init_adapter_path).exists():
+                        LOG.info(
+                            "Warm-starting LoRA from %s (reuse_mode=%s)",
+                            init_adapter_path,
+                            olora_cfg.get("reuse_mode", False),
+                        )
+                        lora_model = PeftModel.from_pretrained(
+                            base_model,
+                            str(init_adapter_path),
+                            is_trainable=True,
+                        )
+                    else:
+                        if init_adapter_path:
+                            LOG.warning(
+                                "init_adapter_path missing (%s); fresh LoRA init",
+                                init_adapter_path,
+                            )
+                        lora_cfg = LoraConfig(
+                            r=lora_rank,
+                            lora_alpha=lora_alpha,
+                            lora_dropout=lora_dropout,
+                            bias="none",
+                            task_type="CAUSAL_LM",
+                            target_modules=LORA_TARGET_MODULES,
+                        )
+                        lora_model = get_peft_model(base_model, lora_cfg)
 
                     trainer_cls = OLoRATrainer if olora_cfg["enabled"] else Trainer
                     trainer_kwargs: Dict[str, Any] = {}
@@ -348,6 +402,10 @@ def main() -> None:
                             "lambda_t": olora_cfg["lambda_t"],
                             "gamma": olora_cfg["gamma"],
                         }
+                        if olora_cfg.get("lambda_weights") is not None:
+                            trainer_kwargs["lambda_weights"] = olora_cfg[
+                                "lambda_weights"
+                            ]
 
                     trainer = trainer_cls(
                         model=lora_model,
@@ -378,8 +436,11 @@ def main() -> None:
                     olora_metrics = {
                         "enabled": olora_cfg["enabled"],
                         "lambda_t": olora_cfg["lambda_t"],
+                        "lambda_weights": olora_cfg.get("lambda_weights"),
                         "gamma": olora_cfg["gamma"],
                         "u_hist_size": len(olora_cfg["u_hist"]),
+                        "init_adapter_path": olora_cfg.get("init_adapter_path"),
+                        "reuse_mode": olora_cfg.get("reuse_mode", False),
                         "sft_loss": None,
                         "ortho_loss": None,
                     }
@@ -405,6 +466,7 @@ def main() -> None:
                         stop_ids=stop_ids,
                         instruct_model=args.instruct_model,
                         chain_of_thought=chain_of_thought,
+                        thinking_mode=args.thinking_mode,
                     )
                     gains = [
                         1 if a and not b else -1 if b and not a else 0

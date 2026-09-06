@@ -168,11 +168,14 @@ def compute_ortho_loss(
     model: torch.nn.Module,
     u_hist: UHist,
     *,
+    lambda_weights: Optional[List[float]] = None,
     device: Optional[torch.device] = None,
 ) -> torch.Tensor:
     """
-    Sum over layers and historical tasks: ||A_t U^T||_F^2
-    where A_t is the current trainable lora_A and U is a historical A matrix.
+    Sum over layers and historical tasks: sum_i lam_i * ||A_t U_i^T||_F^2
+
+    ``lambda_weights`` must align with ``u_hist`` (index 0 = U_SE). When omitted,
+    every historical matrix uses weight 1.0 (caller applies global lambda_t).
     """
     if not u_hist:
         dev = device or next(model.parameters()).device
@@ -183,12 +186,19 @@ def compute_ortho_loss(
         if "lora_A" not in name or not param.requires_grad:
             continue
         a_t = param
-        for hist_a in u_hist:
+        for hist_idx, hist_a in enumerate(u_hist):
             if name not in hist_a:
                 continue
+            lam = 1.0
+            if lambda_weights is not None:
+                lam = (
+                    float(lambda_weights[hist_idx])
+                    if hist_idx < len(lambda_weights)
+                    else 1.0
+                )
             u = hist_a[name].to(device=a_t.device, dtype=a_t.dtype)
             prod = a_t @ u.transpose(0, 1)
-            term = (prod ** 2).sum()
+            term = lam * (prod ** 2).sum()
             total = term if total is None else total + term
 
     if total is None:

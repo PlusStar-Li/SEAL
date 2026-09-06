@@ -11,7 +11,8 @@
 
 # -------- User-editable ---------------------------------------------- #
 # MODEL_NAME="Qwen/Qwen2.5-7B"  # HF model name or path to RL checkpoint (e.g. models/iter1)
-MODEL_NAME="models/iter1"
+# MODEL_NAME="/mnt/afs/visitor38/cache/hub/models--Qwen--Qwen3-8B"
+MODEL_NAME="models/qwen3_iter2"
 VLLM_SERVER_GPUS="0"
 INNER_LOOP_GPU="1"
 PORT=8001
@@ -23,6 +24,8 @@ EVAL_TEMPERATURE=0.0
 EVAL_TOP_P=1.0
 
 MAX_LORA_RANK=32     # Must match general-knowledge/src/lora_config.py (LORA_RANK)
+INSTRUCT_MODEL=1     # Qwen instruct chat template for eval answering
+THINKING_MODE=1      # Qwen3 thinking/reasoning (requires INSTRUCT_MODEL=1)
 # --------------------------------------------------------------------- #
 echo "Launching TTT server on $(hostname)..."
 
@@ -59,6 +62,8 @@ CUDA_VISIBLE_DEVICES=${INNER_LOOP_GPU} python3 -m general-knowledge.src.inner.TT
     --eval_max_tokens ${EVAL_MAX_TOKENS} \
     --eval_temperature ${EVAL_TEMPERATURE} \
     --eval_top_p ${EVAL_TOP_P} \
+    ${INSTRUCT_MODEL:+--instruct_model} \
+    ${THINKING_MODE:+--thinking_mode} \
     > logs/${SLURM_JOB_ID}_TTT_server.log 2>&1 &
 
 ZMQ_PID=$!

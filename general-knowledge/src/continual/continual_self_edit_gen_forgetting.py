@@ -37,9 +37,18 @@ from typing import Any, Dict, List, Optional, Set, Tuple
 import requests
 import torch
 
-from ..data_generation.make_squad_data import make_prompt
+from ..data_generation.make_squad_data import clean_implication_completion, make_prompt
 from ..lora_config import LORA_ALPHA, LORA_DROPOUT, LORA_RANK
 from ..utils import build_train_sequences, set_vllm_api_url
+from .merge_train_retention import (
+    aggregate_lower_tri_over_sequences,
+    build_agg_questions_and_spans,
+    eval_merge_train_row0,
+    finalize_lower_tri_matrix,
+    init_lower_tri_mat_vals,
+    inner_summary_from_merge_train,
+    record_merge_train_step,
+)
 from .continual_self_edits import (
     _banner,
     _cleanup_inner_tmp,
@@ -70,6 +79,11 @@ def _resolve_k_completions(args: argparse.Namespace) -> int:
     if args.k_completions is not None:
         return args.k_completions
     return 5 if _cpt_inner_mode(args) else 1
+
+
+def _resolve_add_context(args: argparse.Namespace) -> bool:
+    """When False, inner TTT uses self-edit implications only (no passage row)."""
+    return not getattr(args, "no_add_context", False)
 
 
 def _cpt_inner_mode(args: argparse.Namespace) -> bool:
@@ -129,7 +143,12 @@ def _generate_completions_live(
     """Sample k self-edit completions from vLLM (``n=k``), matching CPT multiplicity."""
     if k_completions == 0:
         return [""]
-    prompt = make_prompt(item["title"], item["context"], instruct_model=False)
+    prompt = make_prompt(
+        item["title"],
+        item["context"],
+        instruct_model=bool(getattr(args, "instruct_model", False)),
+        thinking_mode=bool(getattr(args, "thinking_mode", False)),
+    )
     resp = requests.post(
         f"{vllm_api}/v1/completions",
         json={
@@ -144,7 +163,9 @@ def _generate_completions_live(
     )
     resp.raise_for_status()
     choices = resp.json()["choices"]
-    return [c["text"].strip() for c in choices[:k_completions]]
+    return [
+        clean_implication_completion(c["text"]) for c in choices[:k_completions]
+    ]
 
 
 def _completions_for_article(
@@ -167,6 +188,7 @@ def _train_sequences_from_completion_list(
     raw_completions: List[str],
     *,
     split_newlines: bool,
+    add_context: bool = True,
 ) -> List[str]:
     """Build train sequences like CPT.py (add_context only for first completion)."""
     train_sequences: List[str] = []
@@ -177,7 +199,7 @@ def _train_sequences_from_completion_list(
                 item["context"],
                 item["title"],
                 split_newlines=split_newlines,
-                add_context=(i == 0),
+                add_context=(i == 0 and add_context),
             )
         )
     return train_sequences
@@ -188,6 +210,7 @@ def _aggregate_train_sequences(
     completions_by_article: Dict[Tuple[str, str], List[str]],
     *,
     split_newlines: bool,
+    add_context: bool = True,
 ) -> List[str]:
     """CPT-style corpus: concatenate train sequences from all passages."""
     train_sequences: List[str] = []
@@ -198,7 +221,10 @@ def _aggregate_train_sequences(
             raw = [""]
         train_sequences.extend(
             _train_sequences_from_completion_list(
-                art, raw, split_newlines=split_newlines
+                art,
+                raw,
+                split_newlines=split_newlines,
+                add_context=add_context,
             )
         )
     return train_sequences
@@ -241,12 +267,23 @@ def _single_passage_train_sequences(
     raw_completions: List[str],
     *,
     split_newlines: bool,
+    add_context: bool = True,
 ) -> List[str]:
     if not raw_completions:
         raw_completions = [""]
-    return _train_sequences_from_completion_list(
-        item, raw_completions, split_newlines=split_newlines
+    seqs = _train_sequences_from_completion_list(
+        item,
+        raw_completions,
+        split_newlines=split_newlines,
+        add_context=add_context,
     )
+    if not seqs:
+        title = item.get("title", "?")[:50]
+        print(
+            f"      [warn] empty inner train_sequences for {title!r} "
+            "(self-edit empty and --no_add_context set)"
+        )
+    return seqs
 
 
 class _ServerSession:
@@ -288,6 +325,8 @@ class _ServerSession:
             self.logs_dir,
             tag,
             keep_adapter_dir=keep_adapter_dir,
+            instruct_model=bool(getattr(args, "instruct_model", False)),
+            thinking_mode=bool(getattr(args, "thinking_mode", False)),
         )
         self.ctx, self.sock = _connect_zmq(args.zmq_port)
 
@@ -329,11 +368,13 @@ class _ServerSession:
             self.cpt_corpus,
             completions,
             split_newlines=self.args.inner_split_newlines,
+            add_context=self.args.add_context,
         )
         print(
             f"      [CPT inner] {len(self._cpt_train_sequences):,} "
             f"aggregated train sequences "
-            f"(k_completions={k}, split_newlines={self.args.inner_split_newlines})"
+            f"(k_completions={k}, split_newlines={self.args.inner_split_newlines}, "
+            f"add_context={self.args.add_context})"
         )
         return self._cpt_train_sequences
 
@@ -348,7 +389,10 @@ class _ServerSession:
             self.args.k_completions,
         )
         return _single_passage_train_sequences(
-            item, raw, split_newlines=self.args.inner_split_newlines
+            item,
+            raw,
+            split_newlines=self.args.inner_split_newlines,
+            add_context=self.args.add_context,
         )
 
     def eval_val_task(self, item: Dict[str, Any], label: str) -> float:
@@ -377,6 +421,48 @@ class _ServerSession:
         _adapter_accuracy(self.sock, item, train_sequences, self.args)
         title_short = item["title"][:50] + ("…" if len(item["title"]) > 50 else "")
         print(f"      [{label}] (single) merge train {title_short}")
+
+    def merge_train_task_with_retention(
+        self,
+        item: Dict[str, Any],
+        step_k: int,
+        agg_questions: List[Dict[str, str]],
+        q_spans: List[Tuple[int, int]],
+        inner_mat_vals: List[List[List[float]]],
+        label: str,
+    ) -> None:
+        """SE + inner TTT on task k; record adapter acc on d_0..d_k."""
+        train_sequences = self._train_sequences_for_item(item)
+        record_merge_train_step(
+            self.sock,
+            train_sequences,
+            agg_questions,
+            q_spans,
+            step_k,
+            lambda sock, train_seqs, questions: _send_round(
+                sock, train_seqs, questions, self.args
+            ),
+            inner_mat_vals,
+        )
+        title_short = item["title"][:50] + ("…" if len(item["title"]) > 50 else "")
+        print(f"      [{label}] (single) merge train {title_short}")
+
+    def eval_merge_train_base_row(
+        self,
+        train_items: List[Dict[str, Any]],
+        inner_mat_vals: List[List[List[float]]],
+        tag: str,
+    ) -> None:
+        eval_merge_train_row0(
+            self.sock,
+            train_items,
+            _questions_for_item,
+            lambda sock, train_seqs, questions: _send_round(
+                sock, train_seqs, questions, self.args
+            ),
+            inner_mat_vals,
+            log_prefix=f"{tag} merge-train base",
+        )
 
     def merge_train_corpus(self, corpus: List[Dict[str, Any]], label: str) -> None:
         """CPT mode: SE on all N articles → aggregated inner TTT (adapter for merge)."""
@@ -622,7 +708,12 @@ def run_one_sequence(
     *,
     train_cpt_corpora: Optional[List[List[Dict[str, Any]]]] = None,
     val_cpt_corpora: Optional[List[List[Dict[str, Any]]]] = None,
-) -> Tuple[List[List[float]], List[List[float]]]:
+) -> Tuple[
+    List[List[float]],
+    List[List[float]],
+    List[List[float]],
+    List[List[float]],
+]:
     cpt_mode = (
         _cpt_inner_mode(args)
         and train_cpt_corpora is not None
@@ -632,6 +723,15 @@ def run_one_sequence(
     M = len(val_cpt_corpora) if cpt_mode else len(val_items)
     R = K + 1
     mat_vals: List[List[List[float]]] = [[[] for _ in range(M)] for _ in range(R)]
+    inner_mat_vals: Optional[List[List[List[float]]]] = (
+        None if cpt_mode else init_lower_tri_mat_vals(K)
+    )
+    agg_questions: Optional[List[Dict[str, str]]] = None
+    q_spans: Optional[List[Tuple[int, int]]] = None
+    if inner_mat_vals is not None:
+        agg_questions, q_spans = build_agg_questions_and_spans(
+            train_items, _questions_for_item
+        )
     out_dir = Path(args.output_dir)
 
     current_model = args.model
@@ -645,6 +745,15 @@ def run_one_sequence(
     else:
         eval_desc = f"val eval ({M} passages)"
     _banner(f"[Seq {seq_idx}] Row 0 — base model, {eval_desc}")
+    if inner_mat_vals is not None:
+        max_model_len = args.max_tokens + 2048
+        base_sess = _ServerSession(
+            current_model, args, f"seq{seq_idx}_merge_train_row0", max_model_len
+        )
+        base_sess.eval_merge_train_base_row(
+            train_items, inner_mat_vals, f"seq{seq_idx}_merge_train_row0"
+        )
+        base_sess.close()
     _eval_all_val(
         current_model,
         val_items,
@@ -689,7 +798,14 @@ def run_one_sequence(
                 max_model_len,
                 keep_adapter_dir=True,
             )
-            sess.merge_train_task(train_item, f"merge_train{k}")
+            sess.merge_train_task_with_retention(
+                train_item,
+                k,
+                agg_questions[: q_spans[k][1]],
+                q_spans,
+                inner_mat_vals,
+                f"merge_train{k}",
+            )
         sess.close()
 
         current_model = _merge_after_ttt(current_model, seq_idx, k, args)
@@ -730,7 +846,17 @@ def run_one_sequence(
                 std_mat[r][i] = _stats.stdev(vals) if len(vals) > 1 else 0.0
 
     print("mean matrix (rows=merge stage, cols=val tasks):\n", json.dumps(mean_mat, indent=2))
-    return mean_mat, std_mat
+
+    if inner_mat_vals is not None:
+        inner_mean, inner_std = finalize_lower_tri_matrix(inner_mat_vals, K)
+        print(
+            "merge-train retention matrix (lower-tri):\n",
+            json.dumps(inner_mean, indent=2),
+        )
+        return mean_mat, std_mat, inner_mean, inner_std
+
+    empty = [[0.0] * K for _ in range(R)]
+    return mean_mat, std_mat, empty, empty
 
 
 def parse_args() -> argparse.Namespace:
@@ -759,6 +885,16 @@ def parse_args() -> argparse.Namespace:
         help="Deprecated: if set without n_merge/n_val, splits evenly into merge+val",
     )
     p.add_argument("--model", default="Qwen/Qwen2.5-7B")
+    p.add_argument(
+        "--instruct_model",
+        action="store_true",
+        help="Set this flag if you are using a Qwen instruct model",
+    )
+    p.add_argument(
+        "--thinking_mode",
+        action="store_true",
+        help="Set this flag to enable thinking mode for Qwen3 models",
+    )
     p.add_argument("--gpus", default="0,1")
     p.add_argument("--vllm_port", type=int, default=8001)
     p.add_argument("--zmq_port", type=int, default=5555)
@@ -804,6 +940,14 @@ def parse_args() -> argparse.Namespace:
         help="Force split_newlines=False (CPT.sh SPLIT_NEWLINES=0)",
     )
     p.add_argument(
+        "--no_add_context",
+        action="store_true",
+        help=(
+            "Inner TTT: train only on self-edit implications; "
+            "do not append the passage as an extra training row"
+        ),
+    )
+    p.add_argument(
         "--output_dir",
         default="general-knowledge/results/continual_self_edit_gen_forgetting",
     )
@@ -822,8 +966,11 @@ def _resolve_split_sizes(args: argparse.Namespace) -> Tuple[int, int]:
 
 def main() -> None:
     args = parse_args()
+    if args.thinking_mode and not args.instruct_model:
+        raise SystemExit("[!] --thinking_mode requires --instruct_model")
     args.inner_split_newlines = _resolve_inner_split_newlines(args)
     args.k_completions = _resolve_k_completions(args)
+    args.add_context = _resolve_add_context(args)
     n_merge, n_val = _resolve_split_sizes(args)
     _banner(
         "[Args] "
@@ -834,6 +981,7 @@ def main() -> None:
                 "n_val": n_val,
                 "inner_split_newlines": args.inner_split_newlines,
                 "k_completions": args.k_completions,
+                "add_context": args.add_context,
             },
             indent=2,
         )
@@ -854,6 +1002,8 @@ def main() -> None:
 
     seq_means: List[List[List[float]]] = []
     seq_stds: List[List[List[float]]] = []
+    inner_seq_means: List[List[List[float]]] = []
+    inner_seq_stds: List[List[List[float]]] = []
 
     matrix_n_val = n_val
 
@@ -884,7 +1034,7 @@ def main() -> None:
             train_cpt_corpora=train_cpt_corpora,
             val_cpt_corpora=val_cpt_corpora,
         )
-        mean_mat, std_mat = run_one_sequence(
+        mean_mat, std_mat, inner_mean, inner_std = run_one_sequence(
             seq_idx,
             train_items,
             val_items,
@@ -894,6 +1044,8 @@ def main() -> None:
         )
         seq_means.append(mean_mat)
         seq_stds.append(std_mat)
+        inner_seq_means.append(inner_mean)
+        inner_seq_stds.append(inner_std)
 
     R = n_merge + 1
     M = matrix_n_val
@@ -904,6 +1056,10 @@ def main() -> None:
             vals = [seq_means[s][r][i] for s in range(args.n_sequences)]
             agg_mean[r][i] = _stats.mean(vals)
             agg_std[r][i] = _stats.stdev(vals) if len(vals) > 1 else 0.0
+
+    inner_agg_mean, inner_agg_std = aggregate_lower_tri_over_sequences(
+        inner_seq_means, inner_seq_stds, n_merge, args.n_sequences
+    )
 
     cpt_mode = _cpt_inner_mode(args)
     inner_mode = "cpt_aggregate" if cpt_mode else "single_passage"
@@ -930,6 +1086,7 @@ def main() -> None:
         "k_completions": args.k_completions,
         "eval_mode": "cpt_val_tasks" if cpt_mode else "per_passage",
         "split_newlines": args.inner_split_newlines,
+        "add_context": args.add_context,
         "dataset": args.dataset,
         "base_model": args.model,
         "metric": "val_adapter_accuracy_after_fresh_self_edit_and_ttt",
@@ -939,6 +1096,15 @@ def main() -> None:
             + f" Inner SFT: {inner_mode}."
         ),
     }
+    if not _cpt_inner_mode(args):
+        summary.update(
+            inner_summary_from_merge_train(
+                inner_agg_mean,
+                inner_agg_std,
+                n_sequences=args.n_sequences,
+                n_merge=n_merge,
+            )
+        )
     summary_path = out_dir / f"summary_{int(time.time())}.json"
     summary_path.write_text(json.dumps(summary, indent=2), encoding="utf-8")
     print(f"\nFinished. Summary → {summary_path}")

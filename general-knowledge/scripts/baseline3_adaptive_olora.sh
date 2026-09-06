@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=b2_olora
+#SBATCH --job-name=b3_adaptive_olora
 #SBATCH --output=logs/%A_%x.log
 #SBATCH --gres=gpu:2
 
@@ -11,8 +11,9 @@
 # set -a && source .env && set +a
 
 # ====================================================================== #
-#  Baseline 2: Standard O-LoRA (λ≡1.0) — aligned with Baseline 1 shell
+#  Baseline 3: GPT-4.1 Adaptive O-LoRA (BGE ablation via LAMBDA_SOURCE)
 # ====================================================================== #
+
 export HF_HOME=/mnt/afs/visitor38/cache
 export HF_ENDPOINT=https://hf-mirror.com
 INDEX=0
@@ -39,8 +40,9 @@ THINKING_MODE=1      # Qwen3 thinking (requires INSTRUCT_MODEL=1)
 N_SEQUENCES=8
 N_MERGE=8
 N_VAL=8
-# Resume: set to sequence index to re-run from (0 = fresh start).
-START_SEQ=0
+# Resume: set to the sequence index to re-run from (0 = fresh start).
+# Interrupted during seq5 with checkpoint_summary.json present → START_SEQ=5.
+START_SEQ=6
 
 INNER_SFT_ARTICLES=1
 K_COMP=1
@@ -51,14 +53,22 @@ SPLIT_NEWLINES=1
 # Inner TTT: 1 = self-edit only; 0 = SEAL default (append passage row)
 NO_ADD_CONTEXT=0
 
-# --- O-LoRA (Baseline 2 only) ---
-OLORA_MODE="standard"
-LAMBDA_FIXED=1.0 # 0.5 for standard, 1.0 for full
+# --- Adaptive O-LoRA (Baseline 3) ---
+OLORA_MODE="adaptive"
+LAMBDA_SOURCE="gpt4"               # gpt4 (Full) | embedding (ablation)
+EMBED_MODEL="BAAI/bge-large-en-v1.5"
+TAU=0.000001
 GAMMA=1.0
+# Optional: set to e.g. 1.0 to skip GPT-4/embedding and use fixed lambdas for all U_hist slots
+# FIXED_LAMBDA_T=""
 U_SE_PATH="models/iter2_lora_adapter/lora_A_matrices.pt"
-SPLITS_DIR="general-knowledge/results/baselines/baseline1_vanilla_sft/run${INDEX}/splits"
+SPLITS_DIR="general-knowledge/baselines/results/baseline1_vanilla_sft/run0/splits"
 
-OUTPUT_DIR="general-knowledge/results/baselines/baseline2_full_olora/run${INDEX}"
+if [[ "${LAMBDA_SOURCE}" == "gpt4" ]]; then
+    OUTPUT_DIR="general-knowledge/results/baselines/baseline3_gpt4_noreuse_full_gamma/run${INDEX}"
+else
+    OUTPUT_DIR="general-knowledge/results/baselines/baseline3_embedding_adaptive_olora/run${INDEX}"
+fi
 mkdir -p "${OUTPUT_DIR}"
 
 # --------------------------------------------------------------------- #
@@ -66,12 +76,13 @@ mkdir -p "${OUTPUT_DIR}"
 export CUDA_VISIBLE_DEVICES=${PY_DRIVER_GPU},${VLLM_SERVER_GPUS}
 export OMP_NUM_THREADS=1
 
-echo "======== Baseline 2 Standard O-LoRA ========"
+echo "======== Baseline 3 Adaptive O-LoRA ========"
 echo "  OUTPUT_DIR=${OUTPUT_DIR}"
 echo "  model=${MODEL_NAME}  U_SE=${U_SE_PATH}"
 echo "  seq=${N_SEQUENCES}  merge=${N_MERGE}  val=${N_VAL}  seed=${SEED}"
 echo "  start_seq=${START_SEQ}"
-echo "  λ=${LAMBDA_FIXED}  γ=${GAMMA}  mode=${OLORA_MODE}"
+echo "  λ_source=${LAMBDA_SOURCE}  τ=${TAU}  γ=${GAMMA}"
+echo "  fixed_lambda_t=${FIXED_LAMBDA_T:-<adaptive>}"
 echo "  splits_dir=${SPLITS_DIR}"
 echo "  inner: r=${LORA_RANK} α=${LORA_ALPHA} epochs=${FINETUNE_EPOCHS} lr=${FINETUNE_LR}"
 echo "  no_add_context=${NO_ADD_CONTEXT}"
@@ -94,6 +105,11 @@ if [[ -n "${SPLITS_DIR}" && -d "${SPLITS_DIR}" ]]; then
     SPLITS_ARG="--splits_dir ${SPLITS_DIR}"
 fi
 
+FIXED_LAMBDA_ARG=""
+if [[ -n "${FIXED_LAMBDA_T:-}" ]]; then
+    FIXED_LAMBDA_ARG="--fixed_lambda_t ${FIXED_LAMBDA_T}"
+fi
+
 START_SEQ_ARG=""
 if [[ "${START_SEQ}" -gt 0 ]]; then
     START_SEQ_ARG="--start_seq ${START_SEQ}"
@@ -106,8 +122,11 @@ python3 -u -m general-knowledge.src.continual.baseline_olora \
     --u_se_path "${U_SE_PATH}" \
     ${SPLITS_ARG} \
     --olora_mode "${OLORA_MODE}" \
-    --lambda_fixed "${LAMBDA_FIXED}" \
-    --gamma "${GAMMA}" \
+    --lambda_source "${LAMBDA_SOURCE}" \
+    --embed_model "${EMBED_MODEL}" \
+    --tau ${TAU} \
+    --gamma ${GAMMA} \
+    ${FIXED_LAMBDA_ARG} \
     --lora_rank ${LORA_RANK} \
     --lora_alpha ${LORA_ALPHA} \
     --lora_dropout ${LORA_DROPOUT} \
@@ -133,10 +152,9 @@ python3 -u -m general-knowledge.src.continual.baseline_olora \
     ${THINKING_MODE:+--thinking_mode} \
     ${START_SEQ_ARG}
 
-echo "Plotting heatmaps..."
+echo "Plotting heatmap..."
 python3 general-knowledge/src/continual/plot_self_edit_gen_forgetting.py \
     --results_dir "${OUTPUT_DIR}" \
-    --output "${OUTPUT_DIR}/forgetting_heatmap_se_gen.png" \
-    --combined_output "${OUTPUT_DIR}/forgetting_heatmaps_combined.png"
+    --output "${OUTPUT_DIR}/forgetting_heatmap_se_gen.png"
 
 echo "Job finished."

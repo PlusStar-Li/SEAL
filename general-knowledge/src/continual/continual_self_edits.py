@@ -51,7 +51,7 @@ from ..utils import (
     set_vllm_api_url,
     build_train_sequences,
 )
-from ..data_generation.make_squad_data import make_prompt
+from ..data_generation.make_squad_data import clean_implication_completion, make_prompt
 
 # Silence transformers warning spam inside forked processes
 os.environ.setdefault("TRANSFORMERS_NO_ADVISORY_WARNINGS", "1")
@@ -153,6 +153,8 @@ def _spawn_inner_server(
     tag: str,
     *,
     keep_adapter_dir: bool = False,
+    instruct_model: bool = False,
+    thinking_mode: bool = False,
 ) -> subprocess.Popen:
     cmd = [
         sys.executable,
@@ -167,6 +169,10 @@ def _spawn_inner_server(
     ]
     if keep_adapter_dir:
         cmd.append("--keep_adapter_dir")
+    if instruct_model:
+        cmd.append("--instruct_model")
+    if thinking_mode:
+        cmd.append("--thinking_mode")
     _banner(f"[Inner] launching on GPU {gpu}, ZMQ :{zmq_port}\n$ {' '.join(cmd)}")
     env = os.environ.copy()
     env["CUDA_VISIBLE_DEVICES"] = gpu
@@ -238,9 +244,16 @@ def run_one_sequence(seq_idx: int, items: List[Dict[str, Any]], args) -> Tuple[L
     vllm_api = f"http://127.0.0.1:{args.vllm_port}"
     set_vllm_api_url(vllm_api)
 
-    inner  = _spawn_inner_server(vllm_api, current_model_path,
-                                 args.zmq_port, args.inner_gpu,
-                                 logs_step_dir, base_tag)
+    inner  = _spawn_inner_server(
+        vllm_api,
+        current_model_path,
+        args.zmq_port,
+        args.inner_gpu,
+        logs_step_dir,
+        base_tag,
+        instruct_model=bool(getattr(args, "instruct_model", False)),
+        thinking_mode=bool(getattr(args, "thinking_mode", False)),
+    )
     ctx, sock = _connect_zmq(args.zmq_port)
 
     for i, item in enumerate(items):
@@ -295,11 +308,18 @@ def run_one_sequence(seq_idx: int, items: List[Dict[str, Any]], args) -> Tuple[L
             logs_step_dir,
             step_tag,
             keep_adapter_dir=True,
+            instruct_model=bool(getattr(args, "instruct_model", False)),
+            thinking_mode=bool(getattr(args, "thinking_mode", False)),
         )
         zmq_ctx, zmq_sock = _connect_zmq(args.zmq_port)
 
         # ---------------- 2) self-edit completion --------------------------
-        prompt = make_prompt(item["title"], item["context"], instruct_model=False)
+        prompt = make_prompt(
+            item["title"],
+            item["context"],
+            instruct_model=bool(getattr(args, "instruct_model", False)),
+            thinking_mode=bool(getattr(args, "thinking_mode", False)),
+        )
         comp_resp = requests.post(
             f"{vllm_api}/v1/completions",
             json={
@@ -313,7 +333,7 @@ def run_one_sequence(seq_idx: int, items: List[Dict[str, Any]], args) -> Tuple[L
             timeout=600,
         )
         comp_resp.raise_for_status()
-        completion = comp_resp.json()["choices"][0]["text"].strip()
+        completion = clean_implication_completion(comp_resp.json()["choices"][0]["text"])
 
         train_sequences = build_train_sequences(
             completion or item["context"], item["context"], item["title"], split_newlines=True
@@ -412,6 +432,16 @@ def parse_args():
 
     # Model & placement
     p.add_argument("--model", default="Qwen/Qwen2.5-7B")
+    p.add_argument(
+        "--instruct_model",
+        action="store_true",
+        help="Set this flag if you are using a Qwen instruct model",
+    )
+    p.add_argument(
+        "--thinking_mode",
+        action="store_true",
+        help="Set this flag to enable thinking mode for Qwen3 models",
+    )
     p.add_argument("--gpus", default="0,1", help="Comma-separated list → first for vLLM, second for inner")
     p.add_argument("--vllm_port", type=int, default=8001)
     p.add_argument("--zmq_port", type=int, default=5555)
@@ -441,6 +471,8 @@ def parse_args():
 
 def main():
     args = parse_args()
+    if args.thinking_mode and not args.instruct_model:
+        raise SystemExit("[!] --thinking_mode requires --instruct_model")
     _banner("[Args] " + json.dumps(vars(args), indent=2))
     random.seed(args.seed)
 

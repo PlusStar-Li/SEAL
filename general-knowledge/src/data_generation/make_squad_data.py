@@ -3,13 +3,20 @@
 Generate synthetic SQuAD-style items by prompting a vLLM endpoint for `k` "implication" completions per passage.
 """
 from pathlib import Path
-import argparse, json, random, time, datetime, requests
+import argparse, json, random, re, time, datetime, requests
 from typing import Any, Dict, List
+
+from ..utils import QWEN3_DISABLE_THINKING_PREFIX, strip_think_blocks
 
 MAKE_SQUAD_DATA_TEMPLATE_INSTRUCT = (
     "<|im_start|>system\nYou are an assistant tasked with analyzing the provided passage and producing a list of implications derived directly or indirectly from the content. <|im_end|>\n"
     "<|im_start|>user\n{title}\n{context}<|im_end|>\n"
     "<|im_start|>assistant\n"
+)
+
+# First real implication line (numbered, markdown-numbered, or bullet).
+_CONTENT_START_RE = re.compile(
+    r"(?m)^(?:\s*\d+[\.\)]\s+|\s*#{1,6}\s*\**\s*\d+|\s*[-*]\s+)"
 )
 
 MAKE_SQUAD_DATA_TEMPLATES_BASE: dict[str, str] = {
@@ -67,12 +74,43 @@ MAKE_SQUAD_DATA_TEMPLATES_BASE: dict[str, str] = {
 
 # ------------------------------------------------------------------------ #
 
-def make_prompt(title: str, context: str, instruct_model: bool, prompt_key: str = "implications") -> str:
-    MAKE_SQUAD_DATA_TEMPLATE = MAKE_SQUAD_DATA_TEMPLATE_INSTRUCT if instruct_model else MAKE_SQUAD_DATA_TEMPLATES_BASE[prompt_key]
-    return MAKE_SQUAD_DATA_TEMPLATE.format(
-            title=title,
-            context=context,
-        )
+def clean_implication_completion(text: str) -> str:
+    """
+    Drop preamble headers like 'Implications Derived from the Passage:' /
+    'Here are the implications...' so training sees only the list body.
+    """
+    text = strip_think_blocks(text)
+    if not text:
+        return text
+    m = _CONTENT_START_RE.search(text)
+    if m:
+        text = text[m.start() :]
+    # Drop leading horizontal rules / blank lines after the cut.
+    lines = text.splitlines()
+    while lines and (not lines[0].strip() or re.fullmatch(r"\s*-{3,}\s*", lines[0])):
+        lines.pop(0)
+    return "\n".join(lines).strip()
+
+
+def make_prompt(
+    title: str,
+    context: str,
+    instruct_model: bool,
+    prompt_key: str = "implications",
+    thinking_mode: bool = False,
+) -> str:
+    MAKE_SQUAD_DATA_TEMPLATE = (
+        MAKE_SQUAD_DATA_TEMPLATE_INSTRUCT
+        if instruct_model
+        else MAKE_SQUAD_DATA_TEMPLATES_BASE[prompt_key]
+    )
+    prompt = MAKE_SQUAD_DATA_TEMPLATE.format(title=title, context=context)
+    # Instruct + non-thinking: force empty think block (Qwen3 enable_thinking=false).
+    # Instruct + thinking_mode: leave assistant open so the model can reason.
+    if instruct_model and not thinking_mode:
+        prompt = prompt + QWEN3_DISABLE_THINKING_PREFIX
+    return prompt
+
 
 def generate_bulk(
     vllm_api_url: str,
@@ -83,7 +121,7 @@ def generate_bulk(
     top_p: float,
 ) -> List[str]:
     """
-    Call vLLM once with a list of prompts.  
+    Call vLLM once with a list of prompts.
     Returns a list of completions in the same order.
     """
     payload: Dict[str, Any] = {
@@ -101,7 +139,7 @@ def generate_bulk(
     out = ["" for _ in range(len(prompts))]
     for ch in choices:
         idx = ch["index"]
-        out[idx] = ch["text"].strip()
+        out[idx] = clean_implication_completion(ch["text"])
 
     if any(c == "" for c in out):
         raise RuntimeError("Mismatch between returned choices and prompt list")
@@ -113,17 +151,34 @@ def main() -> None:
     p = argparse.ArgumentParser()
     p.add_argument("--vllm_api_url", required=True, help="e.g. http://localhost:8001")
     p.add_argument("--model", default="Qwen/Qwen2.5-7B", help="HF model name")
-    p.add_argument("--instruct_model", action="store_true", help="Using instruction model")
+    p.add_argument(
+        "--instruct_model",
+        action="store_true",
+        help="Set this flag if you are using a Qwen instruct model",
+    )
+    p.add_argument(
+        "--thinking_mode",
+        action="store_true",
+        help="Set this flag to enable thinking mode for Qwen3 models",
+    )
     p.add_argument("--dataset_in", required=True, help="Path to the input dataset")
     p.add_argument("--dataset_out", required=True, help="Path to the output dataset")
     p.add_argument("--n", type=int, default=-1, help="How many articles to process")
     p.add_argument("--start", type=int, default=0, help="Start index for processing")
-    p.add_argument('--k', type=int, default=5, help='Completions per article')
-    p.add_argument('--temperature', type=float, default=1.0, help='Sampling temperature')
-    p.add_argument('--top_p', type=float, default=0.95, help='Nucleus sampling (top-p)')
+    p.add_argument("--k", type=int, default=5, help="Completions per article")
+    p.add_argument("--temperature", type=float, default=1.0, help="Sampling temperature")
+    p.add_argument("--top_p", type=float, default=0.95, help="Nucleus sampling (top-p)")
     p.add_argument("--max_tokens", type=int, default=8192, help="Max tokens to generate")
-    p.add_argument("--prompt_key", default="implications", choices=list(MAKE_SQUAD_DATA_TEMPLATES_BASE.keys()), help="Which prompt to use")
+    p.add_argument(
+        "--prompt_key",
+        default="implications",
+        choices=list(MAKE_SQUAD_DATA_TEMPLATES_BASE.keys()),
+        help="Which prompt to use",
+    )
     args = p.parse_args()
+
+    if args.thinking_mode and not args.instruct_model:
+        raise SystemExit("[!] --thinking_mode requires --instruct_model")
 
     # -------- load data + build user messages ----------------------- #
     raw: List[Dict[str, Any]] = json.load(open(args.dataset_in, encoding="utf-8"))
@@ -133,9 +188,18 @@ def main() -> None:
 
     prompts: List[str] = []
     for item in subset:
-        prompt = make_prompt(title=item["title"], context=item["context"], instruct_model=args.instruct_model, prompt_key=args.prompt_key)
+        prompt = make_prompt(
+            title=item["title"],
+            context=item["context"],
+            instruct_model=args.instruct_model,
+            prompt_key=args.prompt_key,
+            thinking_mode=args.thinking_mode,
+        )
         prompts.extend([prompt] * args.k)
-    print(f"Requesting {len(prompts)} completions in one batch...")
+    print(
+        f"Requesting {len(prompts)} completions in one batch "
+        f"(instruct_model={args.instruct_model}, thinking_mode={args.thinking_mode})..."
+    )
     t0 = time.time()
     completions = generate_bulk(
         args.vllm_api_url, prompts, args.model, args.max_tokens, args.temperature, args.top_p
@@ -150,7 +214,13 @@ def main() -> None:
 
         new_item = dict(item)
         new_item["completions"] = comp_slice
-        new_item["prompt"] = make_prompt(title=item["title"], context=item["context"], instruct_model=args.instruct_model, prompt_key=args.prompt_key)
+        new_item["prompt"] = make_prompt(
+            title=item["title"],
+            context=item["context"],
+            instruct_model=args.instruct_model,
+            prompt_key=args.prompt_key,
+            thinking_mode=args.thinking_mode,
+        )
         out_data.append(new_item)
 
     out_path = Path(args.dataset_out)
@@ -168,6 +238,8 @@ def main() -> None:
         "max_tokens": args.max_tokens,
         "n": len(subset),
         "k": args.k,
+        "instruct_model": args.instruct_model,
+        "thinking_mode": args.thinking_mode,
         "timestamp": datetime.datetime.now(datetime.UTC).isoformat() + "Z",
     }
     meta_path = out_path.with_suffix(out_path.suffix + ".meta")

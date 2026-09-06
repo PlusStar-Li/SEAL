@@ -58,6 +58,14 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--gradient_accumulation_steps", type=int, default=1)
     p.add_argument("--end_mask_substring", default="")
     p.add_argument("--split_newlines", action="store_true")
+    p.add_argument(
+        "--no_add_context",
+        action="store_true",
+        help=(
+            "Inner TTT: train only on self-edit implications; "
+            "do not append the passage as an extra training row"
+        ),
+    )
     p.add_argument("--chain_of_thought", action="store_true")
     p.add_argument("--reward_mode", choices=["ttt", "proxy", "both"], default="ttt")
     return p.parse_args()
@@ -138,7 +146,18 @@ def evaluate_completion(ctx, endpoint, item: Dict[str, Any], comp_raw: str, args
         }
         for q in item["questions"]
     ]
-    train_sequences = build_train_sequences(comp_raw, context, title, split_newlines=args.split_newlines)
+    train_sequences = build_train_sequences(
+        comp_raw,
+        context,
+        title,
+        split_newlines=args.split_newlines,
+        add_context=not args.no_add_context,
+    )
+    if not train_sequences:
+        print(
+            f"      [warn] empty train_sequences for {title[:50]!r} "
+            "(completion empty and --no_add_context set)"
+        )
 
     base_accs, adpt_accs, gains = [], [], []
     q_details: List[Dict[str, Any]] = []
@@ -323,6 +342,7 @@ def main() -> None:
             "dataset": str(data_path),
             "reward_mode": args.reward_mode,
             "split_newlines": args.split_newlines,
+            "add_context": not args.no_add_context,
             "n_articles": len(articles_out),
             "k_completions": args.k_completions,
             "eval_times": args.eval_times,

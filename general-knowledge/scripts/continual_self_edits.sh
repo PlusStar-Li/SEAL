@@ -36,6 +36,8 @@ SEED=$((42 + INDEX))
 MAX_TOKENS=8192            # self-edit generation cap
 TEMPERATURE=1.0            # self-edit sampling temperature
 top_p=0.95                 # self-edit top-p
+INSTRUCT_MODEL=1           # Qwen instruct chat template
+THINKING_MODE=1            # Qwen3 thinking (requires INSTRUCT_MODEL=1)
 
 N_SEQUENCES=8              # number of sequence to average over
 N_DATAPOINTS=8             # datapoints per sequence
@@ -68,6 +70,8 @@ python3 -u -m general-knowledge.src.continual.continual_self_edits \
     --temperature ${TEMPERATURE} \
     --top_p ${top_p} \
     --max_tokens ${MAX_TOKENS} \
-    --seed ${SEED}
+    --seed ${SEED} \
+    ${INSTRUCT_MODEL:+--instruct_model} \
+    ${THINKING_MODE:+--thinking_mode}
 
 echo "Job finished."

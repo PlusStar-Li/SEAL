@@ -22,6 +22,8 @@ MODEL="Qwen/Qwen2.5-7B"
 MAXLEN=2048
 EVALTOK=64
 SPLIT_NEWLINES=0
+INSTRUCT_MODEL=1     # Qwen instruct chat template
+THINKING_MODE=1      # Qwen3 thinking (requires INSTRUCT_MODEL=1)
 
 # -------- Hyperparams via Slurm array ------------------------------- #
 # Columns:
@@ -65,4 +67,6 @@ python -u -m general-knowledge.src.query.CPT_fullFT \
     --eval_question_limit 500 \
     ${SN_FLAG} \
     ${BASELINE_FLAG} \
+    ${INSTRUCT_MODEL:+--instruct_model} \
+    ${THINKING_MODE:+--thinking_mode} \
     >> "${LOG_FILE}" 2>&1

@@ -33,6 +33,7 @@ from ..utils import (
     format_answer_prompts,
     format_grade_prompts,
     grade_with_gpt4,
+    strip_think_blocks,
 )
 
 LOG = logging.getLogger()
@@ -53,11 +54,14 @@ def _eval_with_vllm_engine(
     questions: List[Dict[str, str]],
     *,
     instruct_model: bool,
+    thinking_mode: bool,
     temperature: float,
     top_p: float,
     max_tokens: int,
 ) -> Tuple[float, List[str], List[bool]]:
-    prompts = format_answer_prompts(questions, instruct_model=instruct_model)
+    prompts = format_answer_prompts(
+        questions, instruct_model=instruct_model, thinking_mode=thinking_mode
+    )
     sampling = SamplingParams(
         temperature=temperature,
         top_p=top_p,
@@ -65,7 +69,7 @@ def _eval_with_vllm_engine(
     )
     outputs = llm.generate(prompts, sampling)
     # vLLM returns results ordered the same as input prompts
-    preds = [out.outputs[0].text.strip() for out in outputs]
+    preds = [strip_think_blocks(out.outputs[0].text) for out in outputs]
 
     acc, verdicts = _grade_accuracy(questions, preds)
     return acc, preds, verdicts
@@ -85,7 +89,16 @@ def parse_args() -> argparse.Namespace:
 
     # Model / training
     p.add_argument("--model", default="Qwen/Qwen2.5-7B")
-    p.add_argument("--instruct_model", action="store_true")
+    p.add_argument(
+        "--instruct_model",
+        action="store_true",
+        help="Set this flag if you are using a Qwen instruct model",
+    )
+    p.add_argument(
+        "--thinking_mode",
+        action="store_true",
+        help="Set this flag to enable thinking mode for Qwen3 models",
+    )
     p.add_argument("--max_seq_length", type=int, default=2048)
 
     p.add_argument("--epochs", type=int, default=1)
@@ -118,6 +131,8 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> None:
     args = parse_args()
+    if args.thinking_mode and not args.instruct_model:
+        raise SystemExit("[!] --thinking_mode requires --instruct_model")
 
     logging.basicConfig(
         level=logging.INFO,
@@ -213,6 +228,7 @@ def main() -> None:
             baseline_llm,
             eval_questions,
             instruct_model=args.instruct_model,
+            thinking_mode=args.thinking_mode,
             temperature=args.eval_temperature,
             top_p=args.eval_top_p,
             max_tokens=args.eval_max_tokens,
@@ -305,6 +321,7 @@ def main() -> None:
         ft_llm,
         eval_questions,
         instruct_model=args.instruct_model,
+        thinking_mode=args.thinking_mode,
         temperature=args.eval_temperature,
         top_p=args.eval_top_p,
         max_tokens=args.eval_max_tokens,

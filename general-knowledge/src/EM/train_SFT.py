@@ -10,7 +10,10 @@ After training, saves:
   2. {output_dir}/               — merged full model for inference / next RL round
 """
 import os
+import sys
 import argparse
+from pathlib import Path
+
 from datasets import load_dataset
 import torch
 import torch.distributed as dist
@@ -18,19 +21,38 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 from trl import SFTConfig, SFTTrainer
 from peft import LoraConfig, PeftModel
 
-from lora_config import (
+# Allow flat imports when launched as a script path via accelerate.
+_EM_DIR = Path(__file__).resolve().parent
+_SRC_DIR = _EM_DIR.parent
+for _p in (str(_EM_DIR), str(_SRC_DIR)):
+    if _p not in sys.path:
+        sys.path.insert(0, _p)
+
+from utils import apply_qwen3_thinking_prefix, strip_think_blocks  # noqa: E402
+from lora_config import (  # noqa: E402
     LORA_ALPHA,
     LORA_DROPOUT,
     LORA_RANK,
     lora_target_modules_csv,
 )
-from lora_checkpoint_utils import default_lora_adapter_dir, save_outer_lora_checkpoint
+from lora_checkpoint_utils import default_lora_adapter_dir, save_outer_lora_checkpoint  # noqa: E402
+
 
 def parse_args():
     p = argparse.ArgumentParser()
     p.add_argument("--train_file", required=True)
     p.add_argument("--model_name_or_path", default="Qwen/Qwen2.5-7B")
     p.add_argument("--output_dir", required=True)
+    p.add_argument(
+        "--instruct_model",
+        action="store_true",
+        help="Set this flag if you are using a Qwen instruct model",
+    )
+    p.add_argument(
+        "--thinking_mode",
+        action="store_true",
+        help="Set this flag to enable thinking mode for Qwen3 models",
+    )
     p.add_argument("--per_device_batch_size", type=int, default=2)
     p.add_argument("--gradient_accumulation_steps", type=int, default=8)
     p.add_argument("--num_train_epochs", type=int, default=3)
@@ -62,16 +84,43 @@ def _unwrap_model(model):
         return model.module
     return model
 
+
+def _normalize_example(example, *, instruct_model: bool, thinking_mode: bool):
+    prompt = apply_qwen3_thinking_prefix(
+        example["prompt"],
+        instruct_model=instruct_model,
+        thinking_mode=thinking_mode,
+    )
+    completion = strip_think_blocks(example["completion"])
+    return {"prompt": prompt, "completion": completion}
+
+
 def longest_seq_len(dataset, tok):
     return max(
         len(tok(example["prompt"] + example["completion"]).input_ids)
         for example in dataset
     )
 
+
 def main() -> None:
     args = parse_args()
+    if args.thinking_mode and not args.instruct_model:
+        raise SystemExit("[!] --thinking_mode requires --instruct_model")
 
     dataset = load_dataset("json", data_files=args.train_file, split="train")
+    dataset = dataset.map(
+        lambda ex: _normalize_example(
+            ex,
+            instruct_model=args.instruct_model,
+            thinking_mode=args.thinking_mode,
+        )
+    )
+    print(
+        f"[SFT] instruct_model={args.instruct_model} thinking_mode={args.thinking_mode} "
+        f"n={len(dataset)}"
+    )
+    if len(dataset) > 0:
+        print("[SFT] prompt tail:", repr(dataset[0]["prompt"][-120:]))
 
     model = AutoModelForCausalLM.from_pretrained(
         args.model_name_or_path,
@@ -132,6 +181,8 @@ def main() -> None:
                 "lora_dropout": args.lora_dropout,
                 "lora_target_modules": args.lora_target_modules.split(","),
                 "train_file": args.train_file,
+                "instruct_model": args.instruct_model,
+                "thinking_mode": args.thinking_mode,
             },
         )
         print(f"Saved outer LoRA adapter → {lora_adapter_dir}")

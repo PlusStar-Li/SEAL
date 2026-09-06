@@ -15,10 +15,16 @@
 # DATASET_IN="general-knowledge/data/squad_train.json"
 # DATASET_OUT="general-knowledge/data/synthetic_data/train/iter0_train.json"
 
-MODEL_NAME="models/iter1"  # model to use for data generation. For evaluation, set to the model to be evaluated. For RL training, set to the (n-1)'th RL checkpoint.
+# MODEL_NAME="/mnt/afs/visitor38/cache/hub/models--Qwen--Qwen3-8B"
+MODEL_NAME="models/qwen3_iter2"
 PORT=8001
 DATASET_IN="general-knowledge/data/squad_train.json"
-DATASET_OUT="general-knowledge/data/synthetic_data/train/iter1_train.json"
+DATASET_OUT="general-knowledge/data/synthetic_data/train/qwen3_iter2_train.json"
+
+# MODEL_NAME="models/iter1"  # model to use for data generation. For evaluation, set to the model to be evaluated. For RL training, set to the (n-1)'th RL checkpoint.
+# PORT=8001
+# DATASET_IN="general-knowledge/data/squad_train.json"
+# DATASET_OUT="general-knowledge/data/synthetic_data/train/iter1_train.json"
 
 # DATASET_IN="general-knowledge/data/squad_val.json"
 # DATASET_OUT="general-knowledge/data/synthetic_data/eval/base_val.json"
@@ -29,6 +35,8 @@ K=5                          # number of completions to generate per question
 TEMPERATURE=1.0
 TOP_P=0.95
 MAX_TOKENS=8192
+INSTRUCT_MODEL=1           # set to 1 to use Qwen instruct chat template
+THINKING_MODE=1            # set to 1 to enable Qwen3 thinking (requires INSTRUCT_MODEL=1)
 # --------------------------------------------------------------------- #
 
 VLLM_HOST=$(hostname -i)
@@ -58,6 +66,7 @@ python3 -m general-knowledge.src.data_generation.make_squad_data \
     --temperature "$TEMPERATURE" \
     --top_p "$TOP_P" \
     ${INSTRUCT_MODEL:+--instruct_model} \
+    ${THINKING_MODE:+--thinking_mode} \
     --max_tokens "$MAX_TOKENS"
 
 echo "Shutting down vLLM"

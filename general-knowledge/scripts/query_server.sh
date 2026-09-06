@@ -20,13 +20,14 @@ mkdir -p "${OUTPUT_DIR}"
 # Columns: exp_name dataset  k  evalT  r  α  drop  ep  lr  bs  ga  n_articles
 EXPERIMENTS=(
     # "rank_iter0 general-knowledge/data/synthetic_data/train/iter0_train.json  5  3  32  64  0  10  1e-3  1  1 50"
-    "rank_iter1 general-knowledge/data/synthetic_data/train/iter1_train.json  5  3  32  64  0  10  1e-3  1  1 50"
+    "rank_iter2 general-knowledge/data/synthetic_data/train/qwen3_iter2_train.json  5  3  32  64  0  10  1e-3  1  1 50"
     # "eval_baseline general-knowledge/data/synthetic_data/eval/base_val.json  1  1  32  64  0  10  1e-3  1  1 200"
 )
 
 CHAIN_OF_THOUGHT=0  # whether to use chain of thought when answering
 SPLIT_NEWLINES=1  # whether to split newlines into separate training documents
 REWARD_MODE="ttt"  # "ttt", "proxy", or "both" for reward mode
+NO_ADD_CONTEXT=1 # only self-edit fot TTT
 
 # -------- Loop & Launch ---------------------------------------------- #
 for EXP in "${EXPERIMENTS[@]}"; do
@@ -41,6 +42,11 @@ for EXP in "${EXPERIMENTS[@]}"; do
     SN_FLAG=""
     if [[ "${SPLIT_NEWLINES}" == "1" ]]; then
         SN_FLAG="--split_newlines"
+    fi
+
+    NO_CTX_FLAG=""
+    if [[ "${NO_ADD_CONTEXT}" == "1" ]]; then
+        NO_CTX_FLAG="--no_add_context"
     fi
 
     COT_FLAG=""
@@ -67,6 +73,7 @@ for EXP in "${EXPERIMENTS[@]}"; do
         --gradient_accumulation_steps "${GRAD_ACC}" \
         --reward_mode "${REWARD_MODE}" \
         ${SN_FLAG} \
+        ${NO_CTX_FLAG} \
         ${COT_FLAG} \
         >> "${LOG_FILE}" 2>&1
 done
